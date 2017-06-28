@@ -1,3 +1,54 @@
 // Place all the styles related to the static-pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  min-height: 200px;
+  height: 80vh;
+  max-height: 800px;
+
+  &__link, &__link:hover, &__link:focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__clientes, &__alunos {
+    @include center-content;
+
+    margin: 8px;
+    padding: 16px;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+
+    @include media-sm-up {
+      width: calc(50% - 16px); // half minus twice the margin
+    }
+  }
+
+  &__clientes {
+    background-image: url('image.jpg');
+    background-color: #801810;
+  }
+
+  &__alunos {
+    background-image: url('image.jpg');
+    background-color: #00a08c;
+  }
+
+  .separator {
+    background-color: white;
+    height: 5px;
+    width: 48px;
+    margin: 0 auto 8px;
+  }
+}
+
+.arrow {
+  @include center-content;
+}
