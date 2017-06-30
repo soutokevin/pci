@@ -3,16 +3,15 @@
  */
 
 /*Variáveis de ambiente*/
-// @import 'ambience/fonts';
+@import 'ambience/fonts';
 @import 'ambience/colors';
 
 /*Regras básicas*/
-@import 'base/layout';
 @import 'base/normalize';
+@import 'base/typography';
+@import 'base/layout';
 @import 'base/unclassed';
 // @import 'base/helpers';
-// @import 'base/layout';
-// @import 'base/typography';
 
 /*Components*/
 @import 'components/*';
