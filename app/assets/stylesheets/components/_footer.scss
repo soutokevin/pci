@@ -4,13 +4,36 @@
 	align-items: center;
 
 	height: 140px;
-	background-color: $footer-color;
+	background-color: $footer;
 
 	text-align: center;
 	font-size: 0.8em;
 	color: $white;
-
-	.item {
+	
+	hr {
+		width: 15%;
+		height: 3px;
+		background-color: $white;
+	}
+	.partners {
 		padding: 0 2em;
+		width: 300px;
+	}
+	.adress {
+		padding: 0 2em;
+	}
+
+	.social-medias {
+		display: flex;
+		padding: 0 2em;
+		width: 300px;
+		.circle {
+			color: $footer;
+			margin: 0 3em;
+			width: 60px;
+			height: 60px;
+			background-color: $white;
+			border-radius: 50%;
+		}
 	}
 }
