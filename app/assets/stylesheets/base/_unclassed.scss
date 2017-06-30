@@ -8,7 +8,9 @@ a {
     cursor: default;
     text-decoration: none;
 }
-
+input {
+	font-size: $font-size-input;
+}
 input:focus {
 	outline: 0;
 	outline-offset: 0px;
