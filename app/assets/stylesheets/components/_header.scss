@@ -4,8 +4,9 @@
 	justify-content: space-around;
 	
 	height: 130px;
-	margin-bottom: 2px;
+	margin-bottom: 37px;
 	text-align: center;
+	font-size: 1.3em;
 
 	box-shadow: 0px 2px 50px $shadow-color;
 	.item {
@@ -14,7 +15,7 @@
 	.buscador { 
 		input {
 			border-radius: 6px;
-			width: 210px;
+			width: 235px;
 			height: 30px;
 			background-color: $input-color;
 			border-width: 0;
