@@ -1,0 +1,24 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+	height: 130px;
+	margin-bottom: 2px;
+	text-align: center;
+
+	box-shadow: 0px 2px 50px $shadow-color;
+	.item {
+		padding-top: 1.1em;
+	}
+	.buscador { 
+		input {
+			border-radius: 6px;
+			width: 210px;
+			height: 30px;
+			background-color: $input-color;
+			border-width: 0;
+			text-indent: 5px;
+		}
+	}
+}
