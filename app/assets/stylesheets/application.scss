@@ -10,26 +10,8 @@
 @import 'base/layout';
 @import 'base/normalize';
 @import 'base/unclassed';
-// @import 'base/helpers';
-// @import 'base/layout';
+@import 'base/helpers';
 // @import 'base/typography';
 
 /*Components*/
 @import 'components/*';
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Montserrat', 'Lato', 'Helvetica', Arial, sans-serif;
-}
-
-h3 {
-  font-weight: 500;
-  font-size: 48pt;
-}
