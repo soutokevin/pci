@@ -4,13 +4,15 @@
 
 .hero {
   display: flex;
-  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
 
-  min-height: 200px;
-  height: 80vh;
-  max-height: 800px;
+  min-height: calc(100vh - 200px);
+  padding: 4px;
+
+  @include media-sm-down {
+    flex-direction: column;
+  }
 
   &__link,
   &__link:hover,
@@ -22,16 +24,13 @@
   &__clientes,
   &__alunos {
     @include center-content;
-
-    margin: 8px;
+    flex: auto;
+    margin: 4px;
     padding: 16px;
+
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-
-    @include media-sm-up {
-      width: calc(50% - 16px); // half minus twice the margin
-    }
   }
 
   &__clientes {
@@ -54,4 +53,5 @@
 
 .arrow {
   @include center-content;
+  padding-bottom: 8px;
 }
