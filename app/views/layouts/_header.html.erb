@@ -1,5 +1,5 @@
 <header class="header">
-	<div class="logo item">
+	<div class="logo">
 		<%= image_tag("Logotipo PCI - horizontal.svg", size: "210x100", alt: "PCI") %>
 	</div>
 	<div class="item"><%= link_to "SOBRE A PCI", "#" %></div>
@@ -17,4 +17,50 @@
 			<input type="text" placeholder="BUSCAR" style="direction: rtl;" />
 		</div>
 	</div>
+
+  <!-- Menu Hamburguer -->
+  <div class="mobile-nav">
+    <div class="menu-btn" id="menu-btn">
+      <div></div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   
+    <div class="responsive-menu">
+      <ul>
+        <%= link_to "#" do  %>
+          <li>SOBRE A PCI</li>
+        <% end %> 
+        
+        <%= link_to "#" do %>
+          <li>MOVIMENTO EMPRESA JÚNIOR</li>
+        <% end %>
+        
+        <%= link_to "#" do %>
+          <li>CONTATO</li>
+        <% end %>
+        
+        <%= link_to "#" do %>
+          <li>BUSCAR <%= fa_icon "search" %> </li>
+        <% end %>
+
+        <div class="secundary-items">
+
+          <%= link_to "#" do %>
+            <li>SERVIÇOS</li>
+          <% end %>
+          
+          <%= link_to "#" do %>
+            <li>QUEM CONFIA NA GENTE</li>
+          <% end %>
+          
+          <%= link_to "#" do %>
+            <li>BLOG</li>
+          <% end %>
+
+        </div><!-- ./secundary-items -->
+      </ul>
+    </div> <!-- ./responsive-menu -->
+  </div> <!-- ./mobile-nav -->
 </header>
