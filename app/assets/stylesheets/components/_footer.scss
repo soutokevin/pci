@@ -49,3 +49,16 @@
 	  }
 	}
 }
+@media (max-width: 565px) {
+	.footer {
+		.social-medias {
+			padding: 0 0.3em;
+			.circle {
+				margin: 0 1em;
+			}
+		}
+		.adress {
+			padding: 0 0.3em;
+		}
+	}
+}
