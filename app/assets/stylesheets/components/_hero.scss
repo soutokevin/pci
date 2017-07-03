@@ -3,15 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .hero {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  &__user {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 
-  min-height: calc(100vh - 200px);
-  padding: 4px;
+    min-height: calc(100vh - 200px);
+    padding: 4px;
 
-  @include media-sm-down {
-    flex-direction: column;
+    @include media-sm-down {
+      flex-direction: column;
+    }
   }
 
   &__link,
@@ -19,6 +21,10 @@
   &__link:focus {
     color: white;
     text-decoration: none;
+  }
+
+  &__title {
+    margin: 0;
   }
 
   &__clientes,
@@ -49,9 +55,9 @@
     width: 48px;
     margin: 0 auto 8px;
   }
-}
 
-.arrow {
-  @include center-content;
-  padding-bottom: 8px;
+  .arrow {
+    @include center-content;
+    padding-bottom: 8px;
+  }
 }
