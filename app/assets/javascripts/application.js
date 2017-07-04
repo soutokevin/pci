@@ -5,8 +5,8 @@
 //= require_tree .
 
 
-$( document ).ready(function() {
-	$( '.menu-btn' ).click(function(){
+$( document ).on('turbolinks:load', function() {
+	$( '#menu-btn' ).click(function(){
 		$('.responsive-menu').toggleClass('expand')
 		$('.menu-btn span').toggleClass('active')
  	})
