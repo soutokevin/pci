@@ -1,0 +1,26 @@
+.members-photo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 515px;
+
+	background-position-y: -245px;
+	background-blend-mode: multiply;
+	background-color: #821810;
+	background-size: cover;
+	background-image: image-url('membros.png');
+
+	color: $white;
+	text-align: center;
+
+	.title {
+		font-size: 3.7em;
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	.body-text {
+		width: 65%;
+		font-size: 1.7em;
+	}
+}
