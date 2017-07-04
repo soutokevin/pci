@@ -6,7 +6,7 @@
     text-transform: uppercase;
 
     // sizing
-    padding: 52px;
+    padding: 52px 0;
     margin: 32px 0 0 0;
 
     // bg
@@ -26,6 +26,10 @@
 
   &__item {
     text-align: center;
+  }
+
+  .container {
+    padding: 8px;
   }
 
   .separator {
