@@ -24,3 +24,139 @@
 		font-size: 1.7em;
 	}
 }
+
+.services-diagnostic-form {
+	padding: 65px; 
+	
+	hr {
+		width: 60%;
+		height: 2px;
+		margin-bottom: 30px;
+		background-color: $footer;
+	}
+	.services {
+		display: flex;
+		justify-content: space-around;
+		
+		margin-bottom: 55px;
+
+		color: $white;
+		.service {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			width: 28%;
+			height: 540px;
+			background-position: center;
+			background-size: cover;
+			background-blend-mode: multiply;
+			font-size: 2.3em;
+			font-weight: bold;
+			div {
+				width: 100%;
+			}
+		}
+		.management {
+			background-image: image-url('gestao.jpg');
+			background-color: #195f66;
+		}
+		.engineering {
+			background-image: image-url('building.jpg');
+			background-color: #fcbd09; 
+		}
+		.juridical {
+			background-image: image-url('image.jpg');
+			background-color: #12a18c;	
+		}
+	}
+
+	.diagnostic-form {
+		color: $white;
+		.text {
+			margin: 30px auto;
+			width: 50%;
+
+			text-align: center;
+			color: #776969;
+			font-size: 1.4em;
+		}
+		.button-flex {
+			display: flex;
+			justify-content: center; 
+			.button {
+				margin: 0 auto;
+				background-color: $footer;
+				height: 80px;
+				width: 370px;
+				border-radius: 13px;
+				font-weight: bold;
+				font-size: 1.2em;
+				outline: 0;
+				border: none;
+				box-shadow: 5px 5px 0px #c7c7c7;
+				&:hover {
+					background-color: #423C3E;	
+				}	
+			}
+		}
+	}
+}
+
+.partners-section {
+	background-color: $light-gray;
+	padding: 80px;
+	.title {
+		color: $dark-red-pci;
+		font-weight: bold;
+		font-size: 2.5em;
+		margin-left: 20px;
+	}
+	hr {
+		display: inline-block;
+		height: 7px;
+		width: 110px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		background-color: $dark-red-pci;
+
+	}
+	.partners-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.partner {
+			display: flex;
+			width: 48%;
+			margin: 20px 0;
+			.img {
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				background-size: cover;
+			}
+			.description {
+				width: 55%;
+				margin-left: 50px;
+				color: #776969;
+				font-size: 1.2em;
+			}
+		}		
+	}
+}
+.clients {
+	padding: 17px 120px;
+	background-color: $white;
+	justify-content: space-between;
+	.row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.client {
+		width: 100px;
+		height: 100px;
+		margin: 20px 0px;
+		overflow: hidden;
+	}
+}
