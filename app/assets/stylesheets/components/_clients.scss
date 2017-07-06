@@ -47,6 +47,7 @@
 		color: $white;
 		.service {
 			display: flex;
+			justify-content: center;
 			text-align: center;
 			align-items: center;
 			width: 28%;
@@ -54,23 +55,46 @@
 			background-position: center;
 			background-size: cover;
 			background-blend-mode: multiply;
-			font-size: 2.3em;
-			font-weight: bold;
-			div {
-				width: 100%;
+			
+			.name {
+				font-size: 2.3em;
+				font-weight: bold;
+			}
+			&:hover .name {
+				display: none;
+			}
+			&:hover .description {
+				display: block;
+			}
+			.description {
+				width: 80%;
+				display: none;
+				font-size: 1.2em;
+				text-align: left;
+				font-weight: 500;
+				line-height: 25px;
 			}
 		}
 		.management {
 			background-image: image-url('gestao.jpg');
 			background-color: #195f66;
+			&:hover {
+				background-color: darken(#195f66, 15%);
+			}
 		}
 		.engineering {
 			background-image: image-url('building.jpg');
 			background-color: #fcbd09; 
+			&:hover {
+				background-color: darken(#fcbd09, 30%);
+			}
 		}
 		.juridical {
 			background-image: image-url('image.jpg');
-			background-color: #12a18c;	
+			background-color: #12a18c;
+			&:hover {
+				background-color: darken(#12a18c, 25%);
+			}
 		}
 	}
 
@@ -221,14 +245,21 @@
 	.members-photo .body-text {
 		width: 100%;
 	}
+	.services-diagnostic-form {
+		padding: 65px 10px;
+	}
 	.services-diagnostic-form .title {
 		font-size: 2em;
 	}
 	.services-diagnostic-form .diagnostic-form .button-flex .button {
 		font-size: 1em;
 	}
-	.services-diagnostic-form .services .service {
+	.services-diagnostic-form .services .service .name {
 		font-size: 1.3em;
+	}
+	.services-diagnostic-form .services .service .description {
+		text-align: center;
+		font-size: 0.8em;
 	}
 	.partners-section {
 		padding: 80px 10px;
