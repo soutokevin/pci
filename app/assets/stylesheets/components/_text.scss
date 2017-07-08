@@ -13,6 +13,22 @@
     @include blend-image(#801810, 'image.jpg');
   }
 
+  &__title {
+    font-size: 21pt;
+    color: #716364;
+    margin: 32px 0;
+    @include media-sm-down {
+      font-size: 28pt;
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+    @include media-sm-down {
+      font-size: 21pt;
+    }
+  }
+
   &__row {
     display: flex;
     @include media-sm-down {

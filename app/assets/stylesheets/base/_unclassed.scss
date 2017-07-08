@@ -21,23 +21,3 @@ h1 {
   font-size: 48pt;
   margin: 0;
 }
-
-h2 {
-  font-size: 21pt;
-  color: #716364;
-  margin: 32px 0;
-}
-
-p {
-  line-height: 1.5;
-}
-
-@include media-sm-down {
-  h1 {
-    font-size: 28pt;
-  }
-
-  h2 {
-    font-size: 21pt;
-  }
-}
