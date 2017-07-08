@@ -1,7 +1,18 @@
-.depoimentos {
-  color: #617984;
-  background-color: #ededed;
+.section {
   padding: 32px 16px;
+
+  &--message {
+    text-align: center;
+    color: white;
+    font-size: 21px;
+
+    @include blend-image(#02a08d, 'image.jpg');
+  }
+
+  &--quotes {
+    color: #617984;
+    background-color: #ededed;
+  }
 
   h2 {
     color: #435c65;
@@ -24,7 +35,7 @@
       color: #a7d7d3;
       display: block;
       font-size: 4em;
-      height: 0; // p/ não aumentar a altura do paragrafo
+      height: 0; // para não aumentar a altura do paragrafo
     }
 
     &::before {
@@ -42,14 +53,13 @@
     color: white;
     background-color: #a7d7d3;
     border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 
   &__item {
