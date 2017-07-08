@@ -60,6 +60,7 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__item {
@@ -76,5 +77,23 @@
     width: 50px;
     margin: 8px 0;
     background-color: #435c65;
+  }
+
+  &__card {
+    min-width: 208px;
+
+    color: white;
+    display: inline-block;
+    margin: 8px;
+    padding: 16px;
+    @include blend-image(#02a08d, 'image.jpg');
+  }
+
+  @include media-sm-up {
+    &__card {
+      width: calc(25% - 48px);
+      box-sizing: content-box;
+      height: 304px;
+    }
   }
 }
