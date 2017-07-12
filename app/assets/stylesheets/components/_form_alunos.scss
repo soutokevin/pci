@@ -1,0 +1,31 @@
+.form-alunos {
+	@include center-form;
+	@include title-form(#435B65);
+
+	.form {
+		@include form-content(#195F66, #CDDEE4, #3C3C3B, #607984);
+
+		.textarea-small {
+			display: none;
+		}
+		.box-right {
+			width: 40%;
+			label {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.form-alunos {
+		@include responsive-content-form(#435B65);
+		.form .box-right .textarea {
+			display: none;
+		}
+		.form .box-right .textarea-small {
+			display: block;
+		}
+
+	}
+}
