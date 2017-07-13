@@ -4,12 +4,16 @@
 	justify-content: center;
 
 	height: 90px;
+	margin-bottom: 35px;
 	background-color: $dark-red-pci;
 
 	color: white;
 	font-size: 1.3em;
 	.item {
 		padding: 0 3em;
+	}
+	a:hover {
+		font-weight: bold;
 	}
 }
 

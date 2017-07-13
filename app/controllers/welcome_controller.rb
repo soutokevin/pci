@@ -4,4 +4,7 @@ class WelcomeController < ApplicationController
 
   def alunos
   end
+
+  def clients
+  end
 end
