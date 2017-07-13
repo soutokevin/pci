@@ -1,0 +1,33 @@
+.accordion {
+  &__card {
+    min-width: 208px;
+    margin: 8px;
+    padding: 16px;
+
+    color: white;
+    background-color: #02a08d;
+  }
+
+  @include media-lg-up {
+    &__card {
+      @include blend-image(#02a08d, 'image.jpg');
+      width: calc(25% - 48px); // 1/4 - margins
+      height: 304px;
+      overflow: hidden;
+    }
+
+    &__card h3 {
+      @include center-content;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      opacity: 1;
+      transition: height 800ms ease-in-out, opacity 800ms ease-in-out;
+    }
+
+    &__card:hover h3 {
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
