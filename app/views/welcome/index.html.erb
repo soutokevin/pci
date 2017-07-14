@@ -1,15 +1,15 @@
 <section class="hero container">
   <div class="hero__user">
-    <a class="hero__link hero__clientes" href="#">
+    <%= link_to :welcome_clients, class: "hero__link hero__clientes" do %>
       <h1 class="hero__title">Clientes</h1>
       <div class="separator"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </a>
-    <a class="hero__link hero__alunos" href="#">
+    <% end %>
+    <%= link_to :welcome_alunos, class: "hero__link hero__alunos" do %>
       <h1 class="hero__title">Alunos</h1>
       <div class="separator"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </a>
+    <% end %>
   </div>
   <div class="arrow">
     <svg width="78" height="39">
