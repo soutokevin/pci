@@ -1,0 +1,81 @@
+.section {
+  padding: 32px 16px;
+
+  &--message {
+    text-align: center;
+    color: white;
+    font-size: 21px;
+
+    @include blend-image(#02a08d, 'image.jpg');
+  }
+
+  &--quotes {
+    color: #617984;
+    background-color: #ededed;
+  }
+
+  h2 {
+    color: #435c65;
+    margin: 0;
+  }
+
+  &__quote {
+    margin: 0 16px;
+  }
+
+  &__big-quote {
+    display: flex;
+    margin: 32px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    &::before,
+    &::after {
+      color: #a7d7d3;
+      display: block;
+      font-size: 4em;
+      height: 0; // para não aumentar a altura do paragrafo
+    }
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    padding: 16px;
+    color: white;
+    background-color: #a7d7d3;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    margin: 32px 0;
+
+    @include media-md-up {
+      width: 50%;
+    }
+  }
+
+  .separator {
+    height: 6px;
+    width: 50px;
+    margin: 8px 0;
+    background-color: #435c65;
+  }
+}

@@ -10,11 +10,7 @@
     margin: 32px 0 0 0;
 
     // bg
-    background-image: image-url('image.jpg');
-    background-color: #801810;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
+    @include blend-image(#801810, 'image.jpg');
   }
 
   &__title {
