@@ -1,0 +1,76 @@
+<section class="contact">
+  <div class="title">
+    <div class="head">CONTATO</div>
+    <div class="line"></div>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud
+    </p>
+  </div>
+  <div class="container">
+    <div class="address-map">
+      <div class="adress">
+        Setor Comercial Sul Q. 1 BL 1 BL A Union Building SL 901 <br>
+        Brasília, DF, 70297-400 <br>
+        projetosintegrada.com.br <br>
+        (61) 3966-1661 <br>
+        Horário de Funcionamento:<br>
+        De Segunda à Sexta <br>
+        de 14:00 às 18:00
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714.6366720797573!2d-47.88809651948805!3d-15.799946212773586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ade001c4747%3A0x77b7705a44409bf2!2sProjetos+Consultoria+Integrada!5e0!3m2!1spt-BR!2sus!4v1499981450533" width="500" height="350" frameborder="0" id="big" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0848742082494!2d-47.889294285625546!3d-15.799478089048092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ade001c4747%3A0x77b7705a44409bf2!2sProjetos+Consultoria+Integrada!5e0!3m2!1spt-BR!2sbr!4v1500074615399" width="400" height="300" frameborder="0" id="small"  style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0848742082494!2d-47.889294285625546!3d-15.799478089048092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ade001c4747%3A0x77b7705a44409bf2!2sProjetos+Consultoria+Integrada!5e0!3m2!1spt-BR!2sbr!4v1500074615399" width="200" height="300" frameborder="0" id="xsmall"  style="border:0" allowfullscreen></iframe>
+        <div class="border-red border-top-right"></div>
+        <div class="border-red border-down-left"></div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <%= form_for :record, :html => {:class => 'form'} do |f| %>
+
+  			<div class="input-group">
+  				<%= f.label :nome, "NOME", class: "label-inline"  %>
+  				<%= f.text_field :name, class: "text-field" %>
+  			</div>
+  			<div class="input-group">
+  				<%= f.label :email, "EMAIL", class: "label-inline" %>
+  				<%= f.text_field :email, class: "text-field" %>
+  			</div>
+  			<div class="input-group">
+  				<%= f.label :phone, "TELEFONE", class: "label-inline" %>
+  				<%= f.text_field :phone, class: "text-field" %>
+  			</div>
+    	   <div class="input-group">
+           <%= f.label :description, "MENSAGEM", class: "label-inline" %>
+           <%= f.text_area :description, class: "textarea" %>
+    	   </div>
+         <div class="reason">
+          <%= f.label :reason, "ASSUNTO", class: "label-inline", style:"margin-right: 17px;" %>
+          <div class="radio-group">
+            <input type="radio" id="option-one" name="selector" checked="checked">
+            <label for="option-one" class="radio-item">PROJETOS</label>
+            <input type="radio" id="option-two" name="selector">
+            <label for="option-two" class="radio-item">DEIXE SEU DEPOIMENTO</label>
+            <input type="radio" id="option-three" name="selector">
+            <label for="option-three" class="radio-item">OUTROS</label>
+          </div>
+
+         </div>
+    		<div class="submit-box">
+    			<%= button_tag( :class => "submit-button") do %>
+    				<span>ENVIAR</span>
+      			<i class="fa fa-2x  fa-check" aria-hidden="true"></i>
+      		<% end %>
+    		</div>
+    	<% end %>
+    </div>
+  </div>
+  <div class="note">
+    Não encontrou o que precisava aqui na Projetos Consultoria Integrada? <br>
+    <a href="#">Clique aqui</a> para conhecer outras empresas que podem ajudar!
+  </div>
+</section>
