@@ -1,0 +1,210 @@
+.contact {
+  @include center-form;
+  color: #37474F;
+  .title {
+    text-align: center;
+    margin: 0 auto;
+    width: 450px;
+    .head {
+      color: #820000;
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .line {
+      width: 50px;
+      height: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      background-color: #820000;
+    }
+    .description {
+      margin-bottom: 70px;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .address-map {
+      text-align: center;
+      color: #820000;
+      margin-bottom: 10px;
+      .map {
+        position: relative;
+        width: 540px;
+        height: 390px;
+        margin-top: 20px;
+        iframe {
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 20px;
+        }
+        #small, #xsmall {
+          display: none;
+        }
+
+        .border-red {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          background-color: #820000;
+          z-index: -1;
+        }
+        .border-top-right {
+          top: 0;
+          right: 0;
+        }
+        .border-down-left {
+          top: 310px;
+          left: 0;
+        }
+      }
+    }
+    .form-container {
+      width: 50%;
+      .form {
+        display: flex;
+      	flex-wrap: wrap;
+        margin-top: 120px;
+      	.label-inline {
+      		font-size: 1.5em;
+      		float: left;
+      		width: 22%;
+      		text-align: right;
+      		color: #706364;
+      	}
+      	.text-field,
+      	.textarea {
+      		background-color: #E6E0E0;
+      		border-width: 0;
+      		outline: 0;
+      		font-size: 1.5em;
+      		color: $footer;
+          float: right;
+          color: #3C3C3B;
+      	}
+      	.text-field {
+      		width: 75%;
+      		height: 35px;
+      		text-indent: 10px;
+      	}
+      	.textarea {
+      		height: 145px;
+      		width: 75%;
+      		padding: 20px;
+          box-sizing: border-box;
+      	}
+
+    		.input-group {
+          width: 100%;
+    			margin-bottom: 15px;
+    		}
+        .reason {
+          width: 100%;
+          input[type=radio] {
+            position: absolute;
+            display: none;
+          }
+          .radio-group {
+            float: right;
+          }
+          .radio-item {
+            color: white;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 5px 15px;
+            background-color: #9A8081;
+            border-radius: 10px;
+          }
+
+          input[type=radio]:checked + label{
+            color: white;
+            background: #820000;
+          }
+        }
+      	.submit-box {
+      		display: flex;
+      		justify-content: flex-end;
+      		width: 100%;
+      		padding: 30px 0px;
+      		.submit-button {
+      			color: $white;
+      			width: 130px;
+      			height: 45px;
+      			border-radius: 15px;
+      			background-color: $dark-red-pci;
+      			border-width: 0;
+      			font-size: 1.3em;
+      			i { display: none; }
+      			&:hover {
+      				span { display: none; }
+      				i {	display: block; }
+      				background-color: #12A18C;
+      			}
+      		}
+      	}
+      }
+    }
+  }
+  .note {
+    padding: 30px 0;
+    a {
+      color: $dark-red-pci;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact .title {
+    width: 240px;
+  }
+  .contact .container {
+    flex-direction: column-reverse;
+    .form-container {
+      width: 90%;
+      margin: 0 auto;
+      .form {
+        margin-top: 0px;
+        .label-inline {
+          text-align: left;
+        }
+        .text-field, .textarea {
+          width: 100%;
+        }
+      }
+    }
+    .address-map .map {
+      width: 445px;
+      height: 335px;
+      margin: 0 auto;
+      .border-down-left {
+        top: 265px;
+      }
+      #big {
+        display: none;
+      }
+      #small {
+        display: block;
+      }
+    }
+  }
+  .note {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .contact .container .address-map .map #small, .contact .container .address-map .map #big {
+    display: none;
+  }
+  .contact .container .address-map .map #xsmall {
+    display: block;
+  }
+  .contact .container .address-map .map {
+    width: 240px;
+  }
+}

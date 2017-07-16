@@ -10,4 +10,4 @@ $( document ).on('turbolinks:load', function() {
 		$('.responsive-menu').toggleClass('expand')
 		$('.menu-btn span').toggleClass('active')
  	})
-})
+});
