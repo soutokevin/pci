@@ -1,37 +1,24 @@
-// Place all the styles related to the static-pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.hero {
-  &__user {
+.user {
+  &__wrapper {
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 8px;
 
-    min-height: calc(100vh - 200px);
-    padding: 4px;
-
-    @include media-sm-down {
-      flex-direction: column;
+    @include media-md-up {
+      height: 100vh;
+      max-height: 800px;
+      flex-direction: row;
     }
   }
 
-  &__link,
-  &__link:hover,
-  &__link:focus {
+  &__link {
     color: white;
     text-decoration: none;
-  }
-
-  &__title {
-    margin: 0;
-  }
-
-  &__clientes,
-  &__alunos {
     @include center-content;
     flex: auto;
-    margin: 4px;
+    margin: 8px;
     padding: 16px;
 
     background-blend-mode: multiply;
@@ -49,14 +36,20 @@
     background-color: #00a08c;
   }
 
-  .separator {
+  hr {
     background-color: white;
     height: 5px;
     width: 48px;
     margin: 0 auto 8px;
+    border: none;
   }
 
-  .arrow {
+  h1,
+  p {
+    margin: 8px;
+  }
+
+  &__arrow {
     @include center-content;
     padding-bottom: 8px;
   }
