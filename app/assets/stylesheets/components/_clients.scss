@@ -1,282 +1,273 @@
 .members-photo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 515px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 515px;
 
-	background-position-y: -245px;
-	background-blend-mode: multiply;
-	background-color: #821810;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: image-url('membros.png');
+  @include blend-image(#821810, 'membros.png');
 
-	color: $white;
-	text-align: center;
+  color: $white;
+  text-align: center;
 
-	.title {
-		font-size: 3.7em;
-		font-weight: bold;
-		margin-bottom: 30px;
-	}
-	.body-text {
-		width: 65%;
-		font-size: 1.7em;
-	}
+  .title {
+    font-size: 3.7em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .body-text {
+    width: 65%;
+    font-size: 1.7em;
+  }
 }
 
 .services-diagnostic-form {
-	padding: 65px; 
-	
-	.title {
-		display: none;
-	}
-	hr {
-		width: 60%;
-		height: 2px;
-		margin-bottom: 30px;
-		background-color: $footer;
-	}
-	.services {
-		display: flex;
-		justify-content: space-around;
-		
-		margin-bottom: 55px;
+  padding: 65px;
 
-		color: $white;
-		.service {
-			display: flex;
-			justify-content: center;
-			text-align: center;
-			align-items: center;
-			width: 28%;
-			height: 540px;
-			background-position: center;
-			background-size: cover;
-			background-blend-mode: multiply;
-			
-			.name {
-				font-size: 2.3em;
-				font-weight: bold;
-			}
-			&:hover .name {
-				display: none;
-			}
-			&:hover .description {
-				display: block;
-			}
-			.description {
-				width: 80%;
-				display: none;
-				font-size: 1.2em;
-				text-align: left;
-				font-weight: 500;
-				line-height: 25px;
-			}
-		}
-		.management {
-			background-image: image-url('gestao.jpg');
-			background-color: #195f66;
-			&:hover {
-				background-color: darken(#195f66, 15%);
-			}
-		}
-		.engineering {
-			background-image: image-url('building.jpg');
-			background-color: #fcbd09; 
-			&:hover {
-				background-color: darken(#fcbd09, 30%);
-			}
-		}
-		.juridical {
-			background-image: image-url('image.jpg');
-			background-color: #12a18c;
-			&:hover {
-				background-color: darken(#12a18c, 25%);
-			}
-		}
-	}
+  .title {
+    display: none;
+  }
+  hr {
+    width: 60%;
+    height: 2px;
+    margin-bottom: 30px;
+    background-color: $footer;
+  }
+  .services {
+    display: flex;
+    justify-content: space-around;
 
-	.diagnostic-form {
-		color: $white;
-		.text {
-			margin: 30px auto;
-			width: 50%;
+    margin-bottom: 55px;
 
-			text-align: center;
-			color: #776969;
-			font-size: 1.4em;
-		}
-		.button-flex {
-			display: flex;
-			justify-content: center; 
-			.button {
-				margin: 0 auto;
-				background-color: $footer;
-				height: 80px;
-				width: 370px;
-				border-radius: 13px;
-				font-weight: bold;
-				font-size: 1.2em;
-				outline: 0;
-				border: none;
-				box-shadow: 5px 5px 0px #c7c7c7;
-				&:hover {
-					background-color: #423C3E;	
-				}	
-			}
-		}
-	}
+    color: $white;
+    .service {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      width: 28%;
+      height: 540px;
+      @include blend-image(#821810, 'membros.png');
+
+      .name {
+        font-size: 2.3em;
+        font-weight: bold;
+      }
+      &:hover .name {
+        display: none;
+      }
+      &:hover .description {
+        display: block;
+      }
+      .description {
+        width: 80%;
+        display: none;
+        font-size: 1.2em;
+        text-align: left;
+        font-weight: 500;
+        line-height: 25px;
+      }
+    }
+    .management {
+      background-image: image-url('gestao.jpg');
+      background-color: #195f66;
+      &:hover {
+        background-color: darken(#195f66, 15%);
+      }
+    }
+    .engineering {
+      background-image: image-url('building.jpg');
+      background-color: #fcbd09;
+      &:hover {
+        background-color: darken(#fcbd09, 30%);
+      }
+    }
+    .juridical {
+      background-image: image-url('image.jpg');
+      background-color: #12a18c;
+      &:hover {
+        background-color: darken(#12a18c, 25%);
+      }
+    }
+  }
+
+  .diagnostic-form {
+    color: $white;
+    .text {
+      margin: 30px auto;
+      width: 50%;
+
+      text-align: center;
+      color: #776969;
+      font-size: 1.4em;
+    }
+    .button-flex {
+      display: flex;
+      justify-content: center;
+      .button {
+        margin: 0 auto;
+        background-color: $footer;
+        height: 80px;
+        width: 370px;
+        border-radius: 13px;
+        font-weight: bold;
+        font-size: 1.2em;
+        outline: 0;
+        border: none;
+        box-shadow: 5px 5px 0px #c7c7c7;
+        &:hover {
+          background-color: #423c3e;
+        }
+      }
+    }
+  }
 }
 
 .partners-section {
-	background-color: $light-gray;
-	padding: 80px;
-	.title {
-		color: $dark-red-pci;
-		font-weight: bold;
-		font-size: 2.5em;
-		margin-left: 20px;
-	}
-	hr {
-		display: inline-block;
-		height: 7px;
-		width: 110px;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		background-color: $dark-red-pci;
+  background-color: $light-gray;
+  padding: 80px;
+  .title {
+    color: $dark-red-pci;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 20px;
+  }
+  hr {
+    display: inline-block;
+    height: 7px;
+    width: 110px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: $dark-red-pci;
+  }
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-	}
-	.partners-list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		.partner {
-			display: flex;
-			width: 48%;
-			margin: 20px 0;
-			.img {
-				width: 200px;
-				height: 200px;
-			}
-			.description {
-				width: 100%;
-				margin-left: 50px;
-				color: #776969;
-				font-size: 1.2em;
-			}
-		}		
-	}
+    .partner {
+      display: flex;
+      width: 48%;
+      margin: 20px 0;
+      .img {
+        width: 200px;
+        height: 200px;
+      }
+      .description {
+        width: 100%;
+        margin-left: 50px;
+        color: #776969;
+        font-size: 1.2em;
+      }
+    }
+  }
 }
 .clients {
-	padding: 17px 120px;
-	background-color: $white;
-	justify-content: space-between;
-	.row {
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-	.client {
-		width: 100px;
-		height: 100px;
-		margin: 20px 0px;
-		overflow: hidden;
-	}
+  padding: 17px 120px;
+  background-color: $white;
+  justify-content: space-between;
+  .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .client {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0px;
+    overflow: hidden;
+  }
 }
 
-
-@media(max-width: 1024px) {
-	.members-photo {
-		background-position: center;
-		background-size: initial;
-	}
-	.services-diagnostic-form{
-		.title {
-			display: block;
-			color: #195f66;
-			font-weight: bold;
-			font-size: 2.5em;
-			margin-bottom: 20px;
-			.line {
-				height: 7px;
-				width: 15%;
-				background-color: #195f66;
-				margin: 10px 0px; 
-			}
-		}
-		.services {
-			flex-direction: column;
-			.service {
-				height: 170px;
-				width: 100%;
-				margin-bottom: 50px;
-			}
-		}
-	}
+@media (max-width: 1024px) {
+  .members-photo {
+    background-position: center;
+    background-size: initial;
+  }
+  .services-diagnostic-form {
+    .title {
+      display: block;
+      color: #195f66;
+      font-weight: bold;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      .line {
+        height: 7px;
+        width: 15%;
+        background-color: #195f66;
+        margin: 10px 0px;
+      }
+    }
+    .services {
+      flex-direction: column;
+      .service {
+        height: 170px;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 
-@media(min-width:768px) and (max-width:1024px) {
-	.partners-section {
-		.partners-list {
-			.partner {
-				width: 100%;
-			}
-			.partner:nth-child(2n) {
-				.description {
-					order: 1;
-					margin-right: 50px;
-					margin-left: 0px;
-					text-align: right;
-				}
-				.img {
-					order: 2;
-				}
-			}
-		}
-	}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .partners-section {
+    .partners-list {
+      .partner {
+        width: 100%;
+      }
+      .partner:nth-child(2n) {
+        .description {
+          order: 1;
+          margin-right: 50px;
+          margin-left: 0px;
+          text-align: right;
+        }
+        .img {
+          order: 2;
+        }
+      }
+    }
+  }
 }
-@media(max-width:768px) {
-	.members-photo .title {
-		font-size: 2.7em;
-	}
-	.members-photo .body-text {
-		width: 100%;
-	}
-	.services-diagnostic-form {
-		padding: 65px 10px;
-	}
-	.services-diagnostic-form .title {
-		font-size: 2em;
-	}
-	.services-diagnostic-form .diagnostic-form .button-flex .button {
-		font-size: 1em;
-	}
-	.services-diagnostic-form .services .service .name {
-		font-size: 1.3em;
-	}
-	.services-diagnostic-form .services .service .description {
-		text-align: center;
-		font-size: 0.8em;
-	}
-	.partners-section {
-		padding: 80px 10px;
-	}
-	.partners-section .partners-list .partner {
-		flex-wrap: wrap;
-		width: 100%;
-		justify-content: center;
-		.description {
-			margin: 30px 0;
-			text-align: center;
-		}
-	}
-	.services-diagnostic-form .diagnostic-form .text {
-		width: 100%;
-	}
-	.clients {
-		padding: 17px 0px;
-	}
+@media (max-width: 768px) {
+  .members-photo .title {
+    font-size: 2.7em;
+  }
+  .members-photo .body-text {
+    width: 100%;
+  }
+  .services-diagnostic-form {
+    padding: 65px 10px;
+  }
+  .services-diagnostic-form .title {
+    font-size: 2em;
+  }
+  .services-diagnostic-form .diagnostic-form .button-flex .button {
+    font-size: 1em;
+  }
+  .services-diagnostic-form .services .service .name {
+    font-size: 1.3em;
+  }
+  .services-diagnostic-form .services .service .description {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .partners-section {
+    padding: 80px 10px;
+  }
+  .partners-section .partners-list .partner {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    .description {
+      margin: 30px 0;
+      text-align: center;
+    }
+  }
+  .services-diagnostic-form .diagnostic-form .text {
+    width: 100%;
+  }
+  .clients {
+    padding: 17px 0px;
+  }
 }
