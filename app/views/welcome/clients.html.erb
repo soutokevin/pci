@@ -19,28 +19,27 @@
     <div class="line"></div>
   </div>
   <div class="services">
-    <div class="service management">
+    <%= link_to :services_management, class: "service management" do %>
       <div class="name">GESTÃO EMPRESARIAL</div>
       <div class="description">Lorem ipsum dolor sit amet, consectetur
         adipisicing elit. Architecto velitalias soluta ipsam placeat hic cum
         blanditiis delectus explicabo omnis molestiae, itaque harum magnam
         inventore, sapiente quidem? Deleniti, corrupti, libero.
       </div>
-    </div>
-    <div class="service engineering">
-      <div class="name">ENGENHARIA & ARQUITETURA</div>
+    <% end %>
+    <%= link_to :services_engineering, class: "service engineering" do %>
+      <div class="name">ENGENHARIA &amp; ARQUITETURA</div>
       <div class="description">Lorem ipsum dolor sit amet, consectetur
         adipisicing elit. Impedit tenetur esse nostrum odio repudiandae saepe
         quasi modi, sequi fugit obcaecati ducimus nesciunt, quae blanditiis,
         harum aliquid veritatis! Inventore temporibus, assumenda?
       </div>
-    </div>
-    <div class="service juridical">
+    <% end %>
+    <%= link_to :services_legal, class: "service juridical" do %>
       <div class="name">NÚCLEO JURÍDICO</div>
       <div class="description">EM BREVE
       </div>
-    </div>
-
+    <% end %>
   </div>
   <hr>
   <div class="diagnostic-form">
