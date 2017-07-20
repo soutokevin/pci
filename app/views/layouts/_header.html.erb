@@ -6,16 +6,24 @@
 	<div class="item">
 		<%= link_to "#" do  %>
 		MOVIMENTO <br> EMPRESA JÚNIOR
-		<% end %>	
+		<% end %>
 	</div>
 	<div class="item"> <%= link_to "CONTATO", "#" %></div>
 	<div class="buscador item">
-		<div class="inner-addon right-addon">
-			<span type="button" class="search">
-				<%= fa_icon "search"  %>
-			</span>
-			<input type="text" placeholder="BUSCAR" style="direction: rtl;" />
-		</div>
+
+		<script>
+  (function() {
+    var cx = '008742281087618632291:orjgjta9hr0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+
 	</div>
 
   <!-- Menu Hamburguer -->
@@ -26,21 +34,21 @@
       <span></span>
       <span></span>
     </div>
-   
+
     <div class="responsive-menu">
       <ul>
         <%= link_to "#" do  %>
           <li>SOBRE A PCI</li>
-        <% end %> 
-        
+        <% end %>
+
         <%= link_to "#" do %>
           <li>MOVIMENTO EMPRESA JÚNIOR</li>
         <% end %>
-        
+
         <%= link_to "#" do %>
           <li>CONTATO</li>
         <% end %>
-        
+
         <%= link_to "#" do %>
           <li>BUSCAR <%= fa_icon "search" %> </li>
         <% end %>
@@ -50,11 +58,11 @@
           <%= link_to "#" do %>
             <li>SERVIÇOS</li>
           <% end %>
-          
+
           <%= link_to "#" do %>
             <li>QUEM CONFIA NA GENTE</li>
           <% end %>
-          
+
           <%= link_to "#" do %>
             <li>BLOG</li>
           <% end %>
