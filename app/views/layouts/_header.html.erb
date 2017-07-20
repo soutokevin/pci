@@ -11,18 +11,7 @@
 	<div class="item"> <%= link_to "CONTATO", "#" %></div>
 	<div class="buscador item">
 
-		<script>
-  (function() {
-    var cx = '008742281087618632291:orjgjta9hr0';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only></gcse:searchbox-only>
+	<gcse:searchbox-only></gcse:searchbox-only>
 
 	</div>
 
@@ -49,9 +38,11 @@
           <li>CONTATO</li>
         <% end %>
 
-        <%= link_to "#" do %>
-          <li>BUSCAR <%= fa_icon "search" %> </li>
-        <% end %>
+
+        <li class="buscador-mobile" style="padding: 0.5em 1em;">
+					<gcse:searchbox-only></gcse:searchbox-only>
+				</li>
+
 
         <div class="secundary-items">
 
@@ -72,3 +63,23 @@
     </div> <!-- ./responsive-menu -->
   </div> <!-- ./mobile-nav -->
 </header>
+<script>
+	(function() {
+		var cx = '008742281087618632291:orjgjta9hr0';
+		var gcse = document.createElement('script');
+		gcse.type = 'text/javascript';
+		gcse.async = true;
+		gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(gcse, s);
+	})();
+
+	window.onload = function(){
+		document.getElementById('gsc-i-id1').placeholder = 'Buscar';
+		document.getElementById('gsc-i-id2').placeholder = 'Buscar';
+		var buttonDesktop = document.getElementsByClassName('gsc-search-button')[1];
+		var buttonMobile = document.getElementsByClassName('gsc-search-button')[3];
+		buttonDesktop.src = "/assets/search.svg";
+		buttonMobile.src = "/assets/search.svg";
+	}
+</script>
