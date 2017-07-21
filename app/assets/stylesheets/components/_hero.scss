@@ -1,0 +1,23 @@
+.hero {
+  @include blend-image;
+  @include center-content;
+  text-align: center;
+  height: 515px;
+  color: $white;
+
+  &--clients {
+    background-color: #821810;
+    background-image: image-url('membros.png');
+  }
+
+  &__title {
+    font-size: 3.7em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    width: 65%;
+    font-size: 1.7em;
+  }
+}

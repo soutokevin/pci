@@ -1,26 +1,3 @@
-.members-photo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 515px;
-
-  @include blend-image(#821810, 'membros.png');
-
-  color: $white;
-  text-align: center;
-
-  .title {
-    font-size: 3.7em;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  .body-text {
-    width: 65%;
-    font-size: 1.7em;
-  }
-}
-
 .services-diagnostic-form {
   padding: 65px;
 

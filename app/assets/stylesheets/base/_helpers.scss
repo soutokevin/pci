@@ -7,14 +7,15 @@
   flex-wrap: wrap;
 }
 
-@mixin blend-image($color, $image) {
+@mixin blend-image($color: "", $image: "") {
   background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
-  @if $color {
+
+  @if $color != "" {
     background-color: $color;
   }
-  @if $image {
+  @if $image != "" {
     background-image: image-url($image);
   }
 }
