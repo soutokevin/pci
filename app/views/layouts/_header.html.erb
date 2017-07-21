@@ -1,12 +1,12 @@
 <header class="header">
-	<div class="logo">
+	<%= link_to :welcome_index, class: "logo" do %>
 		<%= image_tag("Logotipo PCI - horizontal.svg", size: "210x100", alt: "PCI") %>
-	</div>
+	<% end %>
 	<div class="item"><%= link_to "SOBRE A PCI", "#" %></div>
 	<div class="item">
 		<%= link_to "#" do  %>
-		MOVIMENTO <br> EMPRESA JÚNIOR
-		<% end %>	
+			MOVIMENTO <br> EMPRESA JÚNIOR
+		<% end %>
 	</div>
 	<div class="item"> <%= link_to "CONTATO", "#" %></div>
 	<div class="buscador item">
@@ -26,21 +26,21 @@
       <span></span>
       <span></span>
     </div>
-   
+
     <div class="responsive-menu">
       <ul>
         <%= link_to "#" do  %>
           <li>SOBRE A PCI</li>
-        <% end %> 
-        
+        <% end %>
+
         <%= link_to "#" do %>
           <li>MOVIMENTO EMPRESA JÚNIOR</li>
         <% end %>
-        
+
         <%= link_to "#" do %>
           <li>CONTATO</li>
         <% end %>
-        
+
         <%= link_to "#" do %>
           <li>BUSCAR <%= fa_icon "search" %> </li>
         <% end %>
@@ -50,11 +50,11 @@
           <%= link_to "#" do %>
             <li>SERVIÇOS</li>
           <% end %>
-          
+
           <%= link_to "#" do %>
             <li>QUEM CONFIA NA GENTE</li>
           <% end %>
-          
+
           <%= link_to "#" do %>
             <li>BLOG</li>
           <% end %>

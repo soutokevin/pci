@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
-  get 'welcome/alunos'
+  get 'welcome/students'
   get 'welcome/clients'
   get 'services/management'
   get 'services/engineering'

@@ -1,0 +1,56 @@
+.user {
+  &__wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    @include media-md-up {
+      height: 100vh;
+      max-height: 800px;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    @include center-content;
+    flex: auto;
+    margin: 8px;
+    padding: 16px;
+
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__clientes {
+    background-image: image-url('image.jpg');
+    background-color: #801810;
+  }
+
+  &__alunos {
+    background-image: image-url('image.jpg');
+    background-color: #00a08c;
+  }
+
+  hr {
+    background-color: white;
+    height: 5px;
+    width: 48px;
+    margin: 0 auto 8px;
+    border: none;
+  }
+
+  h1,
+  p {
+    margin: 8px;
+  }
+
+  &__arrow {
+    @include center-content;
+    padding-bottom: 8px;
+  }
+}

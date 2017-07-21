@@ -1,17 +1,19 @@
-<section class="hero container">
-  <div class="hero__user">
-    <%= link_to :welcome_clients, class: "hero__link hero__clientes" do %>
-      <h1 class="hero__title">Clientes</h1>
-      <div class="separator"></div>
+<section class="user container">
+  <div class="user__wrapper">
+    <%= link_to :welcome_clients,
+      class: "user__link user__clientes" do %>
+      <h1 class="user__title">Clientes</h1>
+      <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <% end %>
-    <%= link_to :welcome_alunos, class: "hero__link hero__alunos" do %>
-      <h1 class="hero__title">Alunos</h1>
-      <div class="separator"></div>
+    <%= link_to :welcome_students,
+      class: "user__link user__alunos" do %>
+      <h1 class="user__title">Alunos</h1>
+      <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <% end %>
   </div>
-  <div class="arrow">
+  <div class="user__arrow">
     <svg width="78" height="39">
       <polygon fill="#b3b3b3" points="0,0 78,0 39,39" />
     </svg>
