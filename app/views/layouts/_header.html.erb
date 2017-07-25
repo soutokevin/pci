@@ -1,11 +1,11 @@
 <header class="header">
-	<div class="logo">
+	<%= link_to :welcome_index, class: "logo" do %>
 		<%= image_tag("Logotipo PCI - horizontal.svg", size: "210x100", alt: "PCI") %>
-	</div>
+	<% end %>
 	<div class="item"><%= link_to "SOBRE A PCI", "#" %></div>
 	<div class="item">
 		<%= link_to "#" do  %>
-		MOVIMENTO <br> EMPRESA JÚNIOR
+			MOVIMENTO <br> EMPRESA JÚNIOR
 		<% end %>
 	</div>
 	<div class="item"> <%= link_to "CONTATO", "#" %></div>
@@ -38,11 +38,9 @@
           <li>CONTATO</li>
         <% end %>
 
-
         <li class="buscador-mobile" style="padding: 0.5em 1em;">
 					<gcse:searchbox-only></gcse:searchbox-only>
 				</li>
-
 
         <div class="secundary-items">
 
@@ -63,6 +61,7 @@
     </div> <!-- ./responsive-menu -->
   </div> <!-- ./mobile-nav -->
 </header>
+
 <script>
 	(function() {
 		var cx = '008742281087618632291:orjgjta9hr0';

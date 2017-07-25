@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
   end
 
-  def alunos
+  def students
   end
 
   def clients
