@@ -1,0 +1,67 @@
+.quotes {
+  padding: 80px;
+
+  &--clients {
+    color: #776969;
+    background-color: $light-gray;
+  }
+
+  &--students {
+    color: #617984;
+    background-color: #ededed;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 20px;
+
+    &--clients {
+      color: $dark-red-pci;
+    }
+
+    &--students {
+      color: #435c65;
+    }
+  }
+
+  .sep {
+    display: inline-block;
+    height: 7px;
+    border: none;
+    width: 110px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    &--clients {
+      background-color: $dark-red-pci;
+    }
+
+    &--students {
+      background-color: #435c65;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__quote {
+    display: flex;
+    width: 48%;
+    margin: 20px 0;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__description {
+    width: 100%;
+    margin-left: 50px;
+    font-size: 1.2em;
+  }
+}

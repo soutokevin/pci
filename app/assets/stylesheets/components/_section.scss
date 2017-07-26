@@ -9,18 +9,9 @@
     @include blend-image(#02a08d, 'image.jpg');
   }
 
-  &--quotes {
-    color: #617984;
-    background-color: #ededed;
-  }
-
   h2 {
     color: #435c65;
     margin: 0;
-  }
-
-  &__quote {
-    margin: 0 16px;
   }
 
   &__big-quote {
