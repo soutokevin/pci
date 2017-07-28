@@ -1,6 +1,6 @@
 class PagePartsController < ApplicationController
   before_action :set_page_part, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_page, only: [:new, :create, :show]
   # GET /page_parts
   # GET /page_parts.json
   def index
@@ -24,12 +24,11 @@ class PagePartsController < ApplicationController
   # POST /page_parts
   # POST /page_parts.json
   def create
-    @page_part = PagePart.new(page_part_params)
-
+    @page_part = @page.page_parts.new(page_part_params)
     respond_to do |format|
       if @page_part.save
-        format.html { redirect_to @page_part, notice: 'Page part was successfully created.' }
-        format.json { render :show, status: :created, location: @page_part }
+        format.html { redirect_to @page, notice: 'Page part was successfully created.' }
+        format.json { render :show, status: :created, location: @page }
       else
         format.html { render :new }
         format.json { render json: @page_part.errors, status: :unprocessable_entity }
@@ -65,6 +64,10 @@ class PagePartsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_page_part
       @page_part = PagePart.find(params[:id])
+    end
+
+    def set_page
+      @page = Page.find(params[:page_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
