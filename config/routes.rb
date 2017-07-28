@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :contents
-  resources :page_parts
-  resources :pages
+  resources :pages do
+  	resources :page_parts do
+  		resources :contents
+  	end
+  end
+
   root 'welcome#index'
   get 'welcome/index'
   get 'welcome/students'
