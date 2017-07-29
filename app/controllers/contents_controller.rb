@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_page_part, only: [:new, :show, :create]
   # GET /contents
   # GET /contents.json
   def index
@@ -24,12 +24,12 @@ class ContentsController < ApplicationController
   # POST /contents
   # POST /contents.json
   def create
-    @content = Content.new(content_params)
+    @content = @page_part.contents.new(content_params)
 
     respond_to do |format|
       if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
-        format.json { render :show, status: :created, location: @content }
+        format.html { redirect_to page_path(@page_part.page_id), notice: 'Content was successfully created.' }
+        format.json { render :show, status: :created, location: page_path(@page_part.page_id) }
       else
         format.html { render :new }
         format.json { render json: @content.errors, status: :unprocessable_entity }
@@ -65,6 +65,10 @@ class ContentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_content
       @content = Content.find(params[:id])
+    end
+
+    def set_page_part
+      @page_part = PagePart.find(params[:page_part_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
