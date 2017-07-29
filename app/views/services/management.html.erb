@@ -8,4 +8,45 @@
   </div>
 </section>
 
+<section class="container section carousel">
+  <div class="hero__title">PROJETOS ANTERIORES</div>
+  <div class="carousel__wrapper">
+    <div class="carousel__prev">Anterior</div>
+    <div class="carousel__next">Próximo</div>
+    <ul class="carousel__controls">
+      <li class="carousel__control carousel__control--active">1</li>
+      <li class="carousel__control">2</li>
+      <li class="carousel__control">3</li>
+      <li class="carousel__control">4</li>
+      <li class="carousel__control">5</li>
+    </ul>
+
+    <div
+      class="carousel__slide carousel__slide--active"
+      style="background-image: url(<%= image_url 'building.jpg' %>)"
+    >
+      <div class="hero__title">Slide 1</div>
+      <div class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus dolore cumque possimus quae blanditiis temporibus necessitatibus
+        sint nulla alias enim sunt, sapiente quas voluptates mollitia quisquam animi,
+        quo ex eveniet!
+      </div>
+    </div>
+
+    <div
+      class="carousel__slide"
+      style="background-image: url(<%= image_url 'gestao.jpg' %>)"
+    >
+      <div class="hero__title">Slide 2</div>
+      <div class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus dolore cumque possimus quae blanditiis temporibus necessitatibus
+        sint nulla alias enim sunt, sapiente quas voluptates mollitia quisquam animi,
+        quo ex eveniet!
+      </div>
+    </div>
+  </div>
+</section>
+
 <%= render 'form', component: "gestao" %>
