@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<div>
   <strong>Name:</strong>
-  <%= @page_part.name %>
-</p>
+  <%= @page_part.name %> | 
+  <%= link_to 'Editar nome da seção', edit_page_page_part_path(@page_part) %>
+</div>
 
-<p>
-  <strong>Allow creatable:</strong>
-  <%= @page_part.allow_creatable %>
-</p>
+<% @page_part.contents.each do |content|%>
+	<%= content.title %> <br>
+	<%= content.body %>
+	| <%= link_to 'Editar Conteúdo', edit_page_page_part_content_path(content.page_part_id, content) %>
+	<br><br>
+<% end %>
 
-<%= link_to 'Editar nome da seção', edit_page_page_part_path(@page_part) %> |
+<% if @page_part.allow_creatable %>
+	<%= link_to 'Novo Conteúdo', new_page_page_part_content_path(@page_part.page_id, @page_part) %> |
+<% end %>
 <%= link_to 'Voltar', page_path(@page) %>
