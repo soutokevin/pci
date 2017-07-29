@@ -1,4 +1,4 @@
-<%= form_for(page_part, url: page_page_parts_path) do |f| %>
+<%= form_for(page_part, :url => {:controller => "page_parts", :action => action}) do |f| %>
   <% if page_part.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(page_part.errors.count, "error") %> prohibited this page_part from being saved:</h2>

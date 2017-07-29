@@ -1,4 +1,4 @@
-<%= form_for(content, url: page_page_part_contents_path) do |f| %>
+<%= form_for(content, url: {controller: 'contents', action: action}) do |f| %>
   <% if content.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, cols: 70,  rows:15 %>
   </div>
 
   <div class="actions">
