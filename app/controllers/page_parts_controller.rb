@@ -1,6 +1,6 @@
 class PagePartsController < ApplicationController
   before_action :set_page_part, only: [:show, :edit, :update, :destroy]
-  before_action :set_page, only: [:new, :create, :show]
+  before_action :set_page, only: [:new, :create, :show, :update]
   # GET /page_parts
   # GET /page_parts.json
   def index
@@ -41,8 +41,8 @@ class PagePartsController < ApplicationController
   def update
     respond_to do |format|
       if @page_part.update(page_part_params)
-        format.html { redirect_to @page_part, notice: 'Page part was successfully updated.' }
-        format.json { render :show, status: :ok, location: @page_part }
+        format.html { redirect_to @page, notice: 'Page part was successfully updated.' }
+        format.json { render :show, status: :ok, location: @page }
       else
         format.html { render :edit }
         format.json { render json: @page_part.errors, status: :unprocessable_entity }

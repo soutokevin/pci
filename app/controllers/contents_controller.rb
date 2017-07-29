@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
-  before_action :set_page_part, only: [:new, :show, :create]
+  before_action :set_page_part, only: [:new, :show, :create, :update]
   # GET /contents
   # GET /contents.json
   def index
@@ -42,8 +42,8 @@ class ContentsController < ApplicationController
   def update
     respond_to do |format|
       if @content.update(content_params)
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
-        format.json { render :show, status: :ok, location: @content }
+        format.html { redirect_to page_path(@page_part.page_id), notice: 'Content was successfully updated.' }
+        format.json { render :show, status: :ok, location: page_path(@page_part.page_id) }
       else
         format.html { render :edit }
         format.json { render json: @content.errors, status: :unprocessable_entity }
