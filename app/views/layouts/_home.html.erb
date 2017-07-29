@@ -1,0 +1,101 @@
+<section class="user container">
+  <div class="user__wrapper">
+    <!-- Page_part 01 -->
+    <% page.page_parts[0].contents.each do |content| %>
+      <%= link_to :welcome_clients,
+        class: "user__link user__clientes" do %>
+        <h1 class="user__title"> Clientes </h1>
+        <hr>
+        <p> <%= content.body %> </p>
+      <% end %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
+    <% end %>
+    <!-- Page_part 02 -->
+    <% page.page_parts[1].contents.each do |content| %>
+      <%= link_to :welcome_students,
+        class: "user__link user__alunos" do %>
+        <h1 class="user__title"> Alunos </h1>
+        <hr>
+        <p> <%= content.body %> </p>
+      <% end %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
+    <% end %>
+  </div>
+  <div class="user__arrow">
+    <svg width="78" height="39">
+      <polygon fill="#b3b3b3" points="0,0 78,0 39,39" />
+    </svg>
+  </div>
+  
+</section>
+
+<section class="text">
+  <h1 class="text__heading">Projetos Consultoria Integrada</h1> <!-- Page_part 03 -->
+  <div class="container">
+    <h2 class="text__title">Sobre a Projetos</h2>
+    <!-- Page_part 04 create true -->
+     <% page.page_parts[3].contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[3]) %>
+    <div class="text__row">
+      <div class="text__item">
+        <!-- Page_part 05 create true -->
+        <h1> Missão </h1>
+        <div class="separator"></div>
+        <% page.page_parts[4].contents.each do |content| %>
+          <p class="text__paragraph"> <%= content.body %> </p>
+        <% end %>
+        <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[4]) %>
+      </div>
+      <div class="text__item">
+        <!-- Page_part 06 create true -->
+        <h1> Visão </h1>
+        <div class="separator"></div>
+        <% page.page_parts[5].contents.each do |content| %>
+          <p class="text__paragraph"> <%= content.body %> </p>
+        <% end %>
+        <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[5]) %>
+      </div>
+    </div>
+    <div class="text__item">
+      <h1>Valores</h1>
+      <div class="separator"></div>
+      <div class="text__row">
+        <div class="text__item">
+          <!-- Page_part 07 create true -->
+          <% page.page_parts[6].contents.each do |content| %>
+            <p class="text__paragraph"> <%= content.body %> </p>
+          <% end %>
+          <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[6]) %>
+        </div>
+        <div class="text__item">
+          <!-- Page_part 08 create true -->
+          <% page.page_parts[7].contents.each do |content| %>
+            <p class="text__paragraph"> <%= content.body %> </p>
+          <% end %>
+          <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[7]) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text">
+  <h1 class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1><!-- Page_part 09 -->
+  <div class="container">
+    <h2 class="text__title">O que é o Movimento Empresa Júnior?</h2>
+    <!-- Page_part 10 create true -->
+    <% page.page_parts[9].contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[9]) %>
+    <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
+    <!-- Page_part 11 create true -->
+    <% page.page_parts[10].contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[10]) %>
+  </div>
+</section>
+<%= render 'layouts/contact' %>
