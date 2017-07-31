@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
-  before_action :set_page_part, only: [:new, :show, :create, :update]
+  before_action :set_page_part, only: [:new, :show, :create, :update, :destroy]
   # GET /contents
   # GET /contents.json
   def index
@@ -56,7 +56,7 @@ class ContentsController < ApplicationController
   def destroy
     @content.destroy
     respond_to do |format|
-      format.html { redirect_to contents_url, notice: 'Content was successfully destroyed.' }
+      format.html { redirect_to @page_part, notice: 'Content was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
