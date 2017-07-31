@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Attachinary::Engine => "/attachinary"
   resources :pages do
   	resources :page_parts do
   		resources :contents
