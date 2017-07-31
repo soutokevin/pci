@@ -6,15 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-page = Page.create(name: 'Home Page')
-page_part = page.page_parts.create([{name:'Seção 01', allow_creatable: false},
-																		{name:'Seção 02', allow_creatable: false},
-																		{name:'Seção 03', allow_creatable: false},
-																		{name:'Seção 04', allow_creatable: true},
-																		{name:'Seção 05', allow_creatable: true},
-																		{name:'Seção 06', allow_creatable: true},
-																		{name:'Seção 07', allow_creatable: true},
-																		{name:'Seção 08', allow_creatable: true},
-																		{name:'Seção 09', allow_creatable: false},
-																		{name:'Seção 10', allow_creatable: true},
-																		{name:'Seção 11', allow_creatable: true},]) 
+page = Page.create([{name: 'Home Page'}, {name: 'Client'}])
+home = Page.find_by(name: 'Home Page')
+client = Page.find_by(name: 'Client')
+page_part = home.page_parts.create([{name:'Box Clientes', allow_creatable: false},
+																		{name:'Box Alunos', allow_creatable: false},
+																		{name:'Banner 01', allow_creatable: false},
+																		{name:'Sobre a Projetos', allow_creatable: true},
+																		{name:'Missão', allow_creatable: true},
+																		{name:'Visão', allow_creatable: true},
+																		{name:'Valores esquerda', allow_creatable: true},
+																		{name:'Valores direita', allow_creatable: true},
+																		{name:'Banner 02', allow_creatable: false},
+																		{name:'O que é o Movimento Empresa Júnior?', allow_creatable: true},
+																		{name:'Como funciona uma Empresa Júnior?', allow_creatable: true}]) 
+
+page_part = client.page_parts.create([{name: 'Imagem Topo', allow_creatable: false},
+																			{name: 'Serviços', allow_creatable: false},
+																			{name: 'Texto de diagnóstico', allow_creatable: false},
+																			{name: 'Quem confia na gente', allow_creatable: true},
+																			{name: 'Parceiros', allow_creatable: true},])
