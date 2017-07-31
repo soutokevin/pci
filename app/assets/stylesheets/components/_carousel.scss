@@ -2,15 +2,22 @@
   color: white;
   text-align: center;
 
-  &__prev {
+  &__prev,
+  &__next {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
+    opacity: .5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__prev {
     left: 16px;
   }
 
   &__next {
-    position: absolute;
-    top: 50%;
     right: 16px;
   }
 
