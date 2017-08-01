@@ -14,8 +14,5 @@ $( document ).on('turbolinks:load', function() {
 		$('.responsive-menu').toggleClass('expand')
 		$('.menu-btn span').toggleClass('active')
  	})
-});
-
-$( document ).ready(function(){
-	$('.attachinary-input').attachinary()
+ 	$('.attachinary-input').attachinary()
 });
