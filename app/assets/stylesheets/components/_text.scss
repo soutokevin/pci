@@ -10,7 +10,7 @@
     margin: 32px 0 0 0;
 
     // bg
-    @include blend-image(#801810, 'image.jpg');
+    @include blend-image(#801810, '');
   }
 
   &__title {

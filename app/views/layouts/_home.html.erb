@@ -1,24 +1,28 @@
 <section class="user container">
+  <div style="display: flex; justify-content: space-between;">
+    <%= link_to 'Editar banner clientes', page_page_part_path(page, page.page_parts[0]) %>
+    <%= link_to 'Editar banner alunos', page_page_part_path(page, page.page_parts[1]) %>
+  </div>
   <div class="user__wrapper">
     <!-- Page_part 01 -->
     <% page.page_parts[0].contents.each do |content| %>
-      <%= link_to :welcome_clients,
-        class: "user__link user__clientes" do %>
+    <div class="user__link user__clientes" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
+      <%= link_to page_path(2) do %>
         <h1 class="user__title"> Clientes </h1>
         <hr>
         <p> <%= content.body %> </p>
       <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
+    </div> 
     <% end %>
     <!-- Page_part 02 -->
     <% page.page_parts[1].contents.each do |content| %>
-      <%= link_to :welcome_students,
-        class: "user__link user__alunos" do %>
+    <div class="user__link user__alunos" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
+      <%= link_to :welcome_students do %>
         <h1 class="user__title"> Alunos </h1>
         <hr>
         <p> <%= content.body %> </p>
       <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
+    </div>
     <% end %>
   </div>
   <div class="user__arrow">
@@ -30,7 +34,11 @@
 </section>
 
 <section class="text">
-  <h1 class="text__heading">Projetos Consultoria Integrada</h1> <!-- Page_part 03 -->
+   <!-- Page_part 03 -->
+  <% page.page_parts[2].contents.each do |content| %>
+    <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); " class="text__heading">Projetos Consultoria Integrada</h1>
+    <%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[2]) %>
+  <% end %>
   <div class="container">
     <h2 class="text__title">Sobre a Projetos</h2>
     <!-- Page_part 04 create true -->
@@ -82,7 +90,11 @@
 </section>
 
 <section class="text">
-  <h1 class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1><!-- Page_part 09 -->
+  <!-- Page_part 09 -->
+  <% page.page_parts[8].contents.each do |content|%>
+    <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );  " class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1>
+    <%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[2]) %>
+  <% end %>
   <div class="container">
     <h2 class="text__title">O que é o Movimento Empresa Júnior?</h2>
     <!-- Page_part 10 create true -->

@@ -46,21 +46,18 @@
       }
     }
     .management {
-      background-image: image-url('gestao.jpg');
       background-color: #195f66;
       &:hover {
         background-color: darken(#195f66, 15%);
       }
     }
     .engineering {
-      background-image: image-url('building.jpg');
       background-color: #fcbd09;
       &:hover {
         background-color: darken(#fcbd09, 30%);
       }
     }
     .juridical {
-      background-image: image-url('image.jpg');
       background-color: #12a18c;
       &:hover {
         background-color: darken(#12a18c, 25%);
