@@ -1,4 +1,5 @@
 class PagePartsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_page_part, only: [:show, :edit, :update, :destroy]
   before_action :set_page, only: [:new, :create, :show, :update]
   # GET /page_parts
