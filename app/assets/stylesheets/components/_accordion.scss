@@ -10,7 +10,7 @@
 
   @include media-lg-up {
     &__card {
-      @include blend-image(#02a08d, 'image.jpg');
+      @include blend-image(#02a08d, '');
       width: calc(25% - 48px); // 1/4 - margins
       height: 304px;
       overflow: hidden;

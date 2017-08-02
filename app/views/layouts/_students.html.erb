@@ -1,0 +1,63 @@
+<div class="sub-header">
+  <div class="item"> <%= link_to "ÁREAS DE ATUAÇÃO", "#" %> </div>
+  <div class="item"> <%= link_to "QUEM PASSOU POR AQUI", "#" %> </div>
+  <div class="item"> <%= link_to "PROCESSO SELETIVO", "#" %> </div>
+  <div class="item"> <%= link_to "BLOG", "#" %> </div>
+</div>
+
+
+<section class="section accordion container">
+  <h2>Áreas de Atuação</h2>
+  <div class="separator"></div>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Áreas de atuação')) %>
+  <div class="atuacao section__wrapper">
+  <!-- Page Part 01 -->  
+  <% page_part(page, 'Áreas de atuação').contents.each do |content| %>
+    <div class="accordion__card" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+      <h3><%= content.title %></h3>
+      <p> <%= content.body %> </p>
+    </div>
+  <% end %>
+
+  </div>
+</section>
+
+<section class="section section--quotes">
+  <div class="container">
+    <h2>Quem Passou por Aqui</h2>
+    <div class="separator"></div>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
+    <div class="section__wrapper">
+    <!-- Page Part 02 -->
+    <% page_part(page, 'Quem passou por aqui').contents.each do |content| %>
+      <div class="section__item">
+        <%= cl_image_tag( content.avatar.path, size: "128x128", alt: "PCI") %>
+        <p class="section__quote"> <%= content.body %> </p>
+      </div>
+    <% end %>
+    </div>
+
+    <div class="section__wrapper">
+      <!-- Page Part 03 -->
+      <% page_part(page, 'Citação').contents.each do |content| %>
+        <p class="section__big-quote"> <%= content.body %> </p>
+      <% end %>
+      <div style="text-align: center; width: 100%; margin: 20px 0">
+        <%= link_to 'Editar Citações', page_page_part_path(page, page_part( page, 'Citação')) %>
+      </div>
+      <a class="section__btn" href="#">Deixe seu depoimento</a>
+    </div>
+  </div>
+</section>
+
+<!-- Page Part 04 -->
+<% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
+<section class="section section--message" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+  <div class="container">
+    <h1><%= content.title %></h1>
+    <p><%= content.body%></p>
+  </div>
+</section>
+<% end %>
+<%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner processo seletivo')) %>
+<%= render 'layouts/candidates_form', component: 'form-alunos' %>
