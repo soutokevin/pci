@@ -10,25 +10,28 @@
       </ul>
     </div>
   <% end %>
+  
+  <% if page_part.allow_title %>
+    <div class="field">
+      <%= f.label :title, "Título" %>
+      <%= f.text_field :title %>
+    </div>
+  <% end %>
+  
+  <% if page_part.allow_text %>
+    <div class="field">
+      <%= f.label :body, "Texto" %>
+      <%= f.text_area :body, cols: 70,  rows:15 %>
+    </div>
+  <% end %>
+  
+  <% if page_part.allow_photo %>
+    <div class="field">
+      <%= f.attachinary_file_field :avatar %>
+    </div>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :order %>
-    <%= f.number_field :order %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body, cols: 70,  rows:15 %>
-  </div>
-  <div class="field">
-    <%= f.attachinary_file_field :avatar %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Criar Conteúdo" %>
   </div>
 <% end %>

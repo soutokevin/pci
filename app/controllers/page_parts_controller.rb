@@ -72,6 +72,7 @@ class PagePartsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_part_params
-      params.require(:page_part).permit(:name, :allow_creatable)
+      params.require(:page_part).permit(:name, :allow_creatable, :allow_photo, 
+                                        :allow_title, :allow_text)
     end
 end
