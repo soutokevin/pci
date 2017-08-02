@@ -5,7 +5,9 @@
 </div>
 
 <!-- Page part 01 -->
-<%= link_to 'Editar Banner', page_page_part_path(page, page_part(page, 'Membros')) %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner', page_page_part_path(page, page_part(page, 'Membros')) %>
+<% end %>
 <% page_part(page, 'Membros').contents.each do |content| %>
   <section class="hero hero--clients" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
     <div class="hero__title"> <%= content.title %></div>
@@ -20,7 +22,9 @@
     <div>NOSSOS SERVIÇOS</div>
     <div class="line"></div>
   </div>
-  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Serviços')) %>
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Serviços')) %>
+  <% end %>
   <div class="services">
     <!-- Page part 02 -->
     <% i = 0 %>
@@ -43,9 +47,11 @@
         <%= content.body %> <br>
       </div>
     <% end %>
-    <div style="color: black; text-align: center; margin: 20px 0;">
-      <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) %>
-    </div>
+    <% if user_signed_in? %>
+      <div style="color: black; text-align: center; margin: 20px 0;">
+        <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) %>
+      </div>
+    <% end %>
     <div class="button-flex">
       <button class="button">QUERO PREENCHER O DIAGNÓSTICO</button>
     </div>
@@ -57,9 +63,11 @@
     QUEM CONFIA NA GENTE
   </div>
   <hr>
-  <div>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Quem confia na gente')) %>
-  </div>
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Quem confia na gente')) %>
+    </div>
+  <% end %>
   <div class="partners-list">
     <!-- Page part 04  allow_creatable -->
     <% page_part(page, 'Quem confia na gente').contents.each do |content| %>
@@ -76,7 +84,9 @@
 </section>
 
 <section class="clients">
-  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Parceiros')) %>
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Parceiros')) %>
+  <% end %>
   <div class="row">
     <!-- Page part 05 allow_creatable -->
     <% page_part(page, 'Parceiros').contents.each do |content| %>

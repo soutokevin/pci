@@ -9,7 +9,9 @@
 <section class="section accordion container">
   <h2>Áreas de Atuação</h2>
   <div class="separator"></div>
-  <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Áreas de atuação')) %>
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Áreas de atuação')) %>
+  <% end %>
   <div class="atuacao section__wrapper">
   <!-- Page Part 01 -->  
   <% page_part(page, 'Áreas de atuação').contents.each do |content| %>
@@ -26,7 +28,9 @@
   <div class="container">
     <h2>Quem Passou por Aqui</h2>
     <div class="separator"></div>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
+    <% end %>
     <div class="section__wrapper">
     <!-- Page Part 02 -->
     <% page_part(page, 'Quem passou por aqui').contents.each do |content| %>
@@ -42,9 +46,11 @@
       <% page_part(page, 'Citação').contents.each do |content| %>
         <p class="section__big-quote"> <%= content.body %> </p>
       <% end %>
-      <div style="text-align: center; width: 100%; margin: 20px 0">
-        <%= link_to 'Editar Citações', page_page_part_path(page, page_part( page, 'Citação')) %>
-      </div>
+      <% if user_signed_in? %>
+        <div style="text-align: center; width: 100%; margin: 20px 0">
+          <%= link_to 'Editar Citações', page_page_part_path(page, page_part( page, 'Citação')) %>
+        </div>
+      <% end %>
       <a class="section__btn" href="#">Deixe seu depoimento</a>
     </div>
   </div>
@@ -59,5 +65,7 @@
   </div>
 </section>
 <% end %>
-<%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner processo seletivo')) %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner processo seletivo')) %>
+<% end %>
 <%= render 'layouts/candidates_form', component: 'form-alunos' %>
