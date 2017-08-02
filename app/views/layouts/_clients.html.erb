@@ -5,8 +5,8 @@
 </div>
 
 <!-- Page part 01 -->
-<%= link_to 'Editar Banner', page_page_part_path(page, page_part(page, 'membros')) %>
-<% page_part(page, 'membros').contents.each do |content| %>
+<%= link_to 'Editar Banner', page_page_part_path(page, page_part(page, 'Membros')) %>
+<% page_part(page, 'Membros').contents.each do |content| %>
   <section class="hero hero--clients" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
     <div class="hero__title"> <%= content.title %></div>
     <div class="hero__text">
@@ -20,11 +20,11 @@
     <div>NOSSOS SERVIÇOS</div>
     <div class="line"></div>
   </div>
-  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'servicos')) %>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Serviços')) %>
   <div class="services">
     <!-- Page part 02 -->
     <% i = 0 %>
-    <% page_part(page, 'servicos').contents.each do |content| %>
+    <% page_part(page, 'Serviços').contents.each do |content| %>
       <div class="service <%= services i %>" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
         <div class="name"> <%= content.title %> </div>
         <div class="description">
@@ -38,12 +38,14 @@
   <hr>
   <div class="diagnostic-form">
     <!-- Page part 03 -->
-    <% page_part(page, 'texto de diagnóstico').contents.each do |content| %>
+    <% page_part(page, 'Texto de diagnóstico').contents.each do |content| %>
       <div class="text">
         <%= content.body %> <br>
-        <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
       </div>
     <% end %>
+    <div style="color: black; text-align: center; margin: 20px 0;">
+      <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) %>
+    </div>
     <div class="button-flex">
       <button class="button">QUERO PREENCHER O DIAGNÓSTICO</button>
     </div>
@@ -56,11 +58,11 @@
   </div>
   <hr>
   <div>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'quem confia na gente')) %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Quem confia na gente')) %>
   </div>
   <div class="partners-list">
     <!-- Page part 04  allow_creatable -->
-    <% page_part(page, 'quem confia na gente').contents.each do |content| %>
+    <% page_part(page, 'Quem confia na gente').contents.each do |content| %>
       <div class="partner">
         <% if content.avatar? %>
           <%= cl_image_tag content.avatar.path, class: 'img' %>
@@ -74,10 +76,10 @@
 </section>
 
 <section class="clients">
-  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'parceiros')) %>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Parceiros')) %>
   <div class="row">
     <!-- Page part 05 allow_creatable -->
-    <% page_part(page, 'parceiros').contents.each do |content| %>
+    <% page_part(page, 'Parceiros').contents.each do |content| %>
       <% if content.avatar? %>
         <%= cl_image_tag content.avatar.path, class: "client" %>
       <% end %>

@@ -45,7 +45,7 @@
      <% page_part( page, 'Sobre a Projetos').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Sobre a Projetos')) %>
+    <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Sobre a Projetos')) %>
     <div class="text__row">
       <div class="text__item">
         <!-- Page_part 05 create true -->
@@ -54,7 +54,7 @@
         <% page_part( page, 'Missão').contents.each do |content| %>
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
-        <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Missão')) %>
+        <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Missão')) %>
       </div>
       <div class="text__item">
         <!-- Page_part 06 create true -->
@@ -63,7 +63,7 @@
         <% page_part( page, 'Visão').contents.each do |content| %>
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
-        <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Visão')) %>
+        <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Visão')) %>
       </div>
     </div>
     <div class="text__item">
@@ -75,14 +75,14 @@
           <% page_part( page, 'Valores esquerda').contents.each do |content| %>
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
-          <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Valores esquerda')) %>
+          <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Valores esquerda')) %>
         </div>
         <div class="text__item">
           <!-- Page_part 08 create true -->
           <% page_part( page, 'Valores direita').contents.each do |content| %>
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
-          <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Valores direita')) %>
+          <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Valores direita')) %>
         </div>
       </div>
     </div>
@@ -101,13 +101,13 @@
     <% page_part(page, 'O que é o Movimento Empresa Júnior?').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) %>
+    <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) %>
     <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
     <!-- Page_part 11 create true -->
     <% page_part(page, 'Como funciona uma Empresa Júnior?').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) %>
+    <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) %>
   </div>
 </section>
 <%= render 'layouts/contact' %>
