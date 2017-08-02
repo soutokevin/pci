@@ -1,13 +1,13 @@
 <section class="user container">
   <div style="display: flex; justify-content: space-between;">
-    <%= link_to 'Editar banner clientes', page_page_part_path(page, page.page_parts[0]) %>
-    <%= link_to 'Editar banner alunos', page_page_part_path(page, page.page_parts[1]) %>
+    <%= link_to 'Editar banner clientes', page_page_part_path(page, page_part( page, 'Box Clientes')) %>
+    <%= link_to 'Editar banner alunos', page_page_part_path(page, page_part( page, 'Box Alunos')) %>
   </div>
   <div class="user__wrapper">
     <!-- Page_part 01 -->
-    <% page.page_parts[0].contents.each do |content| %>
+    <% page_part( page, 'Box Clientes').contents.each do |content| %>
     <div class="user__link user__clientes" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
-      <%= link_to page_path(2) do %>
+      <%= link_to page_path(redirect_page('Client')) do %>
         <h1 class="user__title"> Clientes </h1>
         <hr>
         <p> <%= content.body %> </p>
@@ -15,9 +15,9 @@
     </div> 
     <% end %>
     <!-- Page_part 02 -->
-    <% page.page_parts[1].contents.each do |content| %>
+    <% page_part( page, 'Box Alunos').contents.each do |content| %>
     <div class="user__link user__alunos" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
-      <%= link_to :welcome_students do %>
+      <%= link_to page_path(redirect_page('Student')) do %>
         <h1 class="user__title"> Alunos </h1>
         <hr>
         <p> <%= content.body %> </p>
@@ -35,35 +35,35 @@
 
 <section class="text">
    <!-- Page_part 03 -->
-  <% page.page_parts[2].contents.each do |content| %>
+   <% page_part( page, 'Banner PCI').contents.each do |content| %>
     <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); " class="text__heading">Projetos Consultoria Integrada</h1>
-    <%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[2]) %>
+    <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner PCI')) %>
   <% end %>
   <div class="container">
     <h2 class="text__title">Sobre a Projetos</h2>
     <!-- Page_part 04 create true -->
-     <% page.page_parts[3].contents.each do |content| %>
+     <% page_part( page, 'Sobre a Projetos').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[3]) %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Sobre a Projetos')) %>
     <div class="text__row">
       <div class="text__item">
         <!-- Page_part 05 create true -->
         <h1> Missão </h1>
         <div class="separator"></div>
-        <% page.page_parts[4].contents.each do |content| %>
+        <% page_part( page, 'Missão').contents.each do |content| %>
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
-        <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[4]) %>
+        <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Missão')) %>
       </div>
       <div class="text__item">
         <!-- Page_part 06 create true -->
         <h1> Visão </h1>
         <div class="separator"></div>
-        <% page.page_parts[5].contents.each do |content| %>
+        <% page_part( page, 'Visão').contents.each do |content| %>
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
-        <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[5]) %>
+        <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Visão')) %>
       </div>
     </div>
     <div class="text__item">
@@ -72,17 +72,17 @@
       <div class="text__row">
         <div class="text__item">
           <!-- Page_part 07 create true -->
-          <% page.page_parts[6].contents.each do |content| %>
+          <% page_part( page, 'Valores esquerda').contents.each do |content| %>
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
-          <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[6]) %>
+          <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Valores esquerda')) %>
         </div>
         <div class="text__item">
           <!-- Page_part 08 create true -->
-          <% page.page_parts[7].contents.each do |content| %>
+          <% page_part( page, 'Valores direita').contents.each do |content| %>
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
-          <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[7]) %>
+          <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Valores direita')) %>
         </div>
       </div>
     </div>
@@ -91,23 +91,23 @@
 
 <section class="text">
   <!-- Page_part 09 -->
-  <% page.page_parts[8].contents.each do |content|%>
+  <% page_part( page, 'Banner MEJ').contents.each do |content|%>
     <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );  " class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1>
-    <%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[2]) %>
+    <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner MEJ')) %>
   <% end %>
   <div class="container">
     <h2 class="text__title">O que é o Movimento Empresa Júnior?</h2>
     <!-- Page_part 10 create true -->
-    <% page.page_parts[9].contents.each do |content| %>
+    <% page_part(page, 'O que é o Movimento Empresa Júnior?').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[9]) %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) %>
     <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
     <!-- Page_part 11 create true -->
-    <% page.page_parts[10].contents.each do |content| %>
+    <% page_part(page, 'Como funciona uma Empresa Júnior?').contents.each do |content| %>
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
-    <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[10]) %>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) %>
   </div>
 </section>
 <%= render 'layouts/contact' %>
