@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users, path: 'auth'
+  devise_scope :user do
+    get 'login', to: 'devise/sessions#new'
+  end
+
   mount Attachinary::Engine => "/attachinary"
-  resources :pages do
+
+  resources :pages, only: [:show] do
   	resources :page_parts do
   		resources :contents
   	end
   end
 
-  root 'welcome#index'
+  root 'pages#show', :id => '1'
   get 'welcome/index'
   get 'welcome/students'
   get 'welcome/clients'

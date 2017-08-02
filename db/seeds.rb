@@ -1,5 +1,6 @@
 # Page parts só podem ser criadas no seed
 # Page parts não podem ser deletadas no CMS
+user = User.create email: 'admin@cjr.org.br', password: 'admincjr123'
 
 page = Page.create name: 'Home Page'
 			 Page.create name: 'Client'

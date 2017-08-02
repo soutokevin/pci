@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'cloudinary'
 gem 'attachinary'
 gem "jquery-fileupload-rails"
+# Use devise to authenticate
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
