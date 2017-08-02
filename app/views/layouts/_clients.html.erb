@@ -5,7 +5,7 @@
 </div>
 
 <!-- Page part 01 -->
-<%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[0]) %>
+<%= link_to 'Editar Banner', page_page_part_path(page, page_part(page, 'membros')) %>
 <% page_part(page, 'membros').contents.each do |content| %>
   <section class="hero hero--clients" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
     <div class="hero__title"> <%= content.title %></div>
@@ -20,7 +20,7 @@
     <div>NOSSOS SERVIÇOS</div>
     <div class="line"></div>
   </div>
-  <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[1]) %>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'servicos')) %>
   <div class="services">
     <!-- Page part 02 -->
     <% i = 0 %>
@@ -52,10 +52,12 @@
 
 <section class="partners-section">
   <div class="title">
-    QUEM CONFIA NA GENTE 
-    <%= link_to ' | Editar Seção', page_page_part_path(page, page.page_parts[3]) %>
+    QUEM CONFIA NA GENTE
   </div>
   <hr>
+  <div>
+    <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'quem confia na gente')) %>
+  </div>
   <div class="partners-list">
     <!-- Page part 04  allow_creatable -->
     <% page_part(page, 'quem confia na gente').contents.each do |content| %>
@@ -72,7 +74,7 @@
 </section>
 
 <section class="clients">
-  <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[4]) %>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'parceiros')) %>
   <div class="row">
     <!-- Page part 05 allow_creatable -->
     <% page_part(page, 'parceiros').contents.each do |content| %>
