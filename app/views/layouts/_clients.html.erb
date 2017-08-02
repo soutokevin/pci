@@ -1,0 +1,84 @@
+<div class="sub-header">
+  <div class="item"> <%= link_to "SERVIÇOS", "#" %> </div>
+  <div class="item"> <%= link_to "QUEM CONFIA NA GENTE", "#" %> </div>
+  <div class="item"> <%= link_to "BLOG", "#" %> </div>
+</div>
+
+<!-- Page part 01 -->
+<%= link_to 'Editar Banner', page_page_part_path(page, page.page_parts[0]) %>
+<% page_part(page, 'membros').contents.each do |content| %>
+  <section class="hero hero--clients" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+    <div class="hero__title"> <%= content.title %></div>
+    <div class="hero__text">
+      <%= content.body %>
+    </div>
+  </section>
+<% end %>
+
+<section class="services-diagnostic-form">
+  <div class="title">
+    <div>NOSSOS SERVIÇOS</div>
+    <div class="line"></div>
+  </div>
+  <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[1]) %>
+  <div class="services">
+    <!-- Page part 02 -->
+    <% i = 0 %>
+    <% page_part(page, 'servicos').contents.each do |content| %>
+      <div class="service <%= services i %>" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+        <div class="name"> <%= content.title %> </div>
+        <div class="description">
+          <%= content.body %>
+        </div>
+      </div>
+    <% i = i + 1%>
+    <% end %>
+
+  </div>
+  <hr>
+  <div class="diagnostic-form">
+    <!-- Page part 03 -->
+    <% page_part(page, 'texto de diagnóstico').contents.each do |content| %>
+      <div class="text">
+        <%= content.body %> <br>
+        <%= link_to 'Editar Seção', page_page_part_path(page, content) %>
+      </div>
+    <% end %>
+    <div class="button-flex">
+      <button class="button">QUERO PREENCHER O DIAGNÓSTICO</button>
+    </div>
+  </div>
+</section>
+
+<section class="partners-section">
+  <div class="title">
+    QUEM CONFIA NA GENTE 
+    <%= link_to ' | Editar Seção', page_page_part_path(page, page.page_parts[3]) %>
+  </div>
+  <hr>
+  <div class="partners-list">
+    <!-- Page part 04  allow_creatable -->
+    <% page_part(page, 'quem confia na gente').contents.each do |content| %>
+      <div class="partner">
+        <% if content.avatar? %>
+          <%= cl_image_tag content.avatar.path, class: 'img' %>
+        <% end %>
+        <div class="description">
+          <%= content.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="clients">
+  <%= link_to 'Editar Seção', page_page_part_path(page, page.page_parts[4]) %>
+  <div class="row">
+    <!-- Page part 05 allow_creatable -->
+    <% page_part(page, 'parceiros').contents.each do |content| %>
+      <% if content.avatar? %>
+        <%= cl_image_tag content.avatar.path, class: "client" %>
+      <% end %>
+    <% end %>
+  </div>
+</section>
