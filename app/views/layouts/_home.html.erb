@@ -8,23 +8,23 @@
   <div class="user__wrapper">
     <!-- Page_part 01 -->
     <% page_part( page, 'Box Clientes').contents.each do |content| %>
-      <div class="user__link user__clientes" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
-        <%= link_to page_path(redirect_page('Client')) do %>
+        <%= link_to page_path(redirect_page('Client')), 
+        {style:'background-image: url( http://res.cloudinary.com/pcicloud/image/upload/'+ content.avatar.path + ');', 
+        class: 'user__link user__clientes'} do %>
           <h1 class="user__title"> Clientes </h1>
           <hr>
           <p> <%= content.body %> </p>
         <% end %>
-      </div> 
     <% end %>
     <!-- Page_part 02 -->
     <% page_part( page, 'Box Alunos').contents.each do |content| %>
-      <div class="user__link user__alunos" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); "> 
-        <%= link_to page_path(redirect_page('Student')) do %>
+        <%= link_to page_path(redirect_page('Student')), 
+        {style: 'background-image: url( http://res.cloudinary.com/pcicloud/image/upload/' + content.avatar.path + ');',
+        class: 'user__link user__alunos'} do %>
           <h1 class="user__title"> Alunos </h1>
           <hr>
           <p> <%= content.body %> </p>
         <% end %>
-      </div>
     <% end %>
   </div>
   <div class="user__arrow">
