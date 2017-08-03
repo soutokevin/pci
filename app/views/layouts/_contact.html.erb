@@ -2,12 +2,14 @@
   <div class="title">
     <div class="head">CONTATO</div>
     <div class="line"></div>
-    <p class="description">
-      Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud
-    </p>
+    <% page_part(page, 'Contato').contents.each do |content| %>
+      <p class="description">
+        <%= content.body %>
+      </p>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part(page, 'Contato')) %>
+    <% end %>
   </div>
   <div class="container">
     <div class="address-map">

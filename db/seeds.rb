@@ -31,6 +31,9 @@ home.page_parts.create name:'O que é o Movimento Empresa Júnior?', allow_creat
 home.page_parts.create name:'Como funciona uma Empresa Júnior?', allow_creatable: true,
 											 allow_photo: false, allow_title: false, allow_text: true
 
+home.page_parts.create name:'Contato', allow_creatable: true,
+											 allow_photo: false, allow_title: false, allow_text: true
+
 # Partes da Página de Clientes
 client = Page.find_by(name: 'Client')
 client.page_parts.create name: 'Membros', allow_creatable: false,
