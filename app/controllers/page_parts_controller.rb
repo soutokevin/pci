@@ -2,11 +2,6 @@ class PagePartsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_page_part, only: [:show, :edit, :update, :destroy]
   before_action :set_page, only: [:new, :create, :show, :update]
-  # GET /page_parts
-  # GET /page_parts.json
-  def index
-    @page_parts = PagePart.all
-  end
 
   # GET /page_parts/1
   # GET /page_parts/1.json
