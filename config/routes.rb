@@ -13,8 +13,5 @@ Rails.application.routes.draw do
   end
 
   root 'pages#show', :id => '1'
-  get 'welcome/index'
-  get 'welcome/students'
-  get 'welcome/clients'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
