@@ -5,13 +5,9 @@
     text-align: center;
     color: white;
     font-size: 21px;
+    padding: 128px;
 
     @include blend-image(#02a08d, 'image.jpg');
-  }
-
-  &--quotes {
-    color: #617984;
-    background-color: #ededed;
   }
 
   h2 {
@@ -19,15 +15,11 @@
     margin: 0;
   }
 
-  &__quote {
-    margin: 0 16px;
-  }
-
   &__big-quote {
     display: flex;
     margin: 32px 0;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
 
     &::before,

@@ -20,28 +20,27 @@
     <div class="line"></div>
   </div>
   <div class="services">
-    <div class="service management">
+    <%= link_to :services_management, class: "service management" do %>
       <div class="name">GESTÃO EMPRESARIAL</div>
       <div class="description">Lorem ipsum dolor sit amet, consectetur
         adipisicing elit. Architecto velitalias soluta ipsam placeat hic cum
         blanditiis delectus explicabo omnis molestiae, itaque harum magnam
         inventore, sapiente quidem? Deleniti, corrupti, libero.
       </div>
-    </div>
-    <div class="service engineering">
-      <div class="name">ENGENHARIA & ARQUITETURA</div>
+    <% end %>
+    <%= link_to :services_engineering, class: "service engineering" do %>
+      <div class="name">ENGENHARIA &amp; ARQUITETURA</div>
       <div class="description">Lorem ipsum dolor sit amet, consectetur
         adipisicing elit. Impedit tenetur esse nostrum odio repudiandae saepe
         quasi modi, sequi fugit obcaecati ducimus nesciunt, quae blanditiis,
         harum aliquid veritatis! Inventore temporibus, assumenda?
       </div>
-    </div>
-    <div class="service juridical">
+    <% end %>
+    <%= link_to :services_legal, class: "service juridical" do %>
       <div class="name">NÚCLEO JURÍDICO</div>
       <div class="description">EM BREVE
       </div>
-    </div>
-
+    <% end %>
   </div>
   <hr>
   <div class="diagnostic-form">
@@ -56,47 +55,46 @@
   </div>
 </section>
 
-<section class="partners-section">
-  <div class="title">QUEM CONFIA NA GENTE</div>
-  <hr>
-  <div class="partners-list">
+<section class="quotes quotes--clients">
+  <div class="quotes__title quotes__title--clients">QUEM CONFIA NA GENTE</div>
+  <hr class="sep sep--clients">
 
-    <div class="partner">
-      <%= image_tag "parceiros.jpg", class: 'img' %>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing
+  <div class="quotes__wrapper">
+    <div class="quotes__quote">
+      <%= image_tag "parceiros.jpg", class: 'quotes__img' %>
+      <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
         elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
         earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
         Officia nisi eos amet nam?
       </div>
     </div>
 
-    <div class="partner">
-      <%= image_tag "parceiros.jpg", class: 'img' %>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing
+    <div class="quotes__quote">
+      <%= image_tag "parceiros.jpg", class: 'quotes__img' %>
+      <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
         elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
         earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
         Officia nisi eos amet nam?
       </div>
     </div>
 
-    <div class="partner">
-      <%= image_tag "parceiros.jpg", class: 'img' %>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing
+    <div class="quotes__quote">
+      <%= image_tag "parceiros.jpg", class: 'quotes__img' %>
+      <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
         elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
         earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
         Officia nisi eos amet nam?
       </div>
     </div>
 
-    <div class="partner">
-      <%= image_tag "parceiros.jpg", class: 'img' %>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing
+    <div class="quotes__quote">
+      <%= image_tag "parceiros.jpg", class: 'quotes__img' %>
+      <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
         elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
         earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
         Officia nisi eos amet nam?
       </div>
     </div>
-
   </div>
 </section>
 
