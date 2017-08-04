@@ -24,7 +24,7 @@
       <div
         class="carousel__slide <%= index == 0 ? 'carousel__slide--active' : '' %>"
         style="background-image: url(<%= slide[:image] %>)"
-        data-id="<% slide[:id] %>"
+        data-id="<%= slide[:id] %>"
       >
         <div class="hero__title">
           <%= slide[:title] %>
