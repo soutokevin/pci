@@ -65,7 +65,11 @@
 		display: none;
 	}
 }
-
+@media (min-width: 1680px) {
+	.header .buscador .gsc-search-button, .header .buscador-mobile .gsc-search-button {
+		right: 42px !important;
+	}
+}
 @media (max-width: 992px) {
 	.header {
 		justify-content: space-between;
