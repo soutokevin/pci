@@ -1,18 +1,20 @@
-<p id="notice"><%= notice %></p>
-<div>
-  <strong>Name:</strong>
-  <%= @page_part.name %> | 
-  <%= link_to 'Editar nome da seção', edit_page_page_part_path(@page_part) %>
-</div>
-
 <% @page_part.contents.each do |content|%>
-	<%= content.title %> <br>
-	<%= content.body %>
-	| <%= link_to 'Editar Conteúdo', edit_page_page_part_content_path(content.page_part_id, content) %>
-	<br><br>
+	<h2>Título: <%= content.title %> </h2>	 
+	<p> Texto: <%= content.body %></p>
+	<% if content.avatar? %>
+		<div> Foto: <%= cl_image_tag content.avatar.path %> </div>
+	<% end %>
+	<div>
+		<%= link_to 'Editar Conteúdo', edit_page_page_part_content_path(@page_part.page_id, @page_part, content) %> |
+		<% if @page_part.allow_creatable %>
+			<%= link_to 'Deletar conteúdo', page_page_part_content_path(@page_part.page_id, @page_part, content), method: :delete, data: { confirm: 'Você tem certeza?' } %>
+		<% end %>
+	</div>
 <% end %>
 
-<% if @page_part.allow_creatable %>
+<div style="margin-top: 50px;">
+<% #if @page_part.allow_creatable %>
 	<%= link_to 'Novo Conteúdo', new_page_page_part_content_path(@page_part.page_id, @page_part) %> |
-<% end %>
+ <% #end %>
 <%= link_to 'Voltar', page_path(@page) %>
+</div>
