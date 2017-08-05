@@ -1,19 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<div>
-	<strong>Nome da Página:</strong>
-  <%= @page.name %>
-</div>
-<br><br>
-<div>
-  <% @page.page_parts.each do |part| %>
-		<%= part.name %> 
-		<%= link_to 'Editar Conteúdo', page_page_part_path(part.page_id, part) %>
-		<br>
-  <% end %>
-</div>
-<br><br>
-
-<%= link_to 'Nova Parte da Página', new_page_page_part_path(@page) %> |
-<%= link_to 'Editar nome da página', edit_page_path(@page) %> |
-<%= link_to 'Voltar', pages_path %>
+<% if user_signed_in? %>
+	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% end %>
+<% if @page.name == 'Home Page' %>
+	<%= render 'layouts/home', page: @page %>
+<% end %>
+<% if @page.name == 'Client' %>
+	<%= render 'layouts/clients', page: @page %>
+<% end %>
+<% if @page.name == 'Student' %>
+	<%= render 'layouts/students', page: @page %>
+<% end %>
