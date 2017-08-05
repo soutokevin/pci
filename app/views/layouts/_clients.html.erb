@@ -17,7 +17,7 @@
   </section>
 <% end %>
 
-<section class="services-diagnostic-form">
+<section class="services-diagnostic-form container">
   <div class="title">
     <div>NOSSOS SERVIÇOS</div>
     <div class="line"></div>
@@ -59,6 +59,7 @@
 </section>
 
 <section class="partners-section">
+  <div class="container">
   <div class="title">
     QUEM CONFIA NA GENTE
   </div>
@@ -81,9 +82,10 @@
       </div>
     <% end %>
   </div>
+  </div>
 </section>
 
-<section class="clients">
+<section class="clients container">
   <% if user_signed_in? %>
     <%= link_to 'Editar Seção', page_page_part_path(page, page_part(page, 'Parceiros')) %>
   <% end %>
