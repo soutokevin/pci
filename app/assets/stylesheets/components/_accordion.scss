@@ -16,6 +16,8 @@
 
   &__title {
     margin: 0;
+    width: 100%;
+    text-align: center;
   }
 
   &__description {
@@ -26,6 +28,19 @@
   @include media-md-down {
     &__card--active &__description {
       display: block;
+    }
+
+    &__title::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      float: right;
+      background-image: image_url('accordion.svg');
+    }
+
+    &__card--active &__title::after {
+      transform: rotate(-90deg);
     }
   }
 
