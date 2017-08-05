@@ -1,4 +1,9 @@
 .accordion {
+  h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+  }
+
   &__card {
     @include blend-image(#02a08d, 'image.jpg');
     @include center-content;
