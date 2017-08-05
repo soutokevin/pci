@@ -1,33 +1,49 @@
 .accordion {
   &__card {
+    @include blend-image(#02a08d, 'image.jpg');
+    @include center-content;
     min-width: 208px;
-    margin: 8px;
+    width: 100%;
+    margin: 8px 0;
     padding: 16px;
-
     color: white;
-    background-color: #02a08d;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  @include media-md-down {
+    &__card--active &__description {
+      display: block;
+    }
   }
 
   @include media-lg-up {
     &__card {
-      @include blend-image(#02a08d, 'image.jpg');
+      margin: 8px;
       width: calc(25% - 48px); // 1/4 - margins
-      height: 304px;
-      overflow: hidden;
+      height: 344px;
+      font-size: 1.2em;
+
+      &:hover {
+        background-color: darken(#02a08d, 15%);
+      }
     }
 
-    &__card h3 {
-      @include center-content;
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-      opacity: 1;
-      transition: height 800ms ease-in-out, opacity 800ms ease-in-out;
-    }
+    &__card:hover {
+      p {
+        display: block;
+      }
 
-    &__card:hover h3 {
-      height: 0;
-      opacity: 0;
+      h3 {
+        display: none;
+      }
     }
   }
 }
