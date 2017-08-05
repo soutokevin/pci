@@ -38,7 +38,7 @@
 <section class="text">
   <!-- Page_part 03 -->
   <% page_part( page, 'Banner PCI').contents.each do |content| %>
-    <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); " class="text__heading">Projetos Consultoria Integrada</h1>
+    <h1 id="sobre a pci" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); " class="text__heading">Projetos Consultoria Integrada</h1>
   <% end %>
   <% if user_signed_in? %>
     <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner PCI')) %>
@@ -106,7 +106,7 @@
 <section class="text">
   <!-- Page_part 09 -->
   <% page_part( page, 'Banner MEJ').contents.each do |content|%>
-    <h1 style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );  " class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1>
+    <h1 id="mej" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );  " class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1>
   <% end %>
   <% if user_signed_in? %>
     <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner MEJ')) %>
