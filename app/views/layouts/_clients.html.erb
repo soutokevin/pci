@@ -1,8 +1,6 @@
-<div class="sub-header">
-  <div class="item"> <%= link_to "SERVIÇOS", "#" %> </div>
-  <div class="item"> <%= link_to "QUEM CONFIA NA GENTE", "#" %> </div>
-  <div class="item"> <%= link_to "BLOG", "#" %> </div>
-</div>
+<%= render 'layouts/sub_header', 
+            items: clients = { '#servicos' => "SERVIÇOS", 
+                               '#partners' => "QUEM CONFIA NA GENTE"} %>
 
 <!-- Page part 01 -->
 <% if user_signed_in? %>
@@ -17,7 +15,7 @@
   </section>
 <% end %>
 
-<section class="services-diagnostic-form container">
+<section class="services-diagnostic-form container" id="servicos">
   <div class="title">
     <div>NOSSOS SERVIÇOS</div>
     <div class="line"></div>
@@ -58,7 +56,7 @@
   </div>
 </section>
 
-<section class="partners-section">
+<section class="partners-section" id="partners">
   <div class="container">
   <div class="title">
     QUEM CONFIA NA GENTE

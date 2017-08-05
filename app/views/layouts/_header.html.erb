@@ -43,17 +43,20 @@
 				</li>
 
         <div class="secundary-items">
-
-          <%= link_to "#" do %>
-            <li>SERVIÇOS</li>
+            
+          <% if page_clients? @page %>
+          	<%= render 'layouts/hamburguer_sub_items', 
+          							items: clients = { 
+          								'#servicos' => "SERVIÇOS", 
+                          '#partners' => "QUEM CONFIA NA GENTE" } %>
           <% end %>
 
-          <%= link_to "#" do %>
-            <li>QUEM CONFIA NA GENTE</li>
-          <% end %>
-
-          <%= link_to "#" do %>
-            <li>BLOG</li>
+          <% if page_student? @page %>
+          	<%= render 'layouts/hamburguer_sub_items', 
+          							items: students = {
+          								'#areas de atuacao' => "ÁREAS DE ATUAÇÃO", 
+                          '#quem passou por aqui' => "QUEM PASSOU POR AQUI",
+                          '#processo seletivo' => "PROCESSO SELETIVO" } %>
           <% end %>
 
         </div><!-- ./secundary-items -->

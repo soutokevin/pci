@@ -1,7 +1,7 @@
 module ApplicationHelper
 	def services(index)
-		@services_name = ['management', 'engineering', 'juridical']
-		@services_name[index]
+		services_name = ['management', 'engineering', 'juridical']
+		services_name[index]
 	end
 
 	def page_part(page, name)
@@ -13,7 +13,15 @@ module ApplicationHelper
 	end
 
 	def redirect_page(name)
-		pages = { "Home Page" => 1, "Client" => 2, "Student" => 3 }
+		pages = { 'Home Page' => 1, 'Client' => 2, 'Student' => 3 }
 		pages[name]
+	end
+
+	def page_clients?(page)
+		page.name == 'Client'
+	end
+
+	def page_student?(page)
+		page.name == 'Student'
 	end
 end

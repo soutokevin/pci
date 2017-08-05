@@ -1,12 +1,10 @@
-<div class="sub-header">
-  <div class="item"> <%= link_to "ÁREAS DE ATUAÇÃO", "#" %> </div>
-  <div class="item"> <%= link_to "QUEM PASSOU POR AQUI", "#" %> </div>
-  <div class="item"> <%= link_to "PROCESSO SELETIVO", "#" %> </div>
-  <div class="item"> <%= link_to "BLOG", "#" %> </div>
-</div>
+<%= render 'layouts/sub_header', 
+            items: clients = { '#areas de atuacao' => "ÁREAS DE ATUAÇÃO", 
+                               '#quem passou por aqui' => "QUEM PASSOU POR AQUI",
+                               '#processo seletivo' => "PROCESSO SELETIVO"} %>
 
 
-<section class="section accordion container">
+<section class="section accordion container" id="areas de atuacao">
   <h2>Áreas de Atuação</h2>
   <div class="separator"></div>
   <% if user_signed_in? %>
@@ -24,7 +22,7 @@
   </div>
 </section>
 
-<section class="section section--quotes">
+<section class="section section--quotes" id="quem passou por aqui">
   <div class="container">
     <h2>Quem Passou por Aqui</h2>
     <div class="separator"></div>
@@ -58,7 +56,7 @@
 
 <!-- Page Part 04 -->
 <% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
-<section class="section section--message" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+<section id="processo seletivo" class="section section--message" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
   <div class="container">
     <h1><%= content.title %></h1>
     <p><%= content.body%></p>
