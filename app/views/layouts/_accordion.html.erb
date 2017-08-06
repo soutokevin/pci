@@ -1,0 +1,22 @@
+<section class="section accordion container">
+  <% sections.each do |section| %>
+    <h2><%= section[:title] %></h2>
+    <div class="separator"></div>
+    <div class="atuacao section__wrapper">
+
+      <% section[:cards].each do |card| %>
+        <div
+          class="accordion__card"
+          <% if card[:image] %>
+            style="background-image: url(<%= card[:image] %>)"
+          <% end %>
+        >
+          <h3 class="accordion__title"><%= card[:title] %></h3>
+          <p class="accordion__description">
+            <%= card[:description] %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

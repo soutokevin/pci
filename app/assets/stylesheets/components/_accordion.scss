@@ -5,7 +5,7 @@
   }
 
   &__card {
-    @include blend-image(#02a08d, 'image.jpg');
+    @include blend-image(#02a08d);
     @include center-content;
     min-width: 208px;
     width: 100%;
