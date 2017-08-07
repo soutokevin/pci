@@ -1,0 +1,33 @@
+.with-active-modal {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparentize(black, .5);
+  display: none;
+  &--active {
+    display: block;
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color: white;
+    padding: 16px;
+    min-width: 300px;
+    width: 70%;
+    max-width: 800px;
+    height: 70%;
+    max-height: 800px;
+    overflow: auto;
+  }
+}
