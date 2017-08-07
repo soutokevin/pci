@@ -9,14 +9,43 @@
     background-color: #821810;
   }
 
+  &--students {
+    background-color: #02a08d;
+    background-image: image-url('image.jpg');
+  }
+
+  &--management {
+    background-color: #195f66;
+    background-image: image-url('gestao.jpg');
+  }
+
+  &--engineering {
+    background-color: #fcbd09;
+    background-image: image-url('building.jpg');
+  }
+
+  &--legal {
+    background-color: #12a18c;
+    background-image: image-url('image.jpg');
+  }
+
   &__title {
     font-size: 3.7em;
     font-weight: bold;
     margin-bottom: 30px;
+    text-transform: uppercase;
+
+    @include media-sm-down {
+      font-size: 2.7em;
+    }
   }
 
   &__text {
     width: 65%;
     font-size: 1.7em;
+
+    @include media-sm-down {
+      width: 100%;
+    }
   }
 }

@@ -1,33 +1,16 @@
 .section {
   padding: 32px 16px;
 
-  &--message {
-    text-align: center;
-    color: white;
-    font-size: 21px;
-
-    @include blend-image(#02a08d, '');
-  }
-
-  &--quotes {
-    color: #617984;
-    background-color: #ededed;
-  }
-
   h2 {
     color: #435c65;
     margin: 0;
-  }
-
-  &__quote {
-    margin: 0 16px;
   }
 
   &__big-quote {
     display: flex;
     margin: 32px 0;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
 
     &::before,

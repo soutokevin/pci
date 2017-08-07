@@ -1,0 +1,77 @@
+<section class="hero hero--management">
+  <div class="hero__title">GESTÃO EMPRESARIAL</div>
+  <div class="hero__text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusamus dolore cumque possimus quae blanditiis temporibus necessitatibus
+    sint nulla alias enim sunt, sapiente quas voluptates mollitia quisquam animi,
+    quo ex eveniet!
+  </div>
+</section>
+
+<%= render 'layouts/accordion', component: 'management', sections: [
+  {
+    title: 'Section 1',
+    cards: [
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
+    ]
+  },
+  {
+    title: 'Section 2',
+    cards: [
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
+    ]
+  },
+] %>
+
+<%= render 'layouts/carousel', component: 'management', slides: [
+  {
+    id: 1,
+    image: image_url('building.jpg'),
+    title: "Slide 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    id: 2,
+    image: image_url('gestao.jpg'),
+    title: "Slide 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    id: 3,
+    image: image_url('image.jpg'),
+    title: "Slide 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+] %>
+
+<%= render 'form', component: "gestao" %>
