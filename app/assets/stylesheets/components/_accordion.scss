@@ -1,16 +1,38 @@
 .accordion {
+  background-color: #ededed;
+
+  &:not(.accordion--students) .section__wrapper {
+    justify-content: space-around;
+  }
+
+  &--students {
+    background-color: white;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+  }
+
   &__card {
-    @include blend-image(#02a08d, 'image.jpg');
+    @include blend-image(white);
     @include center-content;
     min-width: 208px;
     width: 100%;
     margin: 8px 0;
     padding: 16px;
-    color: white;
+    color: black;
+
+    &--students {
+      background-color: #02a08d;
+      color: white;
+    }
   }
 
   &__title {
     margin: 0;
+    width: 100%;
+    text-align: center;
   }
 
   &__description {
@@ -22,17 +44,44 @@
     &__card--active &__description {
       display: block;
     }
+
+    &__title::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      float: right;
+      background-image: image_url('accordion.svg');
+      transition: transform 300ms;
+    }
+
+    &__card--active &__title::after {
+      transform: rotate(-90deg);
+    }
   }
 
   @include media-lg-up {
     &__card {
-      margin: 8px;
-      width: calc(25% - 48px); // 1/4 - margins
-      height: 344px;
+      height: 256px;
+      margin: 8px 16px;
+      width: calc(15% - 16px); // 1/4 - margins
       font-size: 1.2em;
+      box-shadow: -4px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+      overflow: hidden;
 
       &:hover {
-        background-color: darken(#02a08d, 15%);
+        background-color: darken(white, 15%);
+      }
+
+      &--students {
+        height: 344px;
+        margin: 8px;
+        width: calc(25% - 48px); // 1/4 - margins
+        box-shadow: none;
+
+        &:hover {
+          background-color: darken(#02a08d, 15%);
+        }
       }
     }
 

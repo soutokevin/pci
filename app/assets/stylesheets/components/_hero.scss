@@ -34,6 +34,7 @@
     font-size: 3.7em;
     font-weight: bold;
     margin-bottom: 30px;
+    text-transform: uppercase;
 
     @include media-sm-down {
       font-size: 2.7em;
