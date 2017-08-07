@@ -1,0 +1,99 @@
+.quotes {
+  padding: 80px;
+
+  &--clients {
+    color: #776969;
+    background-color: $light-gray;
+  }
+
+  &--students {
+    color: #617984;
+    background-color: #ededed;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 20px;
+
+    &--clients {
+      color: $dark-red-pci;
+    }
+
+    &--students {
+      color: #435c65;
+    }
+  }
+
+  .sep {
+    display: inline-block;
+    height: 7px;
+    border: none;
+    width: 110px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    &--clients {
+      background-color: $dark-red-pci;
+    }
+
+    &--students {
+      background-color: #435c65;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__quote {
+    display: flex;
+    width: 48%;
+    margin: 20px 0;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__description {
+    width: 100%;
+    margin-left: 50px;
+    font-size: 1.2em;
+  }
+
+  @include media-md-down {
+    padding: 80px 10px;
+
+    &__quote {
+      width: 100%;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  @include media-sm-down {
+    &__description {
+      margin-right: 50px;
+      margin-left: 0px;
+      text-align: right;
+    }
+
+    &__quote {
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__description {
+      margin: 30px 0;
+      text-align: center;
+    }
+  }
+}
