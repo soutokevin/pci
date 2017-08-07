@@ -1,0 +1,132 @@
+<div class="sub-header">
+  <div class="item"> <%= link_to "ÁREAS DE ATUAÇÃO", "#" %> </div>
+  <div class="item"> <%= link_to "QUEM PASSOU POR AQUI", "#" %> </div>
+  <div class="item"> <%= link_to "PROCESSO SELETIVO", "#" %> </div>
+  <div class="item"> <%= link_to "BLOG", "#" %> </div>
+</div>
+
+<%= render 'layouts/accordion', component: 'students', sections: [
+  {
+    title: 'Áreas de Atuação',
+    cards: [
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      },
+      {
+        title: 'Lorem Ipsum',
+        image: image_url('image.jpg'),
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
+    ]
+  }
+] %>
+
+<%= render 'layouts/carousel', component: 'students', slides: [
+  {
+    id: 1,
+    image: image_url('building.jpg'),
+    title: "Slide 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    id: 2,
+    image: image_url('gestao.jpg'),
+    title: "Slide 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    id: 3,
+    image: image_url('image.jpg'),
+    title: "Slide 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+] %>
+
+<section class="quotes quotes--students">
+  <div class="container">
+    <div class="quotes__title quotes__title--students">QUEM PASSOU POR AQUI</div>
+    <hr class="sep sep--students">
+
+    <div class="quotes__wrapper">
+      <div class="quotes__quote">
+        <%= image_tag "image.jpg", class: 'quotes__img' %>
+        <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
+          earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
+          Officia nisi eos amet nam?
+        </div>
+      </div>
+
+      <div class="quotes__quote">
+        <%= image_tag "image.jpg", class: 'quotes__img' %>
+        <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
+          earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
+          Officia nisi eos amet nam?
+        </div>
+      </div>
+
+      <div class="quotes__quote">
+        <%= image_tag "image.jpg", class: 'quotes__img' %>
+        <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
+          earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
+          Officia nisi eos amet nam?
+        </div>
+      </div>
+
+      <div class="quotes__quote">
+        <%= image_tag "image.jpg", class: 'quotes__img' %>
+        <div class="quotes__description">Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Numquam laboriosam pariatur eius molestiae, commodi aliquid itaque
+          earum, laudantium tenetur, ex sunt esse voluptatibus blanditiis quod.
+          Officia nisi eos amet nam?
+        </div>
+      </div>
+    </div><!-- wrapper -->
+
+    <div class="section__wrapper">
+      <p class="section__big-quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <a class="section__btn" href="#">Deixe seu depoimento</a>
+    </div>
+  </div><!-- container -->
+</section>
+
+<section class="hero hero--students">
+  <div class="hero__title">Processo Seletivo</div>
+  <div class="hero__text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusamus dolore cumque possimus quae blanditiis temporibus necessitatibus
+    sint nulla alias enim sunt, sapiente quas voluptates mollitia quisquam animi,
+    quo ex eveniet!
+  </div>
+</section>
+
+<%= render 'layouts/candidates_form', component: 'form-alunos' %>
