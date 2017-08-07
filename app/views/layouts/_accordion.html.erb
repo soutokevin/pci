@@ -1,13 +1,13 @@
-<section class="section accordion accordion--<%= component %>">
-  <div class="container">
-    <% sections.each do |section| %>
+<section class="accordion accordion--<%= component %>">
+  <% sections.each do |section| %>
+    <div class="container section">
       <h2><%= section[:title] %></h2>
       <div class="separator"></div>
       <div class="atuacao section__wrapper">
 
         <% section[:cards].each do |card| %>
           <div
-            class="accordion__card"
+            class="accordion__card accordion__card--<%= component %>"
             <% if card[:image] %>
               style="background-image: url(<%= card[:image] %>)"
             <% end %>
@@ -19,6 +19,6 @@
           </div>
         <% end %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </section>
