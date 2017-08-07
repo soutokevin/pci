@@ -18,10 +18,10 @@ module ApplicationHelper
 	end
 
 	def page_clients?(page)
-		page.name == 'Client'
+		page.name == 'Client' unless page.nil? 	
 	end
 
 	def page_student?(page)
-		page.name == 'Student'
+		page.name == 'Student' unless page.nil?
 	end
 end
