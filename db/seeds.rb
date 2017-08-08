@@ -51,6 +51,8 @@ client.page_parts.create name: 'Parceiros', allow_creatable: true,
 student = Page.find_by(name: 'Student')
 student.page_parts.create name: 'Áreas de atuação', allow_creatable: true,
 												 	allow_photo: true, allow_title: true, allow_text: true
+student.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
+												 	allow_photo: true, allow_title: true, allow_text: true
 student.page_parts.create name: 'Quem passou por aqui', allow_creatable: true,
 												 	allow_photo: true, allow_title: false, allow_text: true
 student.page_parts.create name: 'Citação', allow_creatable: true,
