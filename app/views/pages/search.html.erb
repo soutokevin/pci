@@ -1,0 +1,20 @@
+<div class="results">
+	<div class="container section">
+	<h2>RESULTADOS</h2>
+	<div class="separator"></div>
+		<% @contents.each do |content|%>
+			<div class="item">
+				<% if content.title.nil? %>
+					<div class="item-title"> <%= @searched_name %></div>
+				<% else %>
+					<div class="item-title"> <%= content.title %> </div>
+				<% end %>
+				<div class="item-link"> 
+					<%= link_to "#{@domain}/#{content.page_part.page.name}",
+											 page_path(content.page_part.page_id) %> 
+				</div>
+				<div class="item-text"> <%= content.body %> </div>
+			</div>
+		<% end %>
+	</div>
+</div>

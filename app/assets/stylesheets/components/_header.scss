@@ -18,58 +18,36 @@
 			font-weight: bold;
 		}
 	}
-	.buscador { width: 220px; }
-	.buscador, .buscador-mobile {
-		.gsib_a input {
-			border-top-left-radius: 7px !important;
-			border-bottom-left-radius: 7px !important;
-			width: 100% !important;
-			height: 35px !important;
-			background: none !important;
-			background-color: $light-gray !important;
-			border-width: 0 !important;
-			text-indent: 15px !important;
-		}
-		.cse .gsc-control-cse, .gsc-control-cse {
-			padding: 0 !important;
-		}
-		.gsc-input-box-hover, .gsc-input-box-focus {
-			box-shadow: none !important;
-		}
-		td, input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
-			outline: 0 !important;
-			border: none;
 
+	.buscador {
+		.inner-addon {
+		  position: relative;
 		}
-		.gsib_a {
-			padding: 0 !important;
-			position: relative !important;
+		.right-addon .search { right: 0px;}
+		.inner-addon .search {
+		  position: absolute;
+		  padding: 7px 15px;
 		}
-		.gsc-search-button {
-			position: absolute !important;
-			right: 25px;
-			border: none !important;
-			background-color: $light-gray !important;
+		.seach-input {
+			border-radius: 7px;
+			width: 218px;
+			height: 35px;
+			background-color: $light-gray;
+			border-width: 0;
+			text-indent: 50px;
 		}
-		.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-			width: 25px !important;
-			height: 25px !important;
-			padding: 5px 10px !important;
-			border-top-right-radius: 7px !important;
-			border-bottom-right-radius: 7px !important;
-			margin-top: 0px !important;
+		.button-search {
+			width: 23px;
+			height: 23px;
 		}
+
 	}
 
 	.mobile-nav {
 		display: none;
 	}
 }
-@media (min-width: 1680px) {
-	.header .buscador .gsc-search-button, .header .buscador-mobile .gsc-search-button {
-		right: 42px !important;
-	}
-}
+
 @media (max-width: 992px) {
 	.header {
 		justify-content: space-between;
@@ -85,42 +63,6 @@
 		.buscador,
 		.item {
 			display: none;
-		}
-		.buscador-mobile {
-			.gsc-search-button {
-				position: static !important;
-			}
-			.gsc-input-box {
-				height: inherit !important;
-			}
-			.gsc-input, .gsst_b {
-				padding: 0 !important;
-			}
-
-
-			.gstl_51 {
-				width: 70% !important;
-				float: right !important;
-			}
-			.gsib_a {
-
-				float: right;
-				input {
-					border-top-left-radius: 7px !important;
-					border-bottom-left-radius: 7px !important;
-					background-color: $white !important;
-					font-size: 1.3em;
-					direction: rtl;
-					text-align: right;
-					&::-moz-placeholder, &::-webkit-input-placeholder {
-						color: $text-menu-main-items;
-					}
-				}
-			}
-			.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-				background-color: $white !important;
-				height: 22px !important;
-			}
 		}
 
 		.menu-btn div {

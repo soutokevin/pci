@@ -1,0 +1,29 @@
+.results {
+	width: 50%;
+	margin-left: 70px;
+	color: #435c65;
+	h2 {
+		font-size: 3.0em;
+	}
+
+	.item {
+		padding: 17px 0px;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.3em;
+	}
+	
+	.item-title {
+		display: inline-table;
+		margin-bottom: 5px;
+		border-bottom: 5px solid #435c65;
+		text-transform: uppercase;
+	}
+	.item-text {
+		color: lighten(black, 50%);
+		text-align: justify;
+		font-weight: 300;
+		height: 73px;
+		overflow: hidden;
+	}
+}
