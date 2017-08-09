@@ -2,12 +2,12 @@
 # Page parts não podem ser deletadas no CMS
 user = User.create email: 'admin@cjr.org.br', password: 'admincjr123'
 
-page = Page.create name: 'Home Page'
-			 Page.create name: 'Client'
-			 Page.create name: 'Student'
+page = Page.create name: 'home'
+			 Page.create name: 'client'
+			 Page.create name: 'student'
 
 # Partes da Home Page
-home = Page.find_by(name: 'Home Page')
+home = Page.find_by(name: 'home')
 home.page_parts.create name:'Box Clientes', allow_creatable: false, 
 											 allow_photo: true, allow_title: false, allow_text: true
 home.page_parts.create name:'Box Alunos', allow_creatable: false, 
@@ -35,7 +35,7 @@ home.page_parts.create name:'Contato', allow_creatable: true,
 											 allow_photo: false, allow_title: false, allow_text: true
 
 # Partes da Página de Clientes
-client = Page.find_by(name: 'Client')
+client = Page.find_by(name: 'client')
 client.page_parts.create name: 'Membros', allow_creatable: false,
 												 allow_photo: true, allow_title: true, allow_text: true 
 client.page_parts.create name: 'Serviços', allow_creatable: false,
@@ -48,7 +48,7 @@ client.page_parts.create name: 'Parceiros', allow_creatable: true,
 												 allow_photo: true, allow_title: false, allow_text: false
 
 # Partes da Página de Estudantes
-student = Page.find_by(name: 'Student')
+student = Page.find_by(name: 'student')
 student.page_parts.create name: 'Áreas de atuação', allow_creatable: true,
 												 	allow_photo: true, allow_title: true, allow_text: true
 student.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
