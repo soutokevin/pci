@@ -27,3 +27,10 @@
 		overflow: hidden;
 	}
 }
+
+@media (max-width: 768px) {
+	.results {
+		width: 100%;
+		margin-left: 0px;
+	}
+}
