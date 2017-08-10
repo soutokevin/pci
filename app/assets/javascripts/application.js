@@ -8,12 +8,6 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
-  $('#menu-btn').click(function() {
-    $('.responsive-menu').toggleClass('expand')
-    $('.menu-btn span').toggleClass('active')
-  })
-
 
 $( document ).on('turbolinks:load', function() {
 	// Comportamento do Hamburguer
@@ -23,7 +17,7 @@ $( document ).on('turbolinks:load', function() {
  	})
  	// Inicializa attachinary input para upload de imagens
  	$('.attachinary-input').attachinary()
- 	// Comportamento do da página de Login
+ 	// Comportamento da página de Login
  	var working = false;
 	$('.login').on('submit', function(e) {
 	  if (working) return;
@@ -33,8 +27,7 @@ $( document ).on('turbolinks:load', function() {
 	  $this.addClass('loading');
 	  $state.html('Authenticating');
 	});
-});
-
+  // Comportamento do accordion
   var cards = $('.accordion__card')
 
   cards.click(function() {
@@ -47,5 +40,5 @@ $( document ).on('turbolinks:load', function() {
       el.addClass(cl)
     }
   })
-})
+});
 
