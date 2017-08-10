@@ -60,9 +60,31 @@
 			border-radius: 2px;
 		}
 
-		.buscador,
 		.item {
 			display: none;
+		}
+		.buscador {
+			padding: 7px 2em;
+		}
+		.buscador .inner-addon .search {
+			position: static;
+			float: right;
+		}
+		.buscador .seach-input {
+			width: 80%;
+			border-radius: 0px;
+			background-color: white;
+			font-size: 1.3em;
+			text-indent: 0px;
+			&:focus {
+				border-bottom: 1px solid $text-menu-main-items;
+				&::-webkit-input-placeholder { color:transparent; }
+				&::-moz-placeholder {  color:transparent; } /* firefox 19+ */
+				&:-ms-input-placeholder { color:transparent; } /* ie */
+			}
+			&::-webkit-input-placeholder { font-size: 20px; opacity:  1; }
+			&::-moz-placeholder {  font-size: 20px; opacity:  1; } /* firefox 19+ */
+			&:-ms-input-placeholder { font-size: 20px; opacity:  1; } /* ie */
 		}
 
 		.menu-btn div {
@@ -110,7 +132,7 @@
 			li {
 				list-style-type: none;
 				text-align: right;
-				padding: 1em 1em;
+				padding: 1em 2em;
 				border-bottom: 2px solid $border-menu;
 				&:hover {
 					background: $red-hover-menu;

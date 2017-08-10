@@ -31,21 +31,30 @@
 
     <div class="responsive-menu">
       <ul>
-        <%= link_to "#" do  %>
-          <li>SOBRE A PCI</li>
-        <% end %>
-
-        <%= link_to "#" do %>
+        <li> 
+          <%= link_to 'SOBRE A PCI', page_path(redirect_page('Home Page'),
+                                               :anchor => "sobre a pci") %> 
+        </li>
+        
+        <%= link_to page_path(redirect_page('Home Page'), :anchor => "mej") do %>
           <li>MOVIMENTO EMPRESA JÚNIOR</li>
         <% end %>
 
-        <%= link_to "#" do %>
-          <li>CONTATO</li>
-        <% end %>
-
-        <li class="buscador-mobile" style="padding: 0.5em 1em;">
-          <gcse:searchbox-only></gcse:searchbox-only>
-				</li>
+        <li>
+          <%= link_to 'CONTATO', page_path(redirect_page('Home Page'),
+                                           :anchor => "contato") %>
+        </li>
+        
+        <div class="buscador">
+          <%= form_tag search_path, method: :get do %>
+            <div class="inner-addon right-addon">
+              <%= text_field_tag :name, @searched_name, style:'direction: rtl', 
+                                                        placeholder: 'BUSCAR',
+                                                        class: 'seach-input' %>
+              <%= image_submit_tag 'search', class: 'button-search search' %>
+            </div>
+          <% end %>
+        </div>
 
         <div class="secundary-items">
             
