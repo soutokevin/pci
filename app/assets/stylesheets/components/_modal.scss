@@ -44,7 +44,7 @@
     width: 70%;
     max-width: 800px;
     height: 70%;
-    max-height: 800px;
+    max-height: 600px;
     overflow: auto;
   }
 
@@ -65,9 +65,25 @@
     opacity: .6;
   }
 
+  &__prev,
+  &__next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__prev {
+    left: 16px;
+  }
+
+  &__next {
+    right: 16px;
+  }
+
   @include media-md-up {
     &__images {
       margin-bottom: 16px;
+      align-items: flex-start; // Contorna bug no chrome
     }
 
     &__image {

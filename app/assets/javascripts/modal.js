@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
   var body = $(document.body),
     btns = $('[data-modal]'),
-    modal = $('.modal')
+    modal = $('#info')
 
   modal.click(function(event) {
     if (event.target === this) {
@@ -27,8 +27,13 @@ $(document).on('turbolinks:load', function() {
 
     text.html(opts.description)
 
-    opts.images.forEach(function(src) {
+    opts.images.forEach(function(src, index) {
       var img = $('<img class="modal__image" src="' + src + '">')
+
+      img.click(function() {
+        showImageModal(opts.images, index)
+      })
+
       images.append(img)
     })
   }
