@@ -58,6 +58,27 @@
     margin: 0 auto;
   }
 
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    background-color: transparentize(black, .5);
+    overflow: auto;
+  }
+
+  &__item {
+    max-height: 100%;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    &--active {
+      border-color: white;
+    }
+  }
+
   &__images {
     display: flex;
     flex-wrap: wrap;
