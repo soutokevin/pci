@@ -41,6 +41,15 @@ $(document).on('turbolinks:load', function() {
     images.forEach(function(src, index) {
       var img = $('<img class="modal__item" src="' + src + '">')
 
+      img.click(function() {
+        var items = list.children()
+        items.removeClass('modal__item--active')
+
+        current = index
+        $(items[current]).addClass('modal__item--active')
+        preview.attr('src', images[current])
+      })
+
       if (current === index) {
         img.addClass('modal__item--active')
       }
