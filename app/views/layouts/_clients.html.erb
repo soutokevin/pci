@@ -72,7 +72,9 @@
     <% page_part(page, 'Quem confia na gente').contents.each do |content| %>
       <div class="partner">
         <% if content.avatar? %>
-          <%= cl_image_tag content.avatar.path, class: 'img' %>
+          <div>
+            <%= cl_image_tag content.avatar.path, class: 'img' %>
+          </div>
         <% end %>
         <div class="description">
           <%= content.body %>

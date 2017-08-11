@@ -4,11 +4,13 @@
                                '#processo seletivo' => "PROCESSO SELETIVO"} %>
 
 <!-- Page Part 01 -->  
-<%= render 'layouts/accordion', component: 'students', section: page_part(page, 'Áreas de atuação') %>
+<%= render 'layouts/accordion', component: 'students', 
+                                section: page_part(page, 'Áreas de atuação') %>
 
 
 <!-- Page Part 02 -->
-<%= render 'layouts/carousel', component: 'students', slides: page_part(page, 'Projetos anteriores') %>
+<%= render 'layouts/carousel', component: 'students',
+                               slides: page_part(page, 'Projetos anteriores') %>
 
 <section class="quotes quotes--students">
   <div class="container">
@@ -16,14 +18,17 @@
     <hr class="sep sep--students">
     <div>
       <% if user_signed_in? %>
-        <%= link_to 'Editar Seção', page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
+        <%= link_to 'Editar Seção', 
+            page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
       <% end %>
     </div>
     <!-- Page Part 03 -->
     <div class="quotes__wrapper">
       <% page_part(page, 'Quem passou por aqui').contents.each do |content| %>
         <div class="quotes__quote">
-          <%= cl_image_tag( content.avatar.path, alt: "PCI", class: 'quotes__img') %>
+          <div>
+            <%= cl_image_tag( content.avatar.path, alt: "PCI", class: 'quotes__img') %>
+          </div>
           <div class="quotes__description">
             <%= content.body %>
           </div>
