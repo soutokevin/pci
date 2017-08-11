@@ -48,6 +48,16 @@
     overflow: auto;
   }
 
+  &__preview {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 180px);
+    max-height: calc(100% - 180px);
+    margin: 0 auto;
+  }
+
   &__images {
     display: flex;
     flex-wrap: wrap;
