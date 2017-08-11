@@ -43,7 +43,7 @@
     min-width: 300px;
     width: 70%;
     max-width: 800px;
-    height: 70%;
+    height: calc(100% - 32px);
     max-height: 600px;
     overflow: auto;
   }
@@ -56,6 +56,10 @@
     max-width: calc(100% - 180px);
     max-height: calc(100% - 180px);
     margin: 0 auto;
+
+    @include media-md-down {
+      max-width: calc(100% - 16px);
+    }
   }
 
   &__list {
@@ -68,6 +72,9 @@
     height: 64px;
     background-color: transparentize(black, .5);
     overflow: auto;
+    @include media-md-down {
+      display: none;
+    }
   }
 
   &__item {
@@ -101,6 +108,9 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+    @include media-md-down {
+      display: none;
+    }
   }
 
   &__prev {
