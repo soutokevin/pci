@@ -1,10 +1,14 @@
-# Page parts só podem ser criadas no seed
-# Page parts não podem ser deletadas no CMS
+
+# Page parts não podem ser criadas ou deletadas no CMS
+
 user = User.create email: 'admin@cjr.org.br', password: 'admincjr123'
 
 page = Page.create name: 'home'
 			 Page.create name: 'client'
 			 Page.create name: 'student'
+			 Page.create name: 'legal'
+			 Page.create name: 'engineering'
+			 Page.create name: 'management'
 
 # Partes da Home Page
 home = Page.find_by(name: 'home')
@@ -59,3 +63,29 @@ student.page_parts.create name: 'Citação', allow_creatable: true,
 												 	allow_photo: false, allow_title: false, allow_text: true
 student.page_parts.create name: 'Banner processo seletivo', allow_creatable: false,
 												 	allow_photo: true, allow_title: true, allow_text: true
+
+# Partes da Página de Engenharia de Arquitetura
+engineering = Page.find_by(name: 'engineering')
+engineering.page_parts.create name: 'Banner', allow_creatable: false,
+												 			allow_photo: true, allow_title: true, allow_text: false
+engineering.page_parts.create name: 'Arquitetura', allow_creatable: true,
+												 			allow_photo: false, allow_title: true, allow_text: true
+engineering.page_parts.create name: 'Engenharia', allow_creatable: true,
+												 			allow_photo: false, allow_title: true, allow_text: true
+engineering.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
+												 			allow_photo: true, allow_title: true, allow_text: true
+
+# Partes da Página de Gestão Empresarial
+management = Page.find_by(name: 'management')
+management.page_parts.create name: 'Banner', allow_creatable: false,
+												 		 allow_photo: true, allow_title: true, allow_text: false
+management.page_parts.create name: 'Org e Proc', allow_creatable: true,
+												 		 allow_photo: false, allow_title: true, allow_text: true
+management.page_parts.create name: 'Marketing', allow_creatable: true,
+												 		 allow_photo: false, allow_title: true, allow_text: true
+management.page_parts.create name: 'AdmFin', allow_creatable: true,
+												 		 allow_photo: false, allow_title: true, allow_text: true
+management.page_parts.create name: 'GP', allow_creatable: true,
+												 		 allow_photo: false, allow_title: true, allow_text: true
+management.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
+												 		 allow_photo: true, allow_title: true, allow_text: true
