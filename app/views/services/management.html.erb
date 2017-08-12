@@ -1,10 +1,7 @@
-<%= render 'layouts/sub_header', 
-            items: clients = { '/pages/2#servicos' => "SERVIÇOS", 
-                               '/pages/2#partners' => "QUEM CONFIA NA GENTE"} %>
 <%= render 'layouts/modal' %>
 
-<section class="hero hero--legal">
-  <div class="hero__title">NÚCLEO JURÍDICO</div>
+<section class="hero hero--management">
+  <div class="hero__title">GESTÃO EMPRESARIAL</div>
   <div class="hero__text">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Accusamus dolore cumque possimus quae blanditiis temporibus necessitatibus
@@ -13,7 +10,7 @@
   </div>
 </section>
 
-<%= render 'layouts/accordion', component: 'legal', sections: [
+<%= render 'layouts/accordion', component: 'management', sections: [
   {
     title: 'Section 1',
     cards: [
@@ -58,7 +55,7 @@
   },
 ] %>
 
-<%= render 'layouts/carousel', component: 'legal', slides: [
+<%= render 'layouts/carousel', component: 'management', slides: [
   {
     id: 1,
     image: image_url('building.jpg'),
@@ -79,3 +76,4 @@
   },
 ] %>
 
+<%= render 'form', component: "gestao" %>
