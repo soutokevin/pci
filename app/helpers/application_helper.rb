@@ -1,8 +1,4 @@
 module ApplicationHelper
-	def services(index)
-		services_name = ['management', 'engineering', 'juridical']
-		services_name[index]
-	end
 
 	def page_part(page, name)
 		page.page_parts.each do |page_part|
@@ -14,7 +10,7 @@ module ApplicationHelper
 
 	def redirect_page(name)
 		pages = { 'Home Page' => 1, 'Client' => 2, 'Student' => 3,
-							'legal' => 4, 'engineering' => 5, 'management' => 6 }
+							'Legal' => 4, 'Engineering' => 5, 'Management' => 6 }
 		pages[name]
 	end
 

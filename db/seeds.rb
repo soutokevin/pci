@@ -1,4 +1,5 @@
 
+# Pages não podem ser criadas ou deletadas no CMS
 # Page parts não podem ser criadas ou deletadas no CMS
 
 user = User.create email: 'admin@cjr.org.br', password: 'admincjr123'
@@ -42,7 +43,11 @@ home.page_parts.create name:'Contato', allow_creatable: true,
 client = Page.find_by(name: 'client')
 client.page_parts.create name: 'Membros', allow_creatable: false,
 												 allow_photo: true, allow_title: true, allow_text: true 
-client.page_parts.create name: 'Serviços', allow_creatable: false,
+client.page_parts.create name: 'Management', allow_creatable: false,
+												 allow_photo: true, allow_title: true, allow_text: true
+client.page_parts.create name: 'Engineering', allow_creatable: false,
+												 allow_photo: true, allow_title: true, allow_text: true
+client.page_parts.create name: 'Legal', allow_creatable: false,
 												 allow_photo: true, allow_title: true, allow_text: true
 client.page_parts.create name: 'Texto de diagnóstico', allow_creatable: true,
 												 allow_photo: false, allow_title: false, allow_text: true
