@@ -1,0 +1,26 @@
+<!-- Page part 01 -->
+<% page_part(page, 'Banner').contents.each do |content| %>
+  <section class="hero hero--engineering" 
+    style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );">
+    <div class="hero__title"> <%= content.title %> </div>
+    <div class="hero__text">
+      <%= content.body %>
+    </div>
+  </section>
+<% end %>
+
+<!-- Page part 02 -->
+<%= render 'layouts/accordion', component: 'engineering',
+                                title: 'ARQUITETURA',
+                                section: page_part(page, 'Arquitetura') %>
+
+<!-- Page part 03 -->
+<%= render 'layouts/accordion', component: 'engineering',
+                                title: 'ENGENHARIA',
+                                section: page_part(page, 'Engenharia') %>
+
+<!-- Page part 04 -->
+<%= render 'layouts/carousel', component: 'engineering', 
+                               slides: page_part(page, 'Projetos anteriores') %> 
+
+<%= render 'services/form', component: "engenharia-arquitetura" %>
