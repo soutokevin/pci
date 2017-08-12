@@ -4,7 +4,8 @@
                                '#processo seletivo' => "PROCESSO SELETIVO"} %>
 
 <!-- Page Part 01 -->  
-<%= render 'layouts/accordion', component: 'students', 
+<%= render 'layouts/accordion', component: 'students',
+                                title: 'ÁREAS DE ATUAÇÃO', 
                                 section: page_part(page, 'Áreas de atuação') %>
 
 
@@ -12,7 +13,7 @@
 <%= render 'layouts/carousel', component: 'students',
                                slides: page_part(page, 'Projetos anteriores') %>
 
-<section class="quotes quotes--students">
+<section class="quotes quotes--students" id="quem passou por aqui">
   <div class="container">
     <div class="quotes__title quotes__title--students">QUEM PASSOU POR AQUI</div>
     <hr class="sep sep--students">
@@ -44,7 +45,9 @@
       <% end %>
       <div style="width: 100%; margin: 20px 0; text-align: center;">
       <% if user_signed_in? %>
-        <%= link_to 'Editar citações', page_page_part_path(page, page_part( page, 'Citação')) %>
+        <%= link_to 'Editar citações',
+          page_page_part_path(page, page_part( page, 'Citação')) 
+        %>
       <% end %>
       </div>
       <a class="section__btn" href="#">Deixe seu depoimento</a>
@@ -54,7 +57,9 @@
 
 <!-- Page Part 05 -->
 <% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
-  <section class="hero hero--students" style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> )">
+  <section id="processo seletivo" class="hero hero--students" 
+  style="background-image: 
+  url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> )">
     <div class="hero__title"><%= content.title %></div>
     <div class="hero__text">
       <%= content.body %>
@@ -62,7 +67,9 @@
   </section>
 <% end %>
 <% if user_signed_in? %>
-  <%= link_to 'Editar banner', page_page_part_path(page, page_part( page, 'Banner processo seletivo')) %>
+  <%= link_to 'Editar banner',
+    page_page_part_path(page, page_part( page, 'Banner processo seletivo')) 
+  %>
 <% end %>
 
 <%= render 'layouts/candidates_form', component: 'form-alunos' %>
