@@ -13,15 +13,16 @@ module ApplicationHelper
 	end
 
 	def redirect_page(name)
-		pages = { 'Home Page' => 1, 'Client' => 2, 'Student' => 3 }
+		pages = { 'Home Page' => 1, 'Client' => 2, 'Student' => 3,
+							'legal' => 4, 'engineering' => 5, 'management' => 6 }
 		pages[name]
 	end
 
 	def page_clients?(page)
-		page.name == 'Client' unless page.nil? 	
+		page.name == 'client' unless page.nil? 	
 	end
 
 	def page_student?(page)
-		page.name == 'Student' unless page.nil?
+		page.name == 'student' unless page.nil?
 	end
 end
