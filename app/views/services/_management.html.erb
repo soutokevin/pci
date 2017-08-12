@@ -1,3 +1,6 @@
+<%= render 'layouts/sub_header', 
+            items: clients = { '/pages/2#servicos' => "SERVIÇOS", 
+                               '/pages/2#partners' => "QUEM CONFIA NA GENTE"} %>
 <!-- Page part 01 -->
 <% page_part(page, 'Banner').contents.each do |content| %>
   <section class="hero hero--management" 
