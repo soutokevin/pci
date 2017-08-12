@@ -1,6 +1,6 @@
 <section class="accordion accordion--<%= component %>" id="areas de atuacao">
   <div class="container section">
-    <h2> ÁREAS DE ATUAÇÃO </h2>
+    <h2> <%= title %> </h2>
     <div class="separator"></div>
     <% if user_signed_in? %>
       <%= link_to 'Editar Seção', page_page_part_path(section.page_id, section) %>
@@ -9,7 +9,9 @@
       <% section.contents.each do |content| %>
         <div
           class="accordion__card accordion__card--<%= component %>"
-          style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> )">
+          style="background-image: 
+          url( http://res.cloudinary.com/pcicloud/image/upload/
+          <%= content.avatar.path if content.avatar? %> )">
 
           <h3 class="accordion__title"><%= content.title %></h3>
           <p class="accordion__description">
