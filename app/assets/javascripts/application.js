@@ -39,6 +39,6 @@ $( document ).on('turbolinks:load', function() {
     if (!has) {
       el.addClass(cl)
     }
-  })
+  });
 });
 
