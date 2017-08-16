@@ -18,7 +18,7 @@
         fill="none" stroke-linejoin="miter"/>
     </svg>
     <ul class="carousel__controls">
-      <% slides.contents.each_with_index do |i| %>
+      <% slides.contents.each_with_index do |content, i| %>
         <li class="carousel__control <%= i == 0 ? 'carousel__control--active' : '' %>">
           <%= i %>
         </li>
@@ -28,8 +28,8 @@
     <% slides.contents.each_with_index do |content, index| %>
       <div
         class="carousel__slide <%= index == 0 ? 'carousel__slide--active' : '' %>"
-        style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> )"
-        data-id="<%= content.id %>"
+        style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.photos[0].path %> )"
+        data-modal="<%= content.id %>"
       >
         <div class="hero__title">
           <%= content.title %>
