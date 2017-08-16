@@ -37,7 +37,9 @@
     </svg>
     <ul class="carousel__controls">
       <% slides.each_index do |i| %>
-        <li class="carousel__control <%= i == 0 ? 'carousel__control--active' : '' %>">
+        <li class="carousel__control <%= if i == 0
+          'carousel__control--active'
+        end %>">
           <%= i %>
         </li>
       <% end %>
@@ -46,9 +48,8 @@
     <% slides.each_with_index do |slide, index| %>
       <div
         class="carousel__slide carousel__slide--hero
-         <%= index == 0 ? 'carousel__slide--active' : '' %>"
+         <%= if index == 0; 'carousel__slide--active' end %>"
         style="background-image: url(<%= slide[:image] %>)"
-        data-modal="<%= slide[:id] %>"
       >
         <div class="hero__title">
           <%= slide[:title] %>
