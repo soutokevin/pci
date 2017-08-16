@@ -31,6 +31,12 @@
     </div>
   <% end %>
 
+  <% if page_part.allow_photos %>
+    <div class="field">
+      <%= f.attachinary_file_field :photos %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "Criar Conteúdo" %>
   </div>

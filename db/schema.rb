@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802205540) do
+ActiveRecord::Schema.define(version: 20170814183333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170802205540) do
     t.boolean  "allow_photo"
     t.boolean  "allow_title"
     t.boolean  "allow_text"
+    t.boolean  "allow_photos"
     t.index ["page_id"], name: "index_page_parts_on_page_id", using: :btree
   end
 
