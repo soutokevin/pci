@@ -3,11 +3,6 @@
                                '#partners' => "QUEM CONFIA NA GENTE"} %>
 
 <!-- Page part 01 -->
-<% if user_signed_in? %>
-  <%= link_to 'Editar Banner',
-    page_page_part_path(page, page_part(page, 'Membros')) 
-  %>
-<% end %>
 <% page_part(page, 'Membros').contents.each do |content| %>
   <section class="hero hero--clients" 
   style=" background-image: url( <%= content.avatar.fullpath %> ); ">
@@ -16,6 +11,11 @@
       <%= content.body %>
     </div>
   </section>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner',
+    page_page_part_path(page, page_part(page, 'Membros')) 
+  %>
 <% end %>
 
 <section class="services-diagnostic-form container" id="servicos">
@@ -84,7 +84,7 @@
     <% end %>
     <% if user_signed_in? %>
       <div style="color: black; text-align: center; margin: 20px 0;">
-        <%= link_to 'Editar Seção',
+        <%= link_to 'Editar Parágrafo',
           page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) 
         %>
       </div>

@@ -41,10 +41,11 @@
     <% end %>
   </div>
 </section>
-
-<%= link_to 'Editar Slides',
-    page_page_part_path(page, page_part(page, 'Carousel de apresentação')) 
-%>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Slides',
+      page_page_part_path(page, page_part(page, 'Carousel de apresentação')) 
+  %>
+<% end %>
 
 
 <!-- Page Part 01 -->  
