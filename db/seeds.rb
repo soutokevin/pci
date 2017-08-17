@@ -79,8 +79,8 @@ student.page_parts.create name: 'Áreas de atuação', allow_creatable: true,
 												 	allow_photo: true, allow_title: true, allow_text: true,
 												 	allow_photos: false
 student.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
-												 	allow_photo: true, allow_title: true, allow_text: true,
-												 	allow_photos: false
+												 	allow_photo: false, allow_title: true, allow_text: true,
+												 	allow_photos: true
 student.page_parts.create name: 'Quem passou por aqui', allow_creatable: true,
 												 	allow_photo: true, allow_title: false, allow_text: true,
 												 	allow_photos: false
