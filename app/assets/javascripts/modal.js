@@ -62,7 +62,7 @@ $(document).on('turbolinks:load', function() {
   function ajax(id) {
     $.ajax({
       type: 'GET',
-      url: '/pages/6/page_parts/34/contents/'+ id +'.json'
+      url: '/pages/callback/'+ id +'.json'
     }).success(function(response) {
       setup(response.content, response.photos);
     })
