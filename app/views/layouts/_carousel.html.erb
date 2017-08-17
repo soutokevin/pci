@@ -28,7 +28,7 @@
     <% slides.contents.each_with_index do |content, index| %>
       <div
         class="carousel__slide <%= index == 0 ? 'carousel__slide--active' : '' %>"
-        style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.photos[0].path %> )"
+        style="background-image: url(<%= content.photos[0].fullpath %>  )"
         data-modal="<%= content.id %>"
       >
         <div class="hero__title">

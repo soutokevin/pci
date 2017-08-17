@@ -10,8 +10,7 @@
 <% end %>
 <% page_part(page, 'Membros').contents.each do |content| %>
   <section class="hero hero--clients" 
-  style=" background-image:
-  url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); ">
+  style=" background-image: url( <%= content.avatar.fullpath %> ); ">
     <div class="hero__title"> <%= content.title %></div>
     <div class="hero__text">
       <%= content.body %>
@@ -41,8 +40,7 @@
     <!-- Page part 02 -->
     <% page_part(page, 'Management').contents.each do |content| %>
       <%= link_to page_path(redirect_page 'Management'),
-      {style:'background-image: 
-       url( http://res.cloudinary.com/pcicloud/image/upload/'+ content.avatar.path + ');',
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
        class:'service management' } do %>
           <div class="name"> <%= content.title %> </div>
           <div class="description">
@@ -54,8 +52,7 @@
     <!-- Page part 03 -->
     <% page_part(page, 'Engineering').contents.each do |content| %>
       <%= link_to page_path(redirect_page 'Engineering'),
-      {style:'background-image: 
-       url( http://res.cloudinary.com/pcicloud/image/upload/'+ content.avatar.path + ');',
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
        class:'service engineering' } do %>
           <div class="name"> <%= content.title %> </div>
           <div class="description">
@@ -67,8 +64,7 @@
     <!-- Page part 04 -->
     <% page_part(page, 'Legal').contents.each do |content| %>
       <%= link_to '#', 
-      {style:'background-image: 
-       url( http://res.cloudinary.com/pcicloud/image/upload/'+ content.avatar.path + ');',
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
        class:'service juridical' } do %>
           <div class="name"> <%= content.title %> </div>
           <div class="description">

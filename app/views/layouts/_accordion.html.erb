@@ -10,7 +10,7 @@
         <div
           class="accordion__card accordion__card--<%= component %>"
           style="background-image: 
-          url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path if content.avatar? %> )">
+          url( <%= content.avatar.fullpath if content.avatar? %> )">
 
           <h3 class="accordion__title"><%= content.title %></h3>
           <p class="accordion__description">

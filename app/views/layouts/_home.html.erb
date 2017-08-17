@@ -1,15 +1,19 @@
 <section class="user container">
   <% if user_signed_in? %>
     <div style="display: flex; justify-content: space-between;">
-      <%= link_to 'Editar banner clientes', page_page_part_path(page, page_part( page, 'Box Clientes')) %>
-      <%= link_to 'Editar banner alunos', page_page_part_path(page, page_part( page, 'Box Alunos')) %>
+      <%= link_to 'Editar banner clientes', 
+          page_page_part_path(page, page_part( page, 'Box Clientes')) 
+      %>
+      <%= link_to 'Editar banner alunos',
+          page_page_part_path(page, page_part( page, 'Box Alunos')) 
+      %>
     </div>
   <% end %>
   <div class="user__wrapper">
     <!-- Page_part 01 -->
     <% page_part( page, 'Box Clientes').contents.each do |content| %>
         <%= link_to page_path(redirect_page('Client')), 
-        {style:'background-image: url( http://res.cloudinary.com/pcicloud/image/upload/'+ content.avatar.path + ');', 
+        {style:'background-image: url( ' +  content.avatar.fullpath + ' );', 
         class: 'user__link user__clientes'} do %>
           <h1 class="user__title"> Clientes </h1>
           <hr>
@@ -19,7 +23,7 @@
     <!-- Page_part 02 -->
     <% page_part( page, 'Box Alunos').contents.each do |content| %>
         <%= link_to page_path(redirect_page('Student')), 
-        {style: 'background-image: url( http://res.cloudinary.com/pcicloud/image/upload/' + content.avatar.path + ');',
+        {style: 'background-image: url( ' +  content.avatar.fullpath + ' );',
         class: 'user__link user__alunos'} do %>
           <h1 class="user__title"> Alunos </h1>
           <hr>
@@ -38,10 +42,17 @@
 <section class="text">
   <!-- Page_part 03 -->
   <% page_part( page, 'Banner PCI').contents.each do |content| %>
-    <h1 id="sobre a pci" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> ); " class="text__heading">Projetos Consultoria Integrada</h1>
+    <h1 class="text__heading"
+        id="sobre a pci"
+        style=" background-image: url( <%= content.avatar.fullpath %> ); "
+    >
+      Projetos Consultoria Integrada
+    </h1>
   <% end %>
   <% if user_signed_in? %>
-    <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner PCI')) %>
+    <%= link_to 'Editar Banner',
+        page_page_part_path(page, page_part( page, 'Banner PCI')) 
+    %>
   <% end %>
   <div class="container">
     <h2 class="text__title">Sobre a Projetos</h2>
@@ -50,7 +61,9 @@
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Sobre a Projetos')) %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part( page, 'Sobre a Projetos')) 
+      %>
     <% end %>
     <div class="text__row">
       <div class="text__item">
@@ -61,7 +74,9 @@
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
         <% if user_signed_in? %>
-          <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Missão')) %>
+          <%= link_to 'Editar Parágrafos',
+              page_page_part_path(page, page_part( page, 'Missão')) 
+          %>
         <% end %>
       </div>
       <div class="text__item">
@@ -72,7 +87,9 @@
           <p class="text__paragraph"> <%= content.body %> </p>
         <% end %>
         <% if user_signed_in? %>
-          <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Visão')) %>
+          <%= link_to 'Editar Parágrafos',
+              page_page_part_path(page, page_part( page, 'Visão')) 
+          %>
         <% end %>
       </div>
     </div>
@@ -86,7 +103,9 @@
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
           <% if user_signed_in? %>
-            <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Valores esquerda')) %>
+            <%= link_to 'Editar Parágrafos',
+                page_page_part_path(page, page_part( page, 'Valores esquerda')) 
+            %>
           <% end %>
         </div>
         <div class="text__item">
@@ -95,7 +114,9 @@
             <p class="text__paragraph"> <%= content.body %> </p>
           <% end %>
           <% if user_signed_in? %>
-            <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part( page, 'Valores direita')) %>
+            <%= link_to 'Editar Parágrafos',
+                page_page_part_path(page, page_part( page, 'Valores direita')) 
+            %>
           <% end %>
         </div>
       </div>
@@ -106,10 +127,17 @@
 <section class="text">
   <!-- Page_part 09 -->
   <% page_part( page, 'Banner MEJ').contents.each do |content|%>
-    <h1 id="mej" style=" background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );  " class="text__heading">Fazemos Parte do Movimento Empresa Júnior</h1>
+    <h1 class="text__heading" 
+        id="mej"
+        style=" background-image: url( <%= content.avatar.fullpath %> );"
+    >
+      Fazemos Parte do Movimento Empresa Júnior
+    </h1>
   <% end %>
   <% if user_signed_in? %>
-    <%= link_to 'Editar Banner', page_page_part_path(page, page_part( page, 'Banner MEJ')) %>
+    <%= link_to 'Editar Banner',
+        page_page_part_path(page, page_part( page, 'Banner MEJ')) 
+    %>
   <% end %>
   <div class="container">
     <h2 class="text__title">O que é o Movimento Empresa Júnior?</h2>
@@ -118,7 +146,9 @@
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) 
+      %>
     <% end %>
     <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
     <!-- Page_part 11 create true -->
@@ -126,7 +156,9 @@
       <p class="text__paragraph"> <%= content.body %> </p>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to 'Editar Parágrafos', page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) 
+      %>
     <% end %>
   </div>
 </section>

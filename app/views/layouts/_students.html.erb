@@ -58,8 +58,7 @@
 <!-- Page Part 05 -->
 <% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
   <section id="processo seletivo" class="hero hero--students" 
-  style="background-image: 
-  url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> )">
+  style="background-image: url( <%= content.avatar.fullpath %> )">
     <div class="hero__title"><%= content.title %></div>
     <div class="hero__text">
       <%= content.body %>
