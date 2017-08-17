@@ -58,11 +58,12 @@
 
         <div class="secundary-items">
             
-          <% if page_clients? @page %>
+          <% if page_clients? @page or page_engineering? @page or
+                page_management? @page or page_legal? @page %>
           	<%= render 'layouts/hamburguer_sub_items', 
           							items: clients = { 
-          								'#servicos' => "SERVIÇOS", 
-                          '#partners' => "QUEM CONFIA NA GENTE" } %>
+          								'/pages/2#servicos' => "SERVIÇOS", 
+                          '/pages/2#partners' => "QUEM CONFIA NA GENTE" } %>
           <% end %>
 
           <% if page_student? @page %>

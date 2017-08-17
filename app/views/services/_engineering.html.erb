@@ -6,12 +6,17 @@
 <!-- Page part 01 -->
 <% page_part(page, 'Banner').contents.each do |content| %>
   <section class="hero hero--engineering" 
-    style="background-image: url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );">
+    style="background-image: url( <%= content.avatar.fullpath %> );">
     <div class="hero__title"> <%= content.title %> </div>
     <div class="hero__text">
       <%= content.body %>
     </div>
   </section>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner',
+    page_page_part_path(page, page_part(page, 'Banner')) 
+  %>
 <% end %>
 
 <!-- Page part 02 -->

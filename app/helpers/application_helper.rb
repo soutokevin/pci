@@ -21,4 +21,16 @@ module ApplicationHelper
 	def page_student?(page)
 		page.name == 'student' unless page.nil?
 	end
+
+	def page_legal?(page)
+		page.name == 'legal' unless page.nil?
+	end
+
+	def page_management?(page)
+		page.name == 'management' unless page.nil?
+	end
+
+	def page_engineering?(page)
+		page.name == 'engineering' unless page.nil?
+	end
 end

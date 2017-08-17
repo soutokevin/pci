@@ -5,8 +5,7 @@
 <!-- Page part 01 -->
 <% page_part(page, 'Banner').contents.each do |content| %>
   <section class="hero hero--management" 
-    style="background-image: 
-    url( http://res.cloudinary.com/pcicloud/image/upload/<%= content.avatar.path %> );">
+    style="background-image: url( <%= content.avatar.fullpath %> );">
     <div class="hero__title"><% content.title %></div>
     <div class="hero__text">
       <% content.body %>
