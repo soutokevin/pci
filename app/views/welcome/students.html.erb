@@ -7,6 +7,62 @@
   <div class="item"> <%= link_to "BLOG", "#" %> </div>
 </div>
 
+<% slides = [
+  {
+    title: 'Lorem Ipsum',
+    image: image_url('building.jpg'),
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  {
+    title: 'Lorem Ipsum',
+    image: image_url('image.jpg'),
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  {
+    title: 'Lorem Ipsum',
+    image: image_url('image.jpg'),
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+] %>
+
+<section class="carousel">
+  <div class="carousel__wrapper">
+    <svg class="carousel__prev" width="39" height="78" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="30 6 6 39 30 72" stroke="white" stroke-width="6"
+        fill="none" stroke-linejoin="miter"/>
+    </svg>
+    <svg class="carousel__next" width="39" height="78" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="6 6 30 39 6 72" stroke="white" stroke-width="6"
+        fill="none" stroke-linejoin="miter"/>
+    </svg>
+    <ul class="carousel__controls">
+      <% slides.each_index do |i| %>
+        <li class="carousel__control <%= if i == 0
+          'carousel__control--active'
+        end %>">
+          <%= i %>
+        </li>
+      <% end %>
+    </ul>
+
+    <% slides.each_with_index do |slide, index| %>
+      <div
+        class="carousel__slide carousel__slide--hero
+         <%= if index == 0; 'carousel__slide--active' end %>"
+        style="background-image: url(<%= slide[:image] %>)"
+      >
+        <div class="hero__title">
+          <%= slide[:title] %>
+        </div>
+
+        <div class="hero__text">
+          <%= slide[:description] %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
 <%= render 'layouts/accordion', component: 'students', sections: [
   {
     title: 'Áreas de Atuação',
