@@ -75,6 +75,9 @@ client.page_parts.create name: 'Parceiros', allow_creatable: true,
 
 # Partes da Página de Estudantes
 student = Page.find_by(name: 'student')
+student.page_parts.create name: 'Carousel de apresentação', allow_creatable: true,
+												 	allow_photo: true, allow_title: true, allow_text: true,
+												 	allow_photos: false
 student.page_parts.create name: 'Áreas de atuação', allow_creatable: true,
 												 	allow_photo: true, allow_title: true, allow_text: true,
 												 	allow_photos: false
