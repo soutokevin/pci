@@ -52,7 +52,7 @@ class ContentsController < ApplicationController
   def destroy
     @content.destroy
     respond_to do |format|
-      format.html { redirect_to @page_part, notice: 'Content was successfully destroyed.' }
+      format.html { redirect_to page_path(@page_part.page_id), notice: 'Content was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
