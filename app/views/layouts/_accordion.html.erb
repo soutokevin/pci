@@ -1,24 +1,23 @@
-<section class="accordion accordion--<%= component %>">
-  <% sections.each do |section| %>
-    <div class="container section">
-      <h2><%= section[:title] %></h2>
-      <div class="separator"></div>
-      <div class="atuacao section__wrapper">
+<section class="accordion accordion--<%= component %>" id="areas de atuacao">
+  <div class="container section">
+    <h2> <%= title %> </h2>
+    <div class="separator"></div>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Seção', page_page_part_path(section.page_id, section) %>
+    <% end %>
+    <div class="atuacao section__wrapper">
+      <% section.contents.each do |content| %>
+        <div
+          class="accordion__card accordion__card--<%= component %>"
+          style="background-image: 
+          url( <%= content.avatar.fullpath if content.avatar? %> )">
 
-        <% section[:cards].each do |card| %>
-          <div
-            class="accordion__card accordion__card--<%= component %>"
-            <% if card[:image] %>
-              style="background-image: url(<%= card[:image] %>)"
-            <% end %>
-          >
-            <h3 class="accordion__title"><%= card[:title] %></h3>
-            <p class="accordion__description">
-              <%= card[:description] %>
-            </p>
-          </div>
-        <% end %>
-      </div>
+          <h3 class="accordion__title"><%= content.title %></h3>
+          <p class="accordion__description">
+            <%= content.body %>
+          </p>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </section>

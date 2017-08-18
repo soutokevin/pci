@@ -1,0 +1,143 @@
+<%= render 'layouts/sub_header', 
+            items: clients = { '#servicos' => "SERVIÇOS", 
+                               '#partners' => "QUEM CONFIA NA GENTE"} %>
+
+<!-- Page part 01 -->
+<% page_part(page, 'Membros').contents.each do |content| %>
+  <section class="hero hero--clients" 
+  style=" background-image: url( <%= content.avatar.fullpath %> ); ">
+    <div class="hero__title"> <%= content.title %></div>
+    <div class="hero__text">
+      <%= content.body %>
+    </div>
+  </section>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner',
+    page_page_part_path(page, page_part(page, 'Membros')) 
+  %>
+<% end %>
+
+<section class="services-diagnostic-form container" id="servicos">
+  <div class="title">
+    <div>NOSSOS SERVIÇOS</div>
+    <div class="line"></div>
+  </div>
+  <% if user_signed_in? %>
+    <div style="display: flex; justify-content: space-between; margin: 7px 0px ">
+      <%= link_to 'Editar Gestão',
+        page_page_part_path(page, page_part(page, 'Management'))
+      %>
+      <%= link_to 'Editar Engenharia e Arquitetura',
+        page_page_part_path(page, page_part(page, 'Engineering'))
+      %>
+      <%= link_to 'Editar Jurídico',
+        page_page_part_path(page, page_part(page, 'Legal'))
+      %>
+    </div>
+  <% end %>
+  <div class="services">
+    <!-- Page part 02 -->
+    <% page_part(page, 'Management').contents.each do |content| %>
+      <%= link_to page_path(redirect_page 'Management'),
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
+       class:'service management' } do %>
+          <div class="name"> <%= content.title %> </div>
+          <div class="description">
+            <%= content.body %>
+          </div>
+      <% end %>
+    <% end %>
+
+    <!-- Page part 03 -->
+    <% page_part(page, 'Engineering').contents.each do |content| %>
+      <%= link_to page_path(redirect_page 'Engineering'),
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
+       class:'service engineering' } do %>
+          <div class="name"> <%= content.title %> </div>
+          <div class="description">
+            <%= content.body %>
+          </div>
+      <% end %>
+    <% end %>
+
+    <!-- Page part 04 -->
+    <% page_part(page, 'Legal').contents.each do |content| %>
+      <%= link_to '#', 
+      {style:'background-image: url(' + content.avatar.fullpath + ');',
+       class:'service juridical' } do %>
+          <div class="name"> <%= content.title %> </div>
+          <div class="description">
+            <%= content.body %>
+          </div>
+      <% end %>
+    <% end %>
+
+  </div>
+  <hr>
+  <div class="diagnostic-form">
+    <!-- Page part 05 -->
+    <% page_part(page, 'Texto de diagnóstico').contents.each do |content| %>
+      <div class="text">
+        <%= content.body %> <br>
+      </div>
+    <% end %>
+    <% if user_signed_in? %>
+      <div style="color: black; text-align: center; margin: 20px 0;">
+        <%= link_to 'Editar Parágrafo',
+          page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) 
+        %>
+      </div>
+    <% end %>
+    <div class="button-flex">
+      <button class="button">QUERO PREENCHER O DIAGNÓSTICO</button>
+    </div>
+  </div>
+</section>
+
+<section class="partners-section" id="partners">
+  <div class="container">
+  <div class="title">
+    QUEM CONFIA NA GENTE
+  </div>
+  <hr>
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to 'Editar Seção',
+        page_page_part_path(page, page_part(page, 'Quem confia na gente'))
+      %>
+    </div>
+  <% end %>
+  <div class="partners-list">
+    <!-- Page part 06  allow_creatable -->
+    <% page_part(page, 'Quem confia na gente').contents.each do |content| %>
+      <div class="partner">
+        <% if content.avatar? %>
+          <div>
+            <%= cl_image_tag content.avatar.path, class: 'img' %>
+          </div>
+        <% end %>
+        <div class="description">
+          <%= content.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</section>
+
+<section class="clients container">
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Seção',
+      page_page_part_path(page, page_part(page, 'Parceiros'))
+    %>
+  <% end %>
+  <div class="row">
+    <!-- Page part 07 allow_creatable -->
+    <% page_part(page, 'Parceiros').contents.each do |content| %>
+      <% if content.avatar? %>
+        <%= cl_image_tag content.avatar.path, class: "client" %>
+      <% end %>
+    <% end %>
+  </div>
+</section>

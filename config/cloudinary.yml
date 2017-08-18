@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: pcicloud
+  api_key: '438764344857977'
+  api_secret: AyiEwwVvqGc1Mcj2B6VyBDAgOk4
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: pcicloud
+  api_key: '438764344857977'
+  api_secret: AyiEwwVvqGc1Mcj2B6VyBDAgOk4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: pcicloud
+  api_key: '438764344857977'
+  api_secret: AyiEwwVvqGc1Mcj2B6VyBDAgOk4
+  enhance_image_tag: true
+  static_image_support: false

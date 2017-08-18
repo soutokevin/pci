@@ -1,0 +1,119 @@
+<%= render 'layouts/sub_header', 
+            items: clients = { '#areas de atuacao' => "ÁREAS DE ATUAÇÃO", 
+                               '#quem passou por aqui' => "QUEM PASSOU POR AQUI",
+                               '#processo seletivo' => "PROCESSO SELETIVO"} %>
+
+
+<section class="carousel">
+  <div class="carousel__wrapper">
+    <svg class="carousel__prev" width="39" height="78" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="30 6 6 39 30 72" stroke="white" stroke-width="6"
+        fill="none" stroke-linejoin="miter"/>
+    </svg>
+    <svg class="carousel__next" width="39" height="78" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="6 6 30 39 6 72" stroke="white" stroke-width="6"
+        fill="none" stroke-linejoin="miter"/>
+    </svg>
+    <ul class="carousel__controls">
+      <% page_part(page, 'Carousel de apresentação').contents.each_with_index do |slide, i| %>
+        <li class="carousel__control <%= if i == 0
+          'carousel__control--active'
+        end %>">
+          <%= i %>
+        </li>
+      <% end %>
+    </ul>
+
+    <% page_part(page, 'Carousel de apresentação').contents.each_with_index do |slide, index| %> %>
+      <div
+        class="carousel__slide carousel__slide--hero
+         <%= if index == 0; 'carousel__slide--active' end %>"
+        style="background-image: url(<%= slide.avatar.fullpath %>)"
+      >
+        <div class="hero__title">
+          <%= slide.title %>
+        </div>
+
+        <div class="hero__text">
+          <%= slide.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Slides',
+      page_page_part_path(page, page_part(page, 'Carousel de apresentação')) 
+  %>
+<% end %>
+
+
+<!-- Page Part 01 -->  
+<%= render 'layouts/accordion', component: 'students',
+                                title: 'ÁREAS DE ATUAÇÃO', 
+                                section: page_part(page, 'Áreas de atuação') %>
+
+
+<!-- Page Part 02 -->
+<%= render 'layouts/carousel', component: 'students',
+                               slides: page_part(page, 'Projetos anteriores') %>
+
+<section class="quotes quotes--students" id="quem passou por aqui">
+  <div class="container">
+    <div class="quotes__title quotes__title--students">QUEM PASSOU POR AQUI</div>
+    <hr class="sep sep--students">
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to 'Editar Seção', 
+            page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
+      <% end %>
+    </div>
+    <!-- Page Part 03 -->
+    <div class="quotes__wrapper">
+      <% page_part(page, 'Quem passou por aqui').contents.each do |content| %>
+        <div class="quotes__quote">
+          <div>
+            <%= cl_image_tag( content.avatar.path, alt: "PCI", class: 'quotes__img') %>
+          </div>
+          <div class="quotes__description">
+            <%= content.body %>
+          </div>
+        </div>
+      <% end %>
+
+    </div><!-- wrapper -->
+
+    <div class="section__wrapper">
+      <!-- Page Part 04 -->
+      <% page_part(page, 'Citação').contents.each do |content| %>
+        <p class="section__big-quote"> <%= content.body %> </p>
+      <% end %>
+      <div style="width: 100%; margin: 20px 0; text-align: center;">
+      <% if user_signed_in? %>
+        <%= link_to 'Editar citações',
+          page_page_part_path(page, page_part( page, 'Citação')) 
+        %>
+      <% end %>
+      </div>
+      <a class="section__btn" href="#">Deixe seu depoimento</a>
+    </div>
+  </div><!-- container -->
+</section>
+
+<!-- Page Part 05 -->
+<% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
+  <section id="processo seletivo" class="hero hero--students" 
+  style="background-image: url( <%= content.avatar.fullpath %> )">
+    <div class="hero__title"><%= content.title %></div>
+    <div class="hero__text">
+      <%= content.body %>
+    </div>
+  </section>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar banner',
+    page_page_part_path(page, page_part( page, 'Banner processo seletivo')) 
+  %>
+<% end %>
+
+<%= render 'layouts/candidates_form', component: 'form-alunos' %>

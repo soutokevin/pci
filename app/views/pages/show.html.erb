@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% end %>
+<% if @page.name == 'home' %>
+	<%= render 'layouts/home', page: @page %>
+<% end %>
+<% if @page.name == 'client' %>
+	<%= render 'layouts/clients', page: @page %>
+<% end %>
+<% if @page.name == 'student' %>
+	<%= render 'layouts/students', page: @page %>
+<% end %>
+<% if @page.name == 'legal' %>
+	<%= render 'services/legal', page: @page %>
+<% end %>
+<% if @page.name == 'engineering' %>
+	<%= render 'services/engineering', page: @page %>
+<% end %>
+<% if @page.name == 'management' %>
+	<%= render 'services/management', page: @page %>
+<% end %>

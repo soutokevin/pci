@@ -1,8 +1,17 @@
 $(document).on('turbolinks:load', function() {
   'use strict'
 
+  var el = $('.carousel')
+  for (var i = 0; i < el.length; i++) {
+    carousel(el[i])
+  }
+})
+
+function carousel(el) {
+  'use strict'
+
   var current = 0,
-    carousel = $('.carousel'),
+    carousel = $(el),
     slides = carousel.find('.carousel__slide'),
     controls = carousel.find('.carousel__control')
 
@@ -36,4 +45,4 @@ $(document).on('turbolinks:load', function() {
     var index = controls.index(this)
     setSlide(index)
   })
-})
+}

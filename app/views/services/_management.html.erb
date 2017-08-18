@@ -1,0 +1,40 @@
+<%= render 'layouts/modal' %>
+<%= render 'layouts/sub_header', 
+            items: clients = { '/pages/2#servicos' => "SERVIÇOS", 
+                               '/pages/2#partners' => "QUEM CONFIA NA GENTE"} %>
+<!-- Page part 01 -->
+<% page_part(page, 'Banner').contents.each do |content| %>
+  <section class="hero hero--management" 
+    style="background-image: url( <%= content.avatar.fullpath %> );">
+    <div class="hero__title"><% content.title %></div>
+    <div class="hero__text">
+      <% content.body %>
+    </div>
+  </section>
+<% end %>
+
+<!-- Page part 02 -->
+<%= render 'layouts/accordion', component: 'management', 
+                                title: 'ORGANIZAÇÃO E PROCESSOS',
+                                section: page_part(page, 'Org e Proc') %>
+
+<!-- Page part 03 -->
+<%= render 'layouts/accordion', component: 'management', 
+                                title: 'MARKETING',
+                                section: page_part(page, 'Marketing') %>
+
+<!-- Page part 03 -->
+<%= render 'layouts/accordion', component: 'management', 
+                                title: 'ADMINISTRAÇÃO FINANCEIRA',
+                                section: page_part(page, 'AdmFin') %>
+
+<!-- Page part 04 -->
+<%= render 'layouts/accordion', component: 'management', 
+                                title: 'GESTÃO EMPRESARIAL',
+                                section: page_part(page, 'GP') %>
+
+<!-- Page part 05 -->
+<%= render 'layouts/carousel', component: 'management', 
+                               slides: page_part(page, 'Projetos anteriores') %> 
+
+<%= render 'services/form', component: "gestao" %>

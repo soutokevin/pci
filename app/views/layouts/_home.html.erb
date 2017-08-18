@@ -1,0 +1,165 @@
+<section class="user container">
+  <% if user_signed_in? %>
+    <div style="display: flex; justify-content: space-between;">
+      <%= link_to 'Editar banner clientes', 
+          page_page_part_path(page, page_part( page, 'Box Clientes')) 
+      %>
+      <%= link_to 'Editar banner alunos',
+          page_page_part_path(page, page_part( page, 'Box Alunos')) 
+      %>
+    </div>
+  <% end %>
+  <div class="user__wrapper">
+    <!-- Page_part 01 -->
+    <% page_part( page, 'Box Clientes').contents.each do |content| %>
+        <%= link_to page_path(redirect_page('Client')), 
+        {style:'background-image: url( ' +  content.avatar.fullpath + ' );', 
+        class: 'user__link user__clientes'} do %>
+          <h1 class="user__title"> Clientes </h1>
+          <hr>
+          <p> <%= content.body %> </p>
+        <% end %>
+    <% end %>
+    <!-- Page_part 02 -->
+    <% page_part( page, 'Box Alunos').contents.each do |content| %>
+        <%= link_to page_path(redirect_page('Student')), 
+        {style: 'background-image: url( ' +  content.avatar.fullpath + ' );',
+        class: 'user__link user__alunos'} do %>
+          <h1 class="user__title"> Alunos </h1>
+          <hr>
+          <p> <%= content.body %> </p>
+        <% end %>
+    <% end %>
+  </div>
+  <div class="user__arrow">
+    <svg width="78" height="39">
+      <polygon fill="#b3b3b3" points="0,0 78,0 39,39" />
+    </svg>
+  </div>
+  
+</section>
+
+<section class="text">
+  <!-- Page_part 03 -->
+  <% page_part( page, 'Banner PCI').contents.each do |content| %>
+    <h1 class="text__heading"
+        id="sobre a pci"
+        style=" background-image: url( <%= content.avatar.fullpath %> ); "
+    >
+      Projetos Consultoria Integrada
+    </h1>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Banner',
+        page_page_part_path(page, page_part( page, 'Banner PCI')) 
+    %>
+  <% end %>
+  <div class="container">
+    <h2 class="text__title">Sobre a Projetos</h2>
+    <!-- Page_part 04 create true -->
+    <% page_part( page, 'Sobre a Projetos').contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part( page, 'Sobre a Projetos')) 
+      %>
+    <% end %>
+    <div class="text__row">
+      <div class="text__item">
+        <!-- Page_part 05 create true -->
+        <h1> Missão </h1>
+        <div class="separator"></div>
+        <% page_part( page, 'Missão').contents.each do |content| %>
+          <p class="text__paragraph"> <%= content.body %> </p>
+        <% end %>
+        <% if user_signed_in? %>
+          <%= link_to 'Editar Parágrafos',
+              page_page_part_path(page, page_part( page, 'Missão')) 
+          %>
+        <% end %>
+      </div>
+      <div class="text__item">
+        <!-- Page_part 06 create true -->
+        <h1> Visão </h1>
+        <div class="separator"></div>
+        <% page_part( page, 'Visão').contents.each do |content| %>
+          <p class="text__paragraph"> <%= content.body %> </p>
+        <% end %>
+        <% if user_signed_in? %>
+          <%= link_to 'Editar Parágrafos',
+              page_page_part_path(page, page_part( page, 'Visão')) 
+          %>
+        <% end %>
+      </div>
+    </div>
+    <div class="text__item">
+      <h1>Valores</h1>
+      <div class="separator"></div>
+      <div class="text__row">
+        <div class="text__item">
+          <!-- Page_part 07 create true -->
+          <% page_part( page, 'Valores esquerda').contents.each do |content| %>
+            <p class="text__paragraph"> <%= content.body %> </p>
+          <% end %>
+          <% if user_signed_in? %>
+            <%= link_to 'Editar Parágrafos',
+                page_page_part_path(page, page_part( page, 'Valores esquerda')) 
+            %>
+          <% end %>
+        </div>
+        <div class="text__item">
+          <!-- Page_part 08 create true -->
+          <% page_part( page, 'Valores direita').contents.each do |content| %>
+            <p class="text__paragraph"> <%= content.body %> </p>
+          <% end %>
+          <% if user_signed_in? %>
+            <%= link_to 'Editar Parágrafos',
+                page_page_part_path(page, page_part( page, 'Valores direita')) 
+            %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text">
+  <!-- Page_part 09 -->
+  <% page_part( page, 'Banner MEJ').contents.each do |content|%>
+    <h1 class="text__heading" 
+        id="mej"
+        style=" background-image: url( <%= content.avatar.fullpath %> );"
+    >
+      Fazemos Parte do Movimento Empresa Júnior
+    </h1>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'Editar Banner',
+        page_page_part_path(page, page_part( page, 'Banner MEJ')) 
+    %>
+  <% end %>
+  <div class="container">
+    <h2 class="text__title">O que é o Movimento Empresa Júnior?</h2>
+    <!-- Page_part 10 create true -->
+    <% page_part(page, 'O que é o Movimento Empresa Júnior?').contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) 
+      %>
+    <% end %>
+    <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
+    <!-- Page_part 11 create true -->
+    <% page_part(page, 'Como funciona uma Empresa Júnior?').contents.each do |content| %>
+      <p class="text__paragraph"> <%= content.body %> </p>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Editar Parágrafos',
+          page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) 
+      %>
+    <% end %>
+  </div>
+</section>
+<%= render 'layouts/contact', page: page %>

@@ -46,21 +46,18 @@
       }
     }
     .management {
-      background-image: image-url('gestao.jpg');
       background-color: #195f66;
       &:hover {
         background-color: darken(#195f66, 15%);
       }
     }
     .engineering {
-      background-image: image-url('building.jpg');
       background-color: #fcbd09;
       &:hover {
         background-color: darken(#fcbd09, 30%);
       }
     }
     .juridical {
-      background-image: image-url('image.jpg');
       background-color: #12a18c;
       &:hover {
         background-color: darken(#12a18c, 25%);
@@ -95,6 +92,46 @@
         &:hover {
           background-color: #423c3e;
         }
+      }
+    }
+  }
+}
+
+.partners-section {
+  background-color: $light-gray;
+  padding: 80px 60px;
+  .title {
+    color: $dark-red-pci;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 20px;
+  }
+  hr {
+    display: inline-block;
+    height: 7px;
+    width: 110px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: $dark-red-pci;
+  }
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .partner {
+      display: flex;
+      width: 48%;
+      margin: 20px 0;
+      .img {
+        width: 200px;
+        height: 200px;
+      }
+      .description {
+        width: 100%;
+        margin-left: 50px;
+        color: #776969;
+        font-size: 1.2em;
       }
     }
   }

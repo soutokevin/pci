@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
     modal.addClass('modal--active')
   })
 
-  function setup(opts) {
+  function setup(opts, photos) {
     modal.find('.modal__title').text(opts.title)
 
     var text = modal.find('.modal__text')
@@ -25,10 +25,10 @@ $(document).on('turbolinks:load', function() {
     text.children().remove()
     images.children().remove()
 
-    text.html(opts.description)
+    text.html(opts.body)
 
-    opts.images.forEach(function(src, index) {
-      var img = $('<img class="modal__image" src="' + src + '">')
+    photos.forEach(function(src, index) {
+      var img = $('<img class="modal__image" src="' + src.fullpath + '">')
 
       img.click(function() {
         showImageModal(opts.images, index)
@@ -39,4 +39,32 @@ $(document).on('turbolinks:load', function() {
   }
 
   window.setModal = setup
+
+  // Requisição AJax dos slides para o modal
+  var next = $('.carousel__next')
+  var prev = $('.carousel__prev')
+  var slide_active = $('.carousel__slide--active')
+  var id = slide_active.data('modal');
+  ajax(id);
+
+  prev.click(function(){
+    slide_active = $('.carousel__slide--active')
+    id = slide_active.data('modal');
+    ajax(id);
+  });
+
+  next.click(function(){
+    slide_active = $('.carousel__slide--active')
+    id = slide_active.data('modal');
+    ajax(id);
+  });
+
+  function ajax(id) {
+    $.ajax({
+      type: 'GET',
+      url: '/pages/callback/'+ id +'.json'
+    }).success(function(response) {
+      setup(response.content, response.photos);
+    })
+  }
 })

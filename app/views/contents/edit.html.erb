@@ -1,0 +1,5 @@
+<h1>Editando Conteúdo</h1>
+
+<%= render 'form', content: @content, action: 'update', page_part: @page_part %>
+
+<%= link_to 'Voltar', page_page_parts_path(@page_part)  %>

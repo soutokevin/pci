@@ -1,0 +1,7 @@
+<div class="form-content">
+	<h1>Novo Conteúdo</h1>
+
+	<%= render 'form', content: @content, action: 'create', page_part: @page_part %>
+
+<%= link_to 'Voltar', page_page_parts_path(@page_part)  %>
+</div>
