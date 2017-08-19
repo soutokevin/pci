@@ -45,7 +45,9 @@ $(document).on('turbolinks:load', function() {
   var prev = $('.carousel__prev')
   var slide_active = $('.carousel__slide--active')
   var id = slide_active.data('modal');
-  ajax(id);
+  if (id != null) {
+    ajax(id);
+  }
 
   prev.click(function(){
     slide_active = $('.carousel__slide--active')
