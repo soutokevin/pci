@@ -13,9 +13,13 @@ $primary: #BE0000;
   flex-direction: column; 
   justify-content: center;
   width: 100%;
-  height: 60vh;
-  min-height: 100%;
+  height: 70vh;
   padding: 20px;
+}
+@media (max-width: 565px) {
+  .wrapper {
+    padding: 0px;
+  }
 }
 
 
