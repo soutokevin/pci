@@ -12,6 +12,11 @@
     </div>
   </section>
 <% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner',
+    page_page_part_path(page, page_part(page, 'Banner')) 
+  %>
+<% end %>
 
 <!-- Page part 02 -->
 <%= render 'layouts/accordion', component: 'management', 
