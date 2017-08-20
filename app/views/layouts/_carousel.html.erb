@@ -27,6 +27,7 @@
 
     <% slides.contents.each_with_index do |content, index| %>
       <div
+        id="modal"
         class="carousel__slide <%= index == 0 ? 'carousel__slide--active' : '' %>"
         style="background-image: url(<%= content.photos[0].fullpath %>  )"
         data-modal="<%= content.id %>"
@@ -35,8 +36,12 @@
           <%= content.title %>
         </div>
 
-        <div class="hero__text">
+        <div class="hero__text" style="height: 120px; overflow: hidden;">
           <%= content.body %>
+        </div>
+        <span>. . .</span>
+        <div style="padding-top: 30px;">
+          CLIQUE PARA SABER MAIS
         </div>
       </div>
     <% end %>
