@@ -8,6 +8,9 @@
     // sizing
     padding: 52px 0;
     margin: 32px 0 0 0;
+    @include media-xs-down {
+      font-size: 27pt;
+    }
 
     // bg
     @include blend-image(#801810, '');
