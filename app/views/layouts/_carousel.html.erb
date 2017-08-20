@@ -27,6 +27,7 @@
 
     <% slides.contents.each_with_index do |content, index| %>
       <div
+        id="modal"
         class="carousel__slide <%= index == 0 ? 'carousel__slide--active' : '' %>"
         style="background-image: url(<%= content.photos[0].fullpath %>  )"
         data-modal="<%= content.id %>"
