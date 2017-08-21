@@ -43,23 +43,20 @@ $(document).on('turbolinks:load', function() {
   // Requisição AJax dos slides para o modal
   var next = $('.carousel__next')
   var prev = $('.carousel__prev')
-  var slide_active = $('.carousel__slide--active')
-  if (slide_active.length > 1) {
-    slide_active = $('#modal')
-  } 
+  var slide_active = $('#modal.carousel__slide--active') 
   var id = slide_active.data('modal');
   if (id != null) {
     ajax(id);
   }
 
   prev.click(function(){
-    slide_active = $('.carousel__slide--active')
+    slide_active = $('#modal.carousel__slide--active')
     id = slide_active.data('modal');
     ajax(id);
   });
 
   next.click(function(){
-    slide_active = $('.carousel__slide--active')
+    slide_active = $('#modal.carousel__slide--active')
     id = slide_active.data('modal');
     ajax(id);
   });
