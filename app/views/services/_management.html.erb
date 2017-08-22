@@ -6,11 +6,13 @@
 <% page_part(page, 'Banner').contents.each do |content| %>
   <section class="hero hero--management" 
     style="background-image: url( <%= content.avatar.fullpath %> );">
-    <div class="hero__title"><% content.title %></div>
-    <div class="hero__text">
-      <% content.body %>
-    </div>
+    <div class="hero__title"> <%= content.title %> </div>
   </section>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to 'Editar Banner',
+    page_page_part_path(page, page_part(page, 'Banner')) 
+  %>
 <% end %>
 
 <!-- Page part 02 -->

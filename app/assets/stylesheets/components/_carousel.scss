@@ -11,6 +11,9 @@
     @include media-md-up {
       font-size: 33pt;
     }
+    @include media-xs-down {
+      font-size: 20pt;
+    }
 
     &--management {
       color: #435b65;

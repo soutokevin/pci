@@ -142,11 +142,20 @@
 
 		.expand {
 			display: block !important;
+			z-index: 10;
 		}
 	}
 }
 @media (max-width: 565px) {
 	.header .mobile-nav {
 		padding: 0.8em 1em;
+	}
+	.header .buscador .seach-input {
+		width: 60%;
+	}
+	.header .responsive-menu li,
+	.header .buscador {
+		padding-left: 1em;
+		padding-right: 1em; 
 	}
 }

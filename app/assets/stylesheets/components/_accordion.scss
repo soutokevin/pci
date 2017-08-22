@@ -12,6 +12,9 @@
   h2 {
     font-size: 2.5em;
     text-transform: uppercase;
+    @include media-xs-down {
+      font-size: 20pt;
+    }
   }
 
   &__card {

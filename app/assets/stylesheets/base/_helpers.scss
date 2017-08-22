@@ -92,6 +92,9 @@
       color: $color;
       font-size: 3em;
       margin: 0;
+      @include media-xs-down {
+        font-size: 20pt;
+      }
     }
     .line {
       width: 110px;
