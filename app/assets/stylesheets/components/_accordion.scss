@@ -9,11 +9,23 @@
     background-color: white;
   }
 
-  h2 {
+  .title {
     font-size: 2.5em;
     text-transform: uppercase;
     @include media-xs-down {
       font-size: 20pt;
+    }
+
+    &--management {
+      color: #435b65;
+    }
+
+    &--legal {
+      color: #12a18c;
+    }
+
+    &--engineering {
+      color: #d29108;
     }
   }
 
