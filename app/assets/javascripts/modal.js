@@ -16,7 +16,6 @@ $(document).on('turbolinks:load', function() {
   })
 
   function setup(opts, photos) {
-    console.log(...photos)
     modal.find('.modal__title').text(opts.title)
 
     var text = modal.find('.modal__text')
