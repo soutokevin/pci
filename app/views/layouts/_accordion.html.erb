@@ -1,7 +1,7 @@
 <section class="accordion accordion--<%= component %>" id="areas de atuacao">
   <div class="container section">
-    <h2> <%= title %> </h2>
-    <div class="separator"></div>
+    <h2 class="title title--<%= component %>"> <%= title %> </h2>
+    <div class="separator separator--<%= component %>"></div>
     <% if user_signed_in? %>
       <%= link_to 'Editar Seção', page_page_part_path(section.page_id, section) %>
     <% end %>
@@ -9,7 +9,7 @@
       <% section.contents.each do |content| %>
         <div
           class="accordion__card accordion__card--<%= component %>"
-          style="background-image: 
+          style="background-image:
           url( <%= content.avatar.fullpath if content.avatar? %> )">
 
           <h3 class="accordion__title"><%= content.title %></h3>

@@ -60,5 +60,17 @@
     width: 50px;
     margin: 8px 0;
     background-color: #435c65;
+
+    &--management {
+      background-color: #435b65;
+    }
+
+    &--legal {
+      background-color: #12a18c;
+    }
+
+    &--engineering {
+      background-color: #d29108;
+    }
   }
 }
