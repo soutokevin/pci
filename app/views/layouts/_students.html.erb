@@ -1,6 +1,6 @@
 <%= render 'layouts/modal' %>
-<%= render 'layouts/sub_header', 
-            items: clients = { '#areas de atuacao' => "ÁREAS DE ATUAÇÃO", 
+<%= render 'layouts/sub_header',
+            items: clients = { '#areas de atuacao' => "ÁREAS DE ATUAÇÃO",
                                '#quem passou por aqui' => "QUEM PASSOU POR AQUI",
                                '#processo seletivo' => "PROCESSO SELETIVO"} %>
 
@@ -44,14 +44,14 @@
 </section>
 <% if user_signed_in? %>
   <%= link_to 'Editar Slides',
-      page_page_part_path(page, page_part(page, 'Carousel de apresentação')) 
+      page_page_part_path(page, page_part(page, 'Carousel de apresentação'))
   %>
 <% end %>
 
 
-<!-- Page Part 01 -->  
+<!-- Page Part 01 -->
 <%= render 'layouts/accordion', component: 'students',
-                                title: 'ÁREAS DE ATUAÇÃO', 
+                                title: 'ÁREAS DE ATUAÇÃO',
                                 section: page_part(page, 'Áreas de atuação') %>
 
 
@@ -65,7 +65,7 @@
     <hr class="sep sep--students">
     <div>
       <% if user_signed_in? %>
-        <%= link_to 'Editar Seção', 
+        <%= link_to 'Editar Seção',
             page_page_part_path(page, page_part( page, 'Quem passou por aqui')) %>
       <% end %>
     </div>
@@ -92,7 +92,7 @@
       <div style="width: 100%; margin: 20px 0; text-align: center;">
       <% if user_signed_in? %>
         <%= link_to 'Editar citações',
-          page_page_part_path(page, page_part( page, 'Citação')) 
+          page_page_part_path(page, page_part( page, 'Citação'))
         %>
       <% end %>
       </div>
@@ -103,7 +103,7 @@
 
 <!-- Page Part 05 -->
 <% page_part(page, 'Banner processo seletivo').contents.each do |content| %>
-  <section id="processo seletivo" class="hero hero--students" 
+  <section id="processo seletivo" class="hero hero--students"
   style="background-image: url( <%= content.avatar.fullpath %> )">
     <div class="hero__title"><%= content.title %></div>
     <div class="hero__text">
@@ -113,7 +113,7 @@
 <% end %>
 <% if user_signed_in? %>
   <%= link_to 'Editar banner',
-    page_page_part_path(page, page_part( page, 'Banner processo seletivo')) 
+    page_page_part_path(page, page_part( page, 'Banner processo seletivo'))
   %>
 <% end %>
 
