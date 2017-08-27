@@ -3,5 +3,5 @@
 
 	<%= render 'form', content: @content, action: 'create', page_part: @page_part %>
 
-<%= link_to 'Voltar', page_page_parts_path(@page_part)  %>
+  <%= link_to 'Voltar', page_page_part_path(@page_part.page_id, @page_part)  %>
 </div>
