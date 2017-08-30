@@ -151,7 +151,7 @@
   .note {
     padding: 30px 0;
     a {
-      color: $dark-red-pci;
+      color: #BD1818;
     }
   }
 }
@@ -206,5 +206,8 @@
   }
   .contact .container .address-map .map {
     width: 240px;
+  }
+  .contact .container .address-map .adress {
+    margin-bottom: 25px;
   }
 }
