@@ -71,7 +71,7 @@
 			float: right;
 		}
 		.buscador .seach-input {
-			width: 80%;
+			width: 85%;
 			border-radius: 0px;
 			background-color: white;
 			font-size: 1.3em;
@@ -82,7 +82,7 @@
 				&::-moz-placeholder {  color:transparent; } /* firefox 19+ */
 				&:-ms-input-placeholder { color:transparent; } /* ie */
 			}
-			&::-webkit-input-placeholder { font-size: 20px; opacity:  1; }
+			&::-webkit-input-placeholder { color:$text-menu-main-items; font-size: 20px; opacity:  1; }
 			&::-moz-placeholder {  font-size: 20px; opacity:  1; } /* firefox 19+ */
 			&:-ms-input-placeholder { font-size: 20px; opacity:  1; } /* ie */
 		}
@@ -154,7 +154,7 @@
 		padding: 0.8em 0.8em;
 	}
 	.header .buscador .seach-input {
-		width: 60%;
+		width: 68%;
 	}
 	.header .responsive-menu li,
 	.header .buscador {

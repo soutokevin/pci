@@ -211,3 +211,11 @@
     margin-bottom: 25px;
   }
 }
+
+@media (max-width: 510px) {
+  .contact .container .form-container .form .reason .radio-item {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+}

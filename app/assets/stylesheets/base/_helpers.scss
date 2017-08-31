@@ -175,7 +175,7 @@
 }
 
 @mixin responsive-content-form($color-label) {
-  padding: 0 5%;
+  padding: 30px 5%;
   .form {
     flex-direction: column;
     .box-right,
