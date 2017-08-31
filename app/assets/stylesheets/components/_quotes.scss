@@ -68,6 +68,40 @@
     font-size: 1.2em;
   }
 
+  &__big {
+    position: relative;
+    margin: 32px 0;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 900;
+    font-style: italic;
+    z-index: 0;
+
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: -1;
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      color: #a7d7d3;
+      display: block;
+      font-size: 4em;
+      height: 0.5em;
+    }
+
+    &::before {
+      content: open-quote;
+      left: -0.25em;
+    }
+
+    &::after {
+      content: close-quote;
+      right: -0.25em;
+    }
+  }
+
   @include media-md-down {
     padding: 80px 10px;
 

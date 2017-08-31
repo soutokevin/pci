@@ -87,7 +87,7 @@
     <div class="section__wrapper">
       <!-- Page Part 04 -->
       <% page_part(page, 'Citação').contents.each do |content| %>
-        <p class="section__big-quote"> <%= content.body %> </p>
+        <p class="quotes__big"><%= content.body %></p>
       <% end %>
       <div style="width: 100%; margin: 20px 0; text-align: center;">
       <% if user_signed_in? %>
