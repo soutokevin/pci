@@ -1,10 +1,10 @@
-<%= render 'layouts/sub_header', 
-            items: clients = { '#servicos' => "SERVIÇOS", 
+<%= render 'layouts/sub_header',
+            items: clients = { '#servicos' => "SERVIÇOS",
                                '#partners' => "QUEM CONFIA NA GENTE"} %>
 
 <!-- Page part 01 -->
 <% page_part(page, 'Membros').contents.each do |content| %>
-  <section class="hero hero--clients" 
+  <section class="hero hero--clients"
   style=" background-image: url( <%= content.avatar.fullpath %> ); ">
     <div class="hero__title"> <%= content.title %></div>
     <div class="hero__text">
@@ -14,7 +14,7 @@
 <% end %>
 <% if user_signed_in? %>
   <%= link_to 'Editar Banner',
-    page_page_part_path(page, page_part(page, 'Membros')) 
+    page_page_part_path(page, page_part(page, 'Membros'))
   %>
 <% end %>
 
@@ -63,7 +63,7 @@
 
     <!-- Page part 04 -->
     <% page_part(page, 'Legal').contents.each do |content| %>
-      <%= link_to '#', 
+      <%= link_to '#',
       {style:'background-image: url(' + content.avatar.fullpath + ');',
        class:'service juridical' } do %>
           <div class="name"> <%= content.title %> </div>
@@ -85,7 +85,7 @@
     <% if user_signed_in? %>
       <div style="color: black; text-align: center; margin: 20px 0;">
         <%= link_to 'Editar Parágrafo',
-          page_page_part_path(page, page_part(page, 'Texto de diagnóstico')) 
+          page_page_part_path(page, page_part(page, 'Texto de diagnóstico'))
         %>
       </div>
     <% end %>
@@ -113,9 +113,9 @@
     <% page_part(page, 'Quem confia na gente').contents.each do |content| %>
       <div class="partner">
         <% if content.avatar? %>
-          
+          <div class="img">
             <%= cl_image_tag content.avatar.path, class: 'img' %>
-          
+          </div>
         <% end %>
         <div class="description">
           <%= content.body %>

@@ -156,12 +156,12 @@
   }
 }
 
-@include media-md-down {
+@media(max-width: 1024px) {
   .members-photo {
     background-position: center;
     background-size: initial;
   }
-  .services-diagnostic-form {
+  .services-diagnostic-form{
     .title {
       display: block;
       color: #195f66;
@@ -186,9 +186,32 @@
   }
 }
 
-@include media-sm-down {
-  .services-diagnostic-form {
-    padding: 65px 10px;
+@media(min-width:768px) and (max-width:1024px) {
+  .partners-section {
+    .partners-list {
+      .partner {
+        width: 100%;
+      }
+      .partner:nth-child(2n) {
+        .description {
+          order: 1;
+          margin-right: 50px;
+          margin-left: 0px;
+          text-align: right;
+        }
+        .img {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+@media(max-width:768px) {
+  .members-photo .title {
+    font-size: 2.7em;
+  }
+  .members-photo .body-text {
+    width: 100%;
   }
   .services-diagnostic-form .title {
     font-size: 2em;
@@ -196,12 +219,20 @@
   .services-diagnostic-form .diagnostic-form .button-flex .button {
     font-size: 1em;
   }
-  .services-diagnostic-form .services .service .name {
+  .services-diagnostic-form .services .service {
     font-size: 1.3em;
   }
-  .services-diagnostic-form .services .service .description {
-    text-align: center;
-    font-size: 0.8em;
+  .partners-section {
+    padding: 80px 10px;
+  }
+  .partners-section .partners-list .partner {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    .description {
+      margin: 30px 0;
+      text-align: center;
+    }
   }
   .services-diagnostic-form .diagnostic-form .text {
     width: 100%;
