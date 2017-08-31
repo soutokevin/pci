@@ -35,8 +35,12 @@
           <%= slide.title %>
         </div>
 
-        <div class="hero__text">
+        <div class="hero__text" style="height: 120px; overflow: hidden;">
           <%= slide.body %>
+        </div>
+        <span>. . .</span>
+        <div style="padding-top: 30px;">
+          <a href="<%= slide.link %>"> CLIQUE PARA SABER MAIS</a>
         </div>
       </div>
     <% end %>

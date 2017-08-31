@@ -30,6 +30,7 @@
       text-align: center;
       color: #820000;
       margin-bottom: 10px;
+      padding: 0 30px;
       .map {
         position: relative;
         width: 540px;
@@ -62,15 +63,15 @@
       }
     }
     .form-container {
-      width: 50%;
+      padding: 0 30px;
       .form {
         display: flex;
       	flex-wrap: wrap;
-        margin-top: 120px;
+        margin-top: 220px;
       	.label-inline {
       		font-size: 1.5em;
       		float: left;
-      		width: 22%;
+      		width: 25%;
       		text-align: right;
       		color: #706364;
       	}
@@ -85,13 +86,13 @@
           color: #3C3C3B;
       	}
       	.text-field {
-      		width: 75%;
+      		width: 72%;
       		height: 35px;
       		text-indent: 10px;
       	}
       	.textarea {
       		height: 145px;
-      		width: 75%;
+      		width: 72%;
       		padding: 20px;
           box-sizing: border-box;
       	}
@@ -114,6 +115,7 @@
             display: inline-block;
             cursor: pointer;
             font-weight: bold;
+            font-size: 12px;
             padding: 5px 15px;
             background-color: #9A8081;
             border-radius: 10px;
@@ -190,6 +192,9 @@
       }
     }
   }
+  .contact .container .form-container .form .reason .radio-item {
+    margin: 0 15px;
+  }
   .note {
     width: 90%;
     margin: 0 auto;
@@ -212,7 +217,7 @@
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 600px) {
   .contact .container .form-container .form .reason .radio-item {
     margin-bottom: 20px;
     margin-right: 20px;
