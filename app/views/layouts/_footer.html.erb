@@ -19,16 +19,18 @@
 		<hr>
 	</div>
 
-	<div class="partners">
+	<div class="partners-list">
 		<h2>PARCEIROS</h2>
-		<span class="item">
-			<%= image_tag 'ceub.jpg', width: '50px', height: '50px' %>
-		</span>
-		<span class="item">
-			<%= image_tag 'ceub.jpg', width: '50px', height: '50px' %>
-		</span>
-		<span class="item">
-			<%= image_tag 'ceub.jpg', width: '50px', height: '50px' %>
-		</span>
+			<% footer_part.contents.each do |content| %>
+				<% content.photos.each do |photo| %>
+					<%= cl_image_tag( photo.fullpath, width: '60px', height: '30px' ) %>
+				<% end %>
+			<% end %>
+			<% if user_signed_in? %>
+				<%= link_to 'Editar Lista de parceiros',
+					page_page_part_path(footer, footer_part) 
+				%>
+			<% end %>
 	</div>
+
 </footer>

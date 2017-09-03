@@ -1,6 +1,6 @@
 class Content < ApplicationRecord
 	has_attachment  :avatar, accept: [:jpg, :png, :gif]
-	has_attachments :photos, maximum: 9, accept: [:jpg, :png, :gif]
+	has_attachments :photos, maximum: 10, accept: [:jpg, :png, :gif]
 	belongs_to :page_part, optional: true
 
 	validates_presence_of :avatar, if: 'allow_photo?'
