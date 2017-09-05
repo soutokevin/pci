@@ -35,8 +35,12 @@
           <%= slide.title %>
         </div>
 
-        <div class="hero__text">
+        <div class="hero__text" style="height: 120px; overflow: hidden;">
           <%= slide.body %>
+        </div>
+        <span>. . .</span>
+        <div style="padding-top: 30px;">
+          <a href="<%= slide.link %>"> CLIQUE PARA SABER MAIS</a>
         </div>
       </div>
     <% end %>
@@ -91,12 +95,12 @@
       <% end %>
       <div style="width: 100%; margin: 20px 0; text-align: center;">
       <% if user_signed_in? %>
-        <%= link_to 'Editar citações',
+        <%= link_to 'Editar Depoimentos',
           page_page_part_path(page, page_part( page, 'Citação'))
         %>
       <% end %>
       </div>
-      <a class="section__btn" href="#">Deixe seu depoimento</a>
+      <a class="section__btn" href="/pages/1#contato">Deixe seu depoimento</a>
     </div>
   </div><!-- container -->
 </section>

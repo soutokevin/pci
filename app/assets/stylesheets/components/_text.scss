@@ -9,7 +9,7 @@
     padding: 52px 0;
     margin: 32px 0 0 0;
     @include media-xs-down {
-      font-size: 27pt;
+      font-size: 30px;
     }
 
     // bg
@@ -21,14 +21,14 @@
     color: #716364;
     margin: 32px 0;
     @include media-sm-down {
-      font-size: 28pt;
+      font-size: 30px;
     }
   }
 
   &__paragraph {
     line-height: 1.5;
     @include media-sm-down {
-      font-size: 21pt;
+      font-size: 14pt;
     }
   }
 
@@ -45,6 +45,9 @@
 
   .container {
     padding: 8px;
+    @include media-sm-down {
+      padding: 0 25px;
+    }
   }
 
   .separator {

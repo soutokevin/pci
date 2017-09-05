@@ -26,9 +26,14 @@
 
   &__title {
     color: #c20000;
-    font-size: 3em;
+    font-size: 25px;
     text-align: right;
     margin-bottom: 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-weight: lighter;
   }
 
   hr {
@@ -109,6 +114,7 @@
     display: block;
     margin-top: 16px;
     opacity: .6;
+    font-weight: lighter;
   }
 
   &__prev,

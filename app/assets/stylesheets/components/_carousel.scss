@@ -3,14 +3,11 @@
   text-align: center;
 
   &__title {
-    font-size: 28pt;
+    font-size: 27pt;
     font-weight: bold;
     text-transform: uppercase;
     margin: 32px auto 16px;
 
-    @include media-md-up {
-      font-size: 33pt;
-    }
     @include media-xs-down {
       font-size: 20pt;
     }

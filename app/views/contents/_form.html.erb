@@ -10,31 +10,40 @@
       </ul>
     </div>
   <% end %>
-  
+
   <% if page_part.allow_title %>
     <div class="field">
       <%= f.label :title, "Título" %>
       <%= f.text_field :title %>
     </div>
   <% end %>
-  
+
   <% if page_part.allow_text %>
     <div class="field">
       <%= f.label :body, "Texto" %>
       <%= f.text_area :body, cols: 70,  rows:15 %>
     </div>
   <% end %>
-  
+
+  <% if page_part.allow_link %>
+    <div class="field">
+      <%= f.label :link, "Link" %>
+      <%= f.text_field :link %>
+    </div>
+  <% end %>
+
   <% if page_part.allow_photo %>
     <div class="field">
       <%= f.attachinary_file_field :avatar %>
     </div>
+    <p>Faça upload de uma imagem por vez!</p>
   <% end %>
 
   <% if page_part.allow_photos %>
     <div class="field">
       <%= f.attachinary_file_field :photos %>
     </div>
+    <p>Faça upload de uma imagem por vez!</p>
   <% end %>
 
   <div class="actions">

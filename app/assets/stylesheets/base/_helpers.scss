@@ -90,7 +90,7 @@
     margin-bottom: 70px;
     .text {
       color: $color;
-      font-size: 3em;
+      font-size: 30px;
       margin: 0;
       @include media-xs-down {
         font-size: 20pt;
@@ -161,7 +161,7 @@
       i {
         display: none;
       }
-      &:hover {
+      &:active {
         span {
           display: none;
         }
@@ -175,7 +175,7 @@
 }
 
 @mixin responsive-content-form($color-label) {
-  padding: 0 5%;
+  padding: 30px 5%;
   .form {
     flex-direction: column;
     .box-right,

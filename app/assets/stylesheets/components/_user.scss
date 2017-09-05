@@ -41,7 +41,11 @@
     margin: 0 auto 8px;
     border: none;
   }
-
+  h1 {
+    @include media-xs-down {
+      font-size: 20pt;
+    }
+  }
   h1,
   p {
     margin: 8px;
