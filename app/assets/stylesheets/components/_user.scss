@@ -9,6 +9,7 @@
     @include media-md-up {
       height: 100vh;
       max-height: 800px;
+      min-height: 300px;
       flex-direction: row;
     }
   }
@@ -49,6 +50,12 @@
   h1,
   p {
     margin: 8px;
+  }
+
+  @include media-md-up {
+    p {
+      margin: 8px 100px;
+    }
   }
 
   &__arrow {
