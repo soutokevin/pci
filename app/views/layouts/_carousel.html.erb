@@ -19,7 +19,7 @@
     </svg>
     <ul class="carousel__controls">
       <% slides.contents.each_with_index do |content, i| %>
-        <li class="carousel__control <%= i == 0 ? 'carousel__control--active' : '' %>">
+        <li class="carousel__control <%= i == 0 ? 'carousel__control--active' : '' %> ">
           <%= i %>
         </li>
       <% end %>

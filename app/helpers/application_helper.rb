@@ -1,5 +1,14 @@
 module ApplicationHelper
 
+	def footer
+		@footer = Page.find_by(name: 'footer')
+	end
+
+	def footer_part
+		@footer = Page.find_by(name: 'footer')
+		@footer.page_parts[0]
+	end
+
 	def page_part(page, name)
 		page.page_parts.each do |page_part|
 			if page_part.name == name

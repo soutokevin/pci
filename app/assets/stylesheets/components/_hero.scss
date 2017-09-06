@@ -2,31 +2,32 @@
   @include blend-image;
   @include center-content;
   text-align: center;
-  height: 515px;
+
   color: $white;
 
   &--clients {
     background-color: #821810;
+    height: 515px;
   }
 
   &--students {
     background-color: #02a08d;
-    background-image: image-url('image.jpg');
+    height: 410px;
   }
 
   &--management {
     background-color: #195f66;
-    background-image: image-url('gestao.jpg');
+    height: 515px;
   }
 
   &--engineering {
     background-color: #fcbd09;
-    background-image: image-url('building.jpg');
+    height: 515px;
   }
 
   &--legal {
     background-color: #12a18c;
-    background-image: image-url('image.jpg');
+    height: 515px;
   }
 
   &__title {
