@@ -6,30 +6,6 @@
     margin: 0;
   }
 
-  &__big-quote {
-    display: flex;
-    margin: 32px 0;
-    text-align: center;
-    font-size: 1.4em;
-    font-weight: bold;
-
-    &::before,
-    &::after {
-      color: #a7d7d3;
-      display: block;
-      font-size: 4em;
-      height: 0; // para não aumentar a altura do paragrafo
-    }
-
-    &::before {
-      content: open-quote;
-    }
-
-    &::after {
-      content: close-quote;
-    }
-  }
-
   &__btn {
     margin: 0 auto;
     padding: 16px;

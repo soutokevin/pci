@@ -91,7 +91,11 @@
     <div class="section__wrapper">
       <!-- Page Part 04 -->
       <% page_part(page, 'Citação').contents.each do |content| %>
-        <p class="section__big-quote"> <%= content.body %> </p>
+        <p class="quotes__big">
+          <%= image_tag 'quote_l.svg', class: 'quotes__big__img' %>
+          <%= content.body %>
+          <%= image_tag 'quote_r.svg', class: 'quotes__big__img' %>
+        </p>
       <% end %>
       <div style="width: 100%; margin: 20px 0; text-align: center;">
       <% if user_signed_in? %>

@@ -1,6 +1,10 @@
 <% @page_part.contents.each do |content|%>
-	<h2>Título: <%= content.title %> </h2>
-	<p> Texto: <%= content.body %></p>
+	<% if content.title %>
+		<h2>Título: <%= content.title %> </h2>
+	<% end %>
+	<% if content.body %>
+		<p> Texto: <%= content.body %></p>
+	<% end %>
 	<% if content.page_part.allow_link %>
 		<p> Link: <%= content.link %>
 	<% end %>
@@ -9,6 +13,15 @@
 			<%= cl_image_tag content.avatar.path,
 				:width => 300, :height => 300, :crop => :thumb
 			%>
+		</div>
+	<% end %>
+	<% if content.photos? %>
+		<div> <span style="display: block;">Fotos:</span> 
+			<% content.photos.each do |photo| %>
+				<%= cl_image_tag photo.path,
+					:width => 100, :height => 100, :crop => :thumb
+				%>
+			<% end %>
 		</div>
 	<% end %>
 	<div>

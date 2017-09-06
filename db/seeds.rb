@@ -10,6 +10,7 @@ page = Page.create name: 'home'
 			 Page.create name: 'legal'
 			 Page.create name: 'engineering'
 			 Page.create name: 'management'
+			 Page.create name: 'footer'
 
 # Partes da Home Page
 home = Page.find_by(name: 'home')
@@ -142,3 +143,10 @@ management.page_parts.create name: 'Projetos anteriores', allow_creatable: true,
 												 		 allow_photo: false, allow_title: true,
 														 allow_text: true, allow_photos: true,
 														 allow_link: false
+
+# Partes do footer
+footer = Page.find_by(name: 'footer')
+footer.page_parts.create name: 'Lista de Parceiros', allow_creatable: false,
+												 allow_photo: false, allow_title: false,
+												 allow_text: false, allow_photos: true,
+												 allow_link: false
