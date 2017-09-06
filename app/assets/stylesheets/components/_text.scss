@@ -1,12 +1,13 @@
 .text {
   &__heading {
     // text
+    font-size: 38px;
     color: white;
     text-align: center;
     text-transform: uppercase;
 
     // sizing
-    padding: 52px 0;
+    padding: 80px 0;
     margin: 32px 0 0 0;
     @include media-xs-down {
       font-size: 30px;
@@ -27,6 +28,12 @@
 
   &__paragraph {
     line-height: 1.5;
+    text-align: left;
+    font-weight: 300;
+
+    @include media-md-up {
+      padding: 0 45px;
+    }
     @include media-sm-down {
       font-size: 14pt;
     }
@@ -41,6 +48,10 @@
 
   &__item {
     text-align: center;
+
+    h1 {
+      font-size: 30px;
+    }
   }
 
   .container {

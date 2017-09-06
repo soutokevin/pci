@@ -16,8 +16,17 @@ input:focus {
   outline-offset: 0px;
 }
 
+hr {
+  border: none;
+}
+
 h1 {
   font-weight: 500;
   font-size: 48pt;
   margin: 0;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
 }
