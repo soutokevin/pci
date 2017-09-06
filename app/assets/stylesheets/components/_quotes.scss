@@ -76,9 +76,10 @@
     font-weight: 900;
     font-style: italic;
     z-index: 0;
+    width: 80%;
 
-    &::before,
-    &::after {
+    &__img {
+      $size: 4em;
       position: absolute;
       z-index: -1;
 
@@ -87,18 +88,16 @@
 
       color: #a7d7d3;
       display: block;
-      font-size: 4em;
-      height: 0.5em;
-    }
+      height: $size;
+      width: $size;
 
-    &::before {
-      content: open-quote;
-      left: -0.25em;
-    }
+      &:first-child {
+        left: -($size/2);
+      }
 
-    &::after {
-      content: close-quote;
-      right: -0.25em;
+      &:last-child {
+        right: -($size/2);
+      }
     }
   }
 
