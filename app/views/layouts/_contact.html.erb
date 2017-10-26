@@ -32,10 +32,10 @@
     </div>
 
     <div class="form-container">
-      <%= form_for :record, :html => {:class => 'form'} do |f| %>
+      <%= form_for :email, :url => {:controller => "email", :action => "create"}, :html => {action: email_path, :class => 'form'} do |f| %>
 
   			<div class="input-group">
-  				<%= f.label :nome, "NOME", class: "label-inline"  %>
+  				<%= f.label :name, "NOME", class: "label-inline"  %>
   				<%= f.text_field :name, class: "text-field" %>
   			</div>
   			<div class="input-group">

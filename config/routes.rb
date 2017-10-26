@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   get 'contents/search_content' => 'pages#search', as: :search
   root 'pages#show', :id => '1'
 
+  post '/email' => 'email#create'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
