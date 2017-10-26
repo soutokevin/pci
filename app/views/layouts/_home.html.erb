@@ -1,19 +1,19 @@
 <section class="user container">
   <% if user_signed_in? %>
     <div style="display: flex; justify-content: space-between;">
-      <%= link_to 'Editar banner clientes', 
-          page_page_part_path(page, page_part( page, 'Box Clientes')) 
+      <%= link_to 'Editar banner clientes',
+          page_page_part_path(page, page_part( page, 'Box Clientes'))
       %>
       <%= link_to 'Editar banner alunos',
-          page_page_part_path(page, page_part( page, 'Box Alunos')) 
+          page_page_part_path(page, page_part( page, 'Box Alunos'))
       %>
     </div>
   <% end %>
   <div class="user__wrapper">
     <!-- Page_part 01 -->
     <% page_part( page, 'Box Clientes').contents.each do |content| %>
-        <%= link_to page_path(redirect_page('Client')), 
-        {style:'background-image: url( ' +  content.avatar.fullpath + ' );', 
+        <%= link_to page_path(redirect_page('Client')),
+        {style:'background-image: url( ' +  content.avatar.fullpath + ' );',
         class: 'user__link user__clientes'} do %>
           <h1 class="user__title"> Clientes </h1>
           <hr>
@@ -22,7 +22,7 @@
     <% end %>
     <!-- Page_part 02 -->
     <% page_part( page, 'Box Alunos').contents.each do |content| %>
-        <%= link_to page_path(redirect_page('Student')), 
+        <%= link_to page_path(redirect_page('Student')),
         {style: 'background-image: url( ' +  content.avatar.fullpath + ' );',
         class: 'user__link user__alunos'} do %>
           <h1 class="user__title"> Alunos </h1>
@@ -36,14 +36,14 @@
       <polygon fill="#b3b3b3" points="0,0 78,0 39,39" />
     </svg>
   </div>
-  
+
 </section>
 
 <section class="text">
   <!-- Page_part 03 -->
   <% page_part( page, 'Banner PCI').contents.each do |content| %>
     <h1 class="text__heading"
-        id="sobre a pci"
+        id="sobre_a_pci"
         style=" background-image: url( <%= content.avatar.fullpath %> ); "
     >
       Projetos Consultoria Integrada
@@ -51,7 +51,7 @@
   <% end %>
   <% if user_signed_in? %>
     <%= link_to 'Editar Banner',
-        page_page_part_path(page, page_part( page, 'Banner PCI')) 
+        page_page_part_path(page, page_part( page, 'Banner PCI'))
     %>
   <% end %>
   <div class="container">
@@ -62,7 +62,7 @@
     <% end %>
     <% if user_signed_in? %>
       <%= link_to 'Editar Parágrafos',
-          page_page_part_path(page, page_part( page, 'Sobre a Projetos')) 
+          page_page_part_path(page, page_part( page, 'Sobre a Projetos'))
       %>
     <% end %>
     <div class="text__row">
@@ -75,7 +75,7 @@
         <% end %>
         <% if user_signed_in? %>
           <%= link_to 'Editar Parágrafos',
-              page_page_part_path(page, page_part( page, 'Missão')) 
+              page_page_part_path(page, page_part( page, 'Missão'))
           %>
         <% end %>
       </div>
@@ -88,7 +88,7 @@
         <% end %>
         <% if user_signed_in? %>
           <%= link_to 'Editar Parágrafos',
-              page_page_part_path(page, page_part( page, 'Visão')) 
+              page_page_part_path(page, page_part( page, 'Visão'))
           %>
         <% end %>
       </div>
@@ -104,7 +104,7 @@
           <% end %>
           <% if user_signed_in? %>
             <%= link_to 'Editar Parágrafos',
-                page_page_part_path(page, page_part( page, 'Valores esquerda')) 
+                page_page_part_path(page, page_part( page, 'Valores esquerda'))
             %>
           <% end %>
         </div>
@@ -115,7 +115,7 @@
           <% end %>
           <% if user_signed_in? %>
             <%= link_to 'Editar Parágrafos',
-                page_page_part_path(page, page_part( page, 'Valores direita')) 
+                page_page_part_path(page, page_part( page, 'Valores direita'))
             %>
           <% end %>
         </div>
@@ -127,7 +127,7 @@
 <section class="text">
   <!-- Page_part 09 -->
   <% page_part( page, 'Banner MEJ').contents.each do |content|%>
-    <h1 class="text__heading" 
+    <h1 class="text__heading"
         id="mej"
         style=" background-image: url( <%= content.avatar.fullpath %> );"
     >
@@ -136,7 +136,7 @@
   <% end %>
   <% if user_signed_in? %>
     <%= link_to 'Editar Banner',
-        page_page_part_path(page, page_part( page, 'Banner MEJ')) 
+        page_page_part_path(page, page_part( page, 'Banner MEJ'))
     %>
   <% end %>
   <div class="container">
@@ -147,7 +147,7 @@
     <% end %>
     <% if user_signed_in? %>
       <%= link_to 'Editar Parágrafos',
-          page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?')) 
+          page_page_part_path(page, page_part(page, 'O que é o Movimento Empresa Júnior?'))
       %>
     <% end %>
     <h2 class="text__title">Como funciona uma Empresa Júnior?</h2>
@@ -157,7 +157,7 @@
     <% end %>
     <% if user_signed_in? %>
       <%= link_to 'Editar Parágrafos',
-          page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?')) 
+          page_page_part_path(page, page_part(page, 'Como funciona uma Empresa Júnior?'))
       %>
     <% end %>
   </div>

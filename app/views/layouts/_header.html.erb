@@ -2,7 +2,7 @@
 	<%= link_to root_path, class: "logo" do %>
 		<%= image_tag("Logotipo PCI - horizontal.svg", size: "210x100", alt: "PCI") %>
 	<% end %>
-	<div class="item"> <%= link_to 'SOBRE A PCI', page_path(redirect_page('Home Page'), :anchor => "sobre a pci") %> </div>
+	<div class="item"> <%= link_to 'SOBRE A PCI', page_path(redirect_page('Home Page'), :anchor => "sobre_a_pci") %> </div>
 	<div class="item">
 		<%= link_to page_path(redirect_page('Home Page'), :anchor => "mej") do %>
       MOVIMENTO <br> EMPRESA JÚNIOR
@@ -33,7 +33,7 @@
       <ul>
         <li>
           <%= link_to 'SOBRE A PCI', page_path(redirect_page('Home Page'),
-                                               :anchor => "sobre a pci") %>
+                                               :anchor => "sobre_a_pci") %>
         </li>
 
         <%= link_to page_path(redirect_page('Home Page'), :anchor => "mej") do %>
@@ -69,9 +69,9 @@
           <% if page_student? @page %>
           	<%= render 'layouts/hamburguer_sub_items',
           							items: students = {
-          								'#areas de atuacao' => "ÁREAS DE ATUAÇÃO",
-                          '#quem passou por aqui' => "QUEM PASSOU POR AQUI",
-                          '#processo seletivo' => "PROCESSO SELETIVO" } %>
+          								'#areas_de_atuacao' => "ÁREAS DE ATUAÇÃO",
+                          '#quem_passou_por_aqui' => "QUEM PASSOU POR AQUI",
+                          '#processo_seletivo' => "PROCESSO SELETIVO" } %>
           <% end %>
 
         </div><!-- ./secundary-items -->
