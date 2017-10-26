@@ -29,7 +29,7 @@
       .name {
         font-size: 2.3em;
         font-weight: bold;
-         text-transform: uppercase;
+        text-transform: uppercase;
       }
       &:hover .name {
         display: none;
@@ -149,19 +149,19 @@
     flex-wrap: wrap;
   }
   .client {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     margin: 20px 0px;
     overflow: hidden;
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .members-photo {
     background-position: center;
     background-size: initial;
   }
-  .services-diagnostic-form{
+  .services-diagnostic-form {
     .title {
       display: block;
       color: #195f66;
@@ -186,7 +186,7 @@
   }
 }
 
-@media(min-width:768px) and (max-width:1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .partners-section {
     .partners-list {
       .partner {
@@ -206,7 +206,7 @@
     }
   }
 }
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .members-photo .title {
     font-size: 2.7em;
   }
